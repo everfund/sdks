@@ -52,6 +52,7 @@ module.exports = optimizedImages({
   experimental: {
     plugins: true,
     modern: true,
+    esmExternals: true
   },
   webpack: (config, { dev, isServer, ...options }) => {
     config.module.rules.push({

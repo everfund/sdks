@@ -16,29 +16,44 @@
       "heading": true,
       "routes": [
         {
-          "title": "React",
-          "path": "/donation-widget/react",
-          "editUrl": "/donation-widget/react.md"
+          "title": "Donate Button",
+          "path": "/integrations/donate-button",
+          "editUrl": "/integrations/donate-button.md"
         },
         {
           "title": "JavaScript SDK",
-          "path": "/donation-widget/vanilla-js",
-          "editUrl": "/donation-widget/vanilla-js.md"
+          "path": "/integrations/js-sdk",
+          "editUrl": "/integrations/js-sdk.md"
         },
         {
           "title": "Wordpress",
-          "path": "/donation-widget/wordpress",
-          "editUrl": "/donation-widget/wordpress.md"
+          "path": "/integrations/wordpress",
+          "editUrl": "/integrations/wordpress.md"
         },
         {
           "title": "Webflow",
-          "path": "/donation-widget/webflow",
-          "editUrl": "/donation-widget/webflow.md"
+          "path": "/integrations/webflow",
+          "editUrl": "/integrations/webflow.md"
         },
         {
           "title": "Wix",
-          "path": "/donation-widget/wix",
-          "editUrl": "/donation-widget/wix.md"
+          "path": "/integrations/wix",
+          "editUrl": "/integrations/wix.md"
+        },
+        {
+          "title": "React",
+          "path": "/integrations/react",
+          "editUrl": "/integrations/react.md"
+        },
+        {
+          "title": "Vue",
+          "path": "/integrations/vue",
+          "editUrl": "/integrations/vue.md"
+        },
+        {
+          "title": "Sevelt",
+          "path": "/integrations/sevelt",
+          "editUrl": "/integrations/sevelt.md"
         }
       ]
     },
@@ -51,11 +66,6 @@
           "title": "Simple",
           "path": "/examples/simple",
           "editUrl": "/examples/simple.mdx"
-        },
-        {
-          "title": "Advanced",
-          "path": "/examples/simple",
-          "editUrl": "/examples/simple.mdx"
         }
       ]
     },
@@ -65,8 +75,8 @@
       "routes": [
         {
           "title": "init()",
-          "path": "/reference/useQuery",
-          "editUrl": "/reference/useQuery.md"
+          "path": "/reference/init",
+          "editUrl": "/reference/init.md"
         }
       ]
     }

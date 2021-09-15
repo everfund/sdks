@@ -2,11 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 
-const ogImage = require('images/react-query-og.png?url')
-const favicon = require('images/favicon.png?url')
+// const ogImage = require('images/react-query-og.png?url')
+// const favicon = require('images/favicon.png?url')
 
 export const Seo = withRouter(
-  ({ title, description, image = ogImage, router, children }) => (
+  ({ title, description, image, router, children }) => (
     <Head>
       {/* DEFAULT */}
 
@@ -16,8 +16,8 @@ export const Seo = withRouter(
       {description != undefined && (
         <meta name="description" key="description" content={description} />
       )}
-      <link rel="icon" type="image/x-icon" href={favicon} />
-      <link rel="apple-touch-icon" href={favicon} />
+      {/* <link rel="icon" type="image/x-icon" href={favicon} />
+      <link rel="apple-touch-icon" href={favicon} /> */}
 
       {/* OPEN GRAPH */}
       <meta property="og:type" key="og:type" content="website" />
