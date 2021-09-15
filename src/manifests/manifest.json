@@ -1,0 +1,74 @@
+{
+  "routes": [
+    {
+      "title": "Getting Started",
+      "heading": true,
+      "routes": [
+        {
+          "title": "Overview",
+          "path": "/overview",
+          "editUrl": "/overview.md"
+        }
+      ]
+    },
+    {
+      "title": "Integrations",
+      "heading": true,
+      "routes": [
+        {
+          "title": "React",
+          "path": "/donation-widget/react",
+          "editUrl": "/donation-widget/react.md"
+        },
+        {
+          "title": "JavaScript SDK",
+          "path": "/donation-widget/vanilla-js",
+          "editUrl": "/donation-widget/vanilla-js.md"
+        },
+        {
+          "title": "Wordpress",
+          "path": "/donation-widget/wordpress",
+          "editUrl": "/donation-widget/wordpress.md"
+        },
+        {
+          "title": "Webflow",
+          "path": "/donation-widget/webflow",
+          "editUrl": "/donation-widget/webflow.md"
+        },
+        {
+          "title": "Wix",
+          "path": "/donation-widget/wix",
+          "editUrl": "/donation-widget/wix.md"
+        }
+      ]
+    },
+
+    {
+      "title": "Examples",
+      "heading": true,
+      "routes": [
+        {
+          "title": "Simple",
+          "path": "/examples/simple",
+          "editUrl": "/examples/simple.mdx"
+        },
+        {
+          "title": "Advanced",
+          "path": "/examples/simple",
+          "editUrl": "/examples/simple.mdx"
+        }
+      ]
+    },
+    {
+      "title": "API Reference",
+      "heading": true,
+      "routes": [
+        {
+          "title": "init()",
+          "path": "/reference/useQuery",
+          "editUrl": "/reference/useQuery.md"
+        }
+      ]
+    }
+  ]
+}
