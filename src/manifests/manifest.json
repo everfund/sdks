@@ -16,9 +16,14 @@
       "heading": true,
       "routes": [
         {
-          "title": "Donate Button",
-          "path": "/integrations/donate-button",
-          "editUrl": "/integrations/donate-button.md"
+          "title": "Donation Link",
+          "path": "/integrations/donation-link",
+          "editUrl": "/integrations/donation-link.md"
+        },
+        {
+          "title": "Donation Button",
+          "path": "/integrations/donation-button",
+          "editUrl": "/integrations/donation-button.md"
         },
         {
           "title": "JavaScript SDK",

@@ -5,6 +5,17 @@ import { siteConfig } from 'siteConfig'
 import { Search } from './Search'
 
 export const Nav = () => (
+  <>
+      <div className="fixed bottom-0 left-0 right-0  bg-gray-500">
+      <div className="max-w-7xl mx-auto py-5 px-3 sm:px-6 lg:px-8">
+        <div className="pr-16 sm:text-center sm:px-16">
+          <p className="font-medium text-white">
+            <span className="md:hidden">WIP</span>
+            <span className="hidden md:inline">🚧{" "}These docs are still a being worked on{" "}🚧</span>
+          </p>
+        </div>
+      </div>
+    </div>
   <div className="sticky z-50 top-0  text-gray-600 bg-white bg-opacity-80 shadow-sm backdrop-blur-sm backdrop-saturate-200 backdrop-filter">
     <div
       style={{
@@ -68,4 +79,5 @@ export const Nav = () => (
     </div>
   
     </div>
+    </>
 )
