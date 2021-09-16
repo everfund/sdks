@@ -1,13 +1,13 @@
 /* purgecss start ignore */
 .contents__link {
-  @apply text-gray-700;
+  @apply text-gray-700 transition font-medium;
 }
 
 .contents__link:hover {
-  @apply text-blue-600;
+  @apply text-leafy-600;
 }
 
 .contents__link--active {
-  @apply font-medium text-coral;
+  @apply font-bold text-leafy-500;
 }
 /* purgecss end ignore */

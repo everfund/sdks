@@ -16,7 +16,7 @@ export const Sidebar = ({ active, children, fixed }) => {
       <div className="sidebar-search my-2 lg:hidden">
         <Search />
       </div>
-      <div className="sidebar-content overflow-y-auto pb-4">{children}</div>
+      <div className="sidebar-content overflow-y-auto overflow-x-visible pb-4">{children}</div>
       <style jsx>{`
         .sidebar {
           -webkit-overflow-scrolling: touch;

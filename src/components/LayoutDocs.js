@@ -79,7 +79,7 @@ export const LayoutDocs = props => {
         />
         <div className="block">
           <>
-            <div className="container mx-auto pb-12 pt-6 content">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 pt-6 content">
               <div className="flex relative">
                 {!isMobile && (
                   <Sidebar fixed>
@@ -101,13 +101,13 @@ export const LayoutDocs = props => {
                 </div>
                 {props.meta.toc === false ? null : (
                   <div
-                    className="hidden xl:block ml-10 flex-shrink-0"
+                    className="hidden xl:block ml-10 flex-shrink-0 "
                     style={{
                       width: 200,
                     }}
                   >
                     <div className="sticky top-24 overflow-y-auto">
-                      <h4 className="font-semibold uppercase text-sm mb-2 mt-2 text-gray-500">
+                      <h4 className="inline-block px-4 py-2  font-semibold uppercase text-sm mb-2 mt-2 text-white bg-ivy">
                         On this page
                       </h4>
                       <Toc title={props.meta.title} />

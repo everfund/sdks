@@ -40,15 +40,18 @@ export function SidebarNavLink({
           font-size: 1rem;
           line-height: 1.5rem;
           color: #4b5563;
-          width: 100%;
           box-sizing: border-box;
+          display:inline-block;
+          padding: 0.4rem 1rem;
         }
         .selected :global(a) {
           font-weight: 600;
-          color: #161e2e;
+          color: white;
+          background: #116452;
         }
         .nav-link:hover :global(a) {
-          color: #161e2e;
+          background: #0c4639;
+          color: white !important;
         }
         span {
           color: #a0aec0;
