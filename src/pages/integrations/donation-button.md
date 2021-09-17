@@ -19,7 +19,7 @@ This version of the script will be loaded loaded in at the start of page load.
 </html>
 ```
 
-# Async Script Load
+## Async Script Load
 
 Write some code in that explains asyncronous script loading
 
@@ -61,7 +61,7 @@ Write some code in that explains asyncronous script loading
 }
 ```
 
-# Loading multiple donation portals
+## Loading multiple donation portals
 
 Also once the everfund script has been loaded multiple buttons can be placed on the page,  meaning that you could have multiple courses if wanted or hyper directed fundrasers
 
