@@ -19,7 +19,7 @@ Full HTML [Example](https://codesandbox.io/s/everfund-donation-button-example-br
 
 ## Loading Multiple Donation Modals
 
-Also once the everfund script has been loaded multiple buttons can be placed on the page, meaning that you could have multiple courses if wanted or hyper directed fundrasers
+Once the everfund script has been loaded multiple buttons can be placed on the page, giving you the ability to run multiple campaigns, or hyper directed fundraing with diffrent templates for diffrent parts of the website.
 
 ```html
   <body>
