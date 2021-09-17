@@ -28,7 +28,7 @@ Everfund.modal({
   }
 })
 ```
-[Full Example](https://codesandbox.io/s/everfund-donation-button-example-br01y)
+[Full Example](https://codesandbox.io/s/everfund-modal-plain-javascript-example-rbc6c)
 
 
 ## Options
