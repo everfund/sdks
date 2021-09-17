@@ -1,15 +1,34 @@
-# React Query Docs
+<p>
+    <a href="https://developer.everfund.io/" target="_blank">
+      <img alt="Everfund" width="350" src="https://ik.imagekit.io/everfund/everfund-sticker_U4p0fY8gw.svg">
+    </a>
+    <br>
+Plug and play Donation System.
+Get peace of mind with secure, extensible charity donation system that’s built to scale. All with a few lines of code.
+</p>
 
-This is source code to developer.everfund.co.uk. It is forked from the [Formik](https://formik.org) docs and is built with:
+## Quick Features
 
-- Next.js
-- MDX
-- Tailwind
-- Algolia
+- Single Donations
+- Recurring Donations
+- GDPR Consent
+- Cover Processor Fees
+- Custom Emails
+- Customisable Donation System
+- Apple / Google Pay
+- Bacs Direct Debits (UK Only)
+- Gift Aid Colelction (UK Only)
 
-## Running locally
+## Documentation
 
-```sh
-yarn install
-```
-Now it will work. Run `yarn dev` to get going.
+For full documentation, visit [developer.everfund.io](https://developer.everfund.io).
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

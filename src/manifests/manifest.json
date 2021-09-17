@@ -49,21 +49,6 @@
           "title": "Wix",
           "path": "/integrations/wix",
           "editUrl": "/integrations/wix.md"
-        },
-        {
-          "title": "React",
-          "path": "/integrations/react",
-          "editUrl": "/integrations/react.md"
-        },
-        {
-          "title": "Vue",
-          "path": "/integrations/vue",
-          "editUrl": "/integrations/vue.md"
-        },
-        {
-          "title": "Sevelt",
-          "path": "/integrations/sevelt",
-          "editUrl": "/integrations/sevelt.md"
         }
       ]
     },
@@ -73,20 +58,24 @@
       "heading": true,
       "routes": [
         {
-          "title": "Simple",
-          "path": "/examples/simple",
-          "editUrl": "/examples/simple.mdx"
-        }
-      ]
-    },
-    {
-      "title": "API Reference",
-      "heading": true,
-      "routes": [
+          "title": "Plain Javscript",
+          "path": "/examples/react",
+          "editUrl": "/examples/react.md"
+        },
         {
-          "title": "init()",
-          "path": "/reference/init",
-          "editUrl": "/reference/init.md"
+          "title": "React",
+          "path": "/examples/react",
+          "editUrl": "/examples/react.md"
+        },
+        {
+          "title": "Vue",
+          "path": "/examples/vue",
+          "editUrl": "/examples/vue.md"
+        },
+        {
+          "title": "Sevelt",
+          "path": "/examples/sevelt",
+          "editUrl": "/examples/sevelt.md"
         }
       ]
     }

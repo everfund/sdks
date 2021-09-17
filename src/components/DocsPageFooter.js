@@ -25,7 +25,7 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
                 <span className="text-sm block text-gray-500 mb-1 font-semibold">
                   ← Prev
                 </span>
-                <span className="text-xl block text-blue-600 font-semibold">
+                <span className="text-xl block text-leafy-500 font-semibold">
                   {prevRoute.title}
                 </span>
               </a>
@@ -39,7 +39,7 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
                 <span className="text-sm block text-gray-500 mb-1 font-semibold">
                   Next →
                 </span>
-                <span className="text-xl block text-blue-600 font-semibold">
+                <span className="text-xl block text-leafy-500 font-semibold">
                   {nextRoute.title}
                 </span>
               </a>
@@ -61,7 +61,7 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
         </div>
       ) : null}
 
-      <div className="py-8 md:flex md:items-center md:py-8 border-t border-b">
+      {/* <div className="py-8 md:flex md:items-center md:py-8 border-t border-b">
         <div className="font-semibold text-xl mr-4 text-center mb-4 md:mb-0  md:text-left">
           Was this page helpful?
         </div>
@@ -69,7 +69,7 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
           <TWButton icon={<FiThumbsUp />}>Yes</TWButton>
           <TWButton icon={<FiThumbsDown />}>No</TWButton>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }, areEqual)
