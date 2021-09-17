@@ -1,74 +1,47 @@
 ---
-id: quick-start
-title: Quick Start
+id: installation
+title: Installation
 ---
+Installation
 
-This example very briefly illustrates the 3 core concepts of React Query:
+Everfund SDK can can be installed through multiple methods such as CDN and NPM it is up to you the developer which you choose to use we recommend that if you React, Sevelt or Vue to use the NPM. And if you are outside of the javascript ecosystem to use the CDN 
 
-- [Queries](./guides/queries)
-- [Mutations](./guides/mutations)
-- [Query Invalidation](./guides/query-invalidation)
-
-```js
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-  QueryClient,
-  QueryClientProvider,
-} from 'react-query'
-import { getTodos, postTodo } from '../my-api'
-
-// Create a client
-const queryClient = new QueryClient()
-
-function App() {
-  return (
-    // Provide the client to your App
-    <QueryClientProvider client={queryClient}>
-      <Todos />
-    </QueryClientProvider>
-  )
-}
-
-function Todos() {
-  // Access the client
-  const queryClient = useQueryClient()
-
-  // Queries
-  const query = useQuery('todos', getTodos)
-
-  // Mutations
-  const mutation = useMutation(postTodo, {
-    onSuccess: () => {
-      // Invalidate and refetch
-      queryClient.invalidateQueries('todos')
-    },
-  })
-
-  return (
-    <div>
-      <ul>
-        {query.data.map(todo => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
-
-      <button
-        onClick={() => {
-          mutation.mutate({
-            id: Date.now(),
-            title: 'Do Laundry',
-          })
-        }}
-      >
-        Add Todo
-      </button>
-    </div>
-  )
-}
-
-render(<App />, document.getElementById('root'))
+### Install from NPM
+To install from NPM 
+```bash
+yarn add everfund-sdk
+// or
+npm install everfund-sdk
 ```
 
-These three concepts make up most of the core functionality of React Query. The next sections of the documentation will go over each of these core concepts in great detail.
+### Install from CDN
+
+To load from the CDN use this universal asynchronous script to load everfunds SDK
+```html
+   <script>
+       {!(function (w, d, i, s) {
+         function l() {
+           if (!d.getElementById(i)) {
+             var f = d.getElementsByTagName(s)[0],
+               e = d.createElement(s)
+             ;(e.type = "text/javascript"),
+               (e.async = !0),
+               (e.src = "https://script.everfund.co.uk/m.js"),
+               f.parentNode.insertBefore(e, f)
+           }
+         }
+         if ("function" != typeof w.Everfund) {
+           var c = function () {
+             c.q.push(arguments)
+           }
+           ;(c.q = []),
+             (w.Everfund = c),
+             "complete" === d.readyState
+               ? l()
+               : w.attachEvent
+               ? w.attachEvent("onload", l)
+               : w.addEventListener("load", l, !1)
+         }
+       })(window, document, "everfund", "script")}
+     </script>
+```

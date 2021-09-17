@@ -8,6 +8,26 @@
           "title": "Overview",
           "path": "/overview",
           "editUrl": "/overview.md"
+        },
+        {
+          "title": "Quick Start",
+          "path": "/quick-start",
+          "editUrl": "/quick-start.md"
+        },
+        {
+          "title": "Donation Link",
+          "path": "/donation-link",
+          "editUrl": "/donation-link.md"
+        },
+        {
+          "title": "Donation Button",
+          "path": "/donation-button",
+          "editUrl": "/donation-button.md"
+        },
+        {
+          "title": "Donation Modal",
+          "path": "/donation-modal",
+          "editUrl": "/donation-modal.md"
         }
       ]
     },
@@ -15,21 +35,6 @@
       "title": "Integrations",
       "heading": true,
       "routes": [
-        {
-          "title": "Donation Link",
-          "path": "/integrations/donation-link",
-          "editUrl": "/integrations/donation-link.md"
-        },
-        {
-          "title": "Donation Button",
-          "path": "/integrations/donation-button",
-          "editUrl": "/integrations/donation-button.md"
-        },
-        {
-          "title": "JavaScript SDK",
-          "path": "/integrations/js-sdk",
-          "editUrl": "/integrations/js-sdk.md"
-        },
         {
           "title": "Wordpress",
           "path": "/integrations/wordpress",
