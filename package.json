@@ -13,6 +13,7 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.10.4",
     "@docsearch/react": "1.0.0-alpha.14",
+    "@heroicons/react": "^1.0.4",
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
@@ -24,6 +25,7 @@
     "@zeit/fetch": "^6.0.0",
     "@zeit/react-jsx-parser": "^2.0.0",
     "async-sema": "^3.1.1",
+    "autoprefixer": "^10.3.4",
     "axios": "^0.21.4",
     "body-scroll-lock": "^3.1.5",
     "classnames": "^2.3.1",
@@ -35,6 +37,7 @@
     "next": "^11.1.2",
     "next-images": "^1.8.1",
     "next-optimized-images": "^2.6.2",
+    "postcss": "^8.3.6",
     "prismjs": "^1.24.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -65,7 +68,7 @@
     "mdast-util-to-string": "^1.1.0",
     "postcss-preset-env": "^6.7.0",
     "remark-parse": "^8.0.3",
-    "tailwindcss": "^1.8.10",
+    "tailwindcss": "^2.2.15",
     "unified": "^9.2.0",
     "webp-loader": "^0.6.0"
   },

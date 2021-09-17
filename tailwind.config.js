@@ -3,10 +3,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  corePlugins: {
-    preflight: true,
-    float: false,
-  },
   purge: {
     enabled: process.env.NODE_ENV !== 'development',
     content: ['./src/**/*.js'],
@@ -14,9 +10,14 @@ module.exports = {
       defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
     },
   },
+  
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['visby', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
+
         coral: {
           light: '#FF6070',
           default: '#FF4154',
@@ -67,11 +68,32 @@ module.exports = {
           800: '#355954',
           900: '#233B38',
         },
+
+        "leafy": {
+          "100": "#f2fdfa",
+          "200": "#9feedd",
+          "300": "#51e1c2",
+          "400": "#1fb292",
+          "500": "#116452",
+          "600": "#0e5344",
+          "700": "#0c4639",
+          "800": "#0a382e",
+          "900": "#082b24"
+        },
+        ivy: "#011410",
+        sunny: {
+          "50": "#fffdfa",
+          "100": "#fefaf0",
+          "200": "#fef3d8",
+          "300": "#fdebbf",
+          "400": "#fce4a6",
+          "500": "#fbdc8e",
+          "600": "#f8c23a",
+          "700": "#d99e08",
+          "800": "#856105",
+          "900": "#312402"
+        }
       },
-    },
-    fontFamily: {
-      sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      serif: ['Inter', ...defaultTheme.fontFamily.serif],
     },
     screens: {
       sm: '640px',
@@ -103,5 +125,4 @@ module.exports = {
     }),
   },
   variants: {},
-  plugins: [require('@tailwindcss/ui')],
 }
