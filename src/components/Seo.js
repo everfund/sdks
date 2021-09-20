@@ -1,6 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-import { withRouter } from 'next/router'
+import React from "react";
+import Head from "next/head";
+import { withRouter } from "next/router";
 
 // const ogImage = require('images/react-query-og.png?url')
 // const favicon = require('images/favicon.png?url')
@@ -11,7 +11,9 @@ export const Seo = withRouter(
       {/* DEFAULT */}
 
       {title != undefined && (
-        <title key="title">{title} | Everfund | Plug and Play donation system</title>
+        <title key="title">
+          {title} | Everfund | Plug and Play donation system
+        </title>
       )}
       {description != undefined && (
         <meta name="description" key="description" content={description} />
@@ -77,4 +79,4 @@ export const Seo = withRouter(
       {children}
     </Head>
   )
-)
+);

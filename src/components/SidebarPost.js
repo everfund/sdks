@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { SidebarNavLink } from './SidebarNavLink';
-import cn from 'classnames';
+import * as React from "react";
+import { SidebarNavLink } from "./SidebarNavLink";
+import cn from "classnames";
 export const SidebarPost = ({
   isMobile,
   route,
@@ -12,7 +12,7 @@ export const SidebarPost = ({
   const ref = route.selected ? selectedRef : null;
   React.useEffect(() => {
     if (ref && ref.current && !isMobile) {
-      const content = document.querySelector('.sidebar-content'); // 32 is the top and bottom margin for `.link`
+      const content = document.querySelector(".sidebar-content"); // 32 is the top and bottom margin for `.link`
 
       const height = ref.current.offsetTop - 32;
 
@@ -21,8 +21,15 @@ export const SidebarPost = ({
       }
     }
   }, [ref, isMobile]);
-  return <div ref={ref} className={cn('link', `level-${level}`)}>
-      <SidebarNavLink route={route} scrollSelectedIntoView={props.scrollSelectedIntoView} categorySelected={props.categorySelected} level={level} onClick={onClick} />
+  return (
+    <div ref={ref} className={cn("link", `level-${level}`)}>
+      <SidebarNavLink
+        route={route}
+        scrollSelectedIntoView={props.scrollSelectedIntoView}
+        categorySelected={props.categorySelected}
+        level={level}
+        onClick={onClick}
+      />
       <style jsx>{`
         .link {
           margin: 12px 0;
@@ -42,5 +49,6 @@ export const SidebarPost = ({
           }
         }
       `}</style>
-    </div>;
+    </div>
+  );
 };

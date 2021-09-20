@@ -1,6 +1,6 @@
 /* purgecss start ignore */
 .contents__link {
-  @apply text-gray-700 transition font-medium;
+  @apply text-gray-700 font-medium transition;
 }
 
 .contents__link:hover {
@@ -8,6 +8,6 @@
 }
 
 .contents__link--active {
-  @apply font-bold text-leafy-500;
+  @apply text-leafy-500 font-bold;
 }
 /* purgecss end ignore */

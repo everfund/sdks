@@ -1,6 +1,6 @@
 /* purgecss start ignore */
 .markdown {
-  @apply leading-relaxed text-gray-800 text-base;
+  @apply text-gray-800 text-base leading-relaxed;
 }
 
 /* 
@@ -23,17 +23,17 @@
   height: 6rem;
   margin-top: -6rem;
   visibility: hidden;
-  content: '';
+  content: "";
 }
 
 .markdown > h1,
 .markdown > a > h1 {
-  @apply mb-6 text-3xl lg:text-4xl font-semibold leading-snug tracking-tighter text-gray-900;
+  @apply mb-6 text-gray-900 text-3xl font-semibold tracking-tighter leading-snug lg:text-4xl;
 }
 
 .markdown > h2,
 .markdown > a > h2 {
-  @apply mt-12 mb-4 text-2xl font-semibold  text-gray-900;
+  @apply mb-4 mt-12 text-gray-900 text-2xl font-semibold;
 }
 
 .markdown > h2 code,
@@ -43,7 +43,7 @@
 
 .markdown > h3,
 .markdown > a > h3 {
-  @apply mt-8 mb-3 text-xl font-semibold  text-gray-900;
+  @apply mb-3 mt-8 text-gray-900 text-xl font-semibold;
 }
 
 .markdown > h3 code,
@@ -53,7 +53,7 @@
 
 .markdown > h4,
 .markdown > a > h4 {
-  @apply pt-8 mb-3 text-lg font-semibold  text-gray-900;
+  @apply mb-3 pt-8 text-gray-900 text-lg font-semibold;
 }
 
 .markdown > h4 code,
@@ -112,7 +112,7 @@
 }
 
 .markdown > table > thead > tr > th {
-  @apply px-3 py-2 text-left text-sm font-bold bg-gray-100 text-gray-700;
+  @apply px-3 py-2 text-left text-gray-700 text-sm font-bold bg-gray-100;
 }
 
 .markdown > table > tbody > tr {
@@ -132,7 +132,7 @@
 .markdown > ol > li > ol > li > code,
 .markdown > p a > code,
 .markdown > table > tbody > tr > td:not(:first-child) > code {
-  @apply bg-gray-100 rounded-md px-1  border border-gray-300 text-gray-900;
+  @apply px-1 text-gray-900 bg-gray-100 border border-gray-300 rounded-md;
   margin-left: 2px;
   margin-right: 2px;
   padding-top: 2px;
@@ -159,15 +159,15 @@
 }
 
 .markdown > hr {
-  @apply my-6 block border-b;
+  @apply block my-6 border-b;
 }
 .markdown pre {
-  @apply p-3 rounded-lg  mb-6 overflow-y-scroll text-sm bg-gray-100;
+  @apply mb-6 p-3 text-sm bg-gray-100 rounded-lg overflow-y-scroll;
   background: #292d3e;
 }
 /* Blockquotes */
 .markdown blockquote {
-  @apply p-3 bg-gray-100 mb-6 border border-gray-300 border-l-4 rounded-sm text-sm leading-5;
+  @apply mb-6 p-3 text-sm leading-5 bg-gray-100 border border-l-4 border-gray-300 rounded-sm;
 }
 .markdown blockquote > p {
   @apply mb-0;

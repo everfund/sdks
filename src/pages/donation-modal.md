@@ -9,29 +9,29 @@ The Donation modal is the **low-code** solution for integrating Everfund into a 
 
 Make sure that you have added the script to the bottom of your **&#60/body&#62** or are using the **NPM Package**. [How to install](https://developer.everfund.io/quick-start)
 
-
 ## How to use
-```js
 
-import Everfund from "everfund"
+```js
+import Everfund from "everfund";
 
 Everfund.modal({
   code: "hdndyd7xXd0lp",
-  onSuccess: function(event) {
+  onSuccess: function (event) {
     //
   },
-  onFailure: function(error) {
+  onFailure: function (error) {
     //
   },
-  onClose: function() {
+  onClose: function () {
     //
-  }
-})
+  },
+});
 ```
+
 [Full Example](https://codesandbox.io/s/everfund-modal-plain-javascript-example-rbc6c)
 
-
 ## Options
+
 - `code: string` **Required**
   - passing a URL on redirect on success means that when the payment completes it will automatically redirect to whatever link provided so you can create a custom thank you page
 - `donationLink: string` **Depreciated**

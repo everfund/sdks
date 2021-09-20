@@ -104,9 +104,9 @@ export const Footer = (props) => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div className="xl:grid xl:grid-cols-12 xl:gap-8">
-          <div className="grid grid-cols-3 gap-8 xl:col-span-9">
+      <div className="mx-auto px-4 py-12 max-w-7xl sm:px-6 lg:px-8 lg:py-16">
+        <div className="xl:grid xl:gap-8 xl:grid-cols-12">
+          <div className="grid gap-8 grid-cols-3 xl:col-span-9">
             <div className="">
               <svg
                 viewBox="0 0 2698.39 585.2"
@@ -126,10 +126,10 @@ export const Footer = (props) => {
                 ></path>
               </svg>
             </div>
-            <div className="md:grid md:grid-cols-2 md:col-span-2 md:gap-8">
+            <div className="md:grid md:gap-8 md:col-span-2 md:grid-cols-2">
               <div>
                 <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase">
+                  <h3 className="text-white text-sm font-semibold tracking-wider uppercase">
                     Menu
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
@@ -137,7 +137,7 @@ export const Footer = (props) => {
                       <li key={item.name}>
                         <a
                           href={item.href}
-                          className="transition text-base text-leafy-100 text-opacity-75 hover:text-white hover:text-opacity-100"
+                          className="text-leafy-100 hover:text-white hover:text-opacity-100 text-opacity-75 text-base transition"
                         >
                           {item.name}
                         </a>
@@ -148,7 +148,7 @@ export const Footer = (props) => {
               </div>
 
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-white tracking-wider uppercase">
+                <h3 className="text-white text-sm font-semibold tracking-wider uppercase">
                   Legal
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
@@ -156,7 +156,7 @@ export const Footer = (props) => {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="transition text-base text-leafy-100 text-opacity-75 hover:text-white hover:text-opacity-100"
+                        className="text-leafy-100 hover:text-white hover:text-opacity-100 text-opacity-75 text-base transition"
                       >
                         {item.name}
                       </a>
@@ -166,11 +166,11 @@ export const Footer = (props) => {
               </div>
             </div>
           </div>
-          <div className="mt-8 xl:mt-0 xl:col-span-3">
-            <h3 className="text-sm font-semibold text-white tracking-wider uppercase">
+          <div className="mt-8 xl:col-span-3 xl:mt-0">
+            <h3 className="text-white text-sm font-semibold tracking-wider uppercase">
               Subscribe to our newsletter
             </h3>
-            <p className="mt-4 text-base text-leafy-100 text-opacity-75">
+            <p className="mt-4 text-leafy-100 text-opacity-75 text-base">
               The latest news, articles, and resources, sent to your inbox
               weekly.
             </p>
@@ -184,13 +184,13 @@ export const Footer = (props) => {
                 id="email-address"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none min-w-0 w-full bg-leafy-800 border border-transparent  py-2 px-4 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-ivy focus:ring-leafy-500 focus:border-0 focus:z-10 focus:placeholder-gray-200"
+                className="placeholder-gray-500 focus:placeholder-gray-200 focus:z-10 px-4 py-2 w-full min-w-0 text-white text-sm bg-leafy-800 border focus:border-0 border-transparent rounded-none focus:outline-none appearance-none focus:ring-2 focus:ring-leafy-500 focus:ring-offset-2 focus:ring-offset-ivy"
                 placeholder="Enter your email"
               />
-              <div className="mt-3 sm:mt-0 sm:flex-shrink-0">
+              <div className="mt-3 sm:flex-shrink-0 sm:mt-0">
                 <button
                   type="submit"
-                  className="rounded-none w-full bg-leafy-500 border border-transparent py-2 px-4 flex items-center justify-center text-base font-medium text-leafy-100 hover:bg-leafy-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-ivy focus:ring-leafy-500"
+                  className="flex items-center justify-center px-4 py-2 w-full text-leafy-100 text-base font-medium bg-leafy-500 hover:bg-leafy-600 border border-transparent rounded-none focus:outline-none focus:ring-2 focus:ring-leafy-500 focus:ring-offset-2 focus:ring-offset-ivy"
                 >
                   Subscribe
                 </button>
@@ -198,20 +198,20 @@ export const Footer = (props) => {
             </form>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="mt-8 pt-8 border-t border-gray-700 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-400 hover:text-gray-300"
+                className="hover:text-gray-300 text-gray-400"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon className="h-6 w-6" aria-hidden="true" />
+                <item.icon className="w-6 h-6" aria-hidden="true" />
               </a>
             ))}
           </div>
-          <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+          <p className="mt-8 text-gray-400 text-base md:order-1 md:mt-0">
             &copy; {new Date().getFullYear()} Everfund Ltd. All rights reserved.
           </p>
         </div>

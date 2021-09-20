@@ -22,10 +22,8 @@ Full HTML [Example](https://codesandbox.io/s/everfund-donation-button-example-br
 Once the everfund script has been loaded multiple buttons can be placed on the page, giving you the ability to run multiple campaigns, or hyper directed fundraing with diffrent templates for diffrent parts of the website.
 
 ```html
-  <body>
-    <button data-ef-modal="https://evr.fund/demo">Donate Now</button>
-    <button data-ef-modal="https://evr.fund/demo2">Donate Now</button>
-  </body>
+<body>
+  <button data-ef-modal="https://evr.fund/demo">Donate Now</button>
+  <button data-ef-modal="https://evr.fund/demo2">Donate Now</button>
+</body>
 ```
-
-
