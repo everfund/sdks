@@ -1,6 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-import { withRouter } from 'next/router'
+import React from "react";
+import Head from "next/head";
+import { withRouter } from "next/router";
 
 // const ogImage = require('images/react-query-og.png?url')
 // const favicon = require('images/favicon.png?url')
@@ -11,13 +11,15 @@ export const Seo = withRouter(
       {/* DEFAULT */}
 
       {title != undefined && (
-        <title key="title">{title} | Everfund | Plug and Play donation system</title>
+        <title key="title">
+          {title} | Everfund | Plug and Play donation system
+        </title>
       )}
       {description != undefined && (
         <meta name="description" key="description" content={description} />
       )}
-      {/* <link rel="icon" type="image/x-icon" href={favicon} />
-      <link rel="apple-touch-icon" href={favicon} /> */}
+      <link rel="icon" type="image/x-icon" href="https://developer.everfund.co.uk/favicon.png" />
+      <link rel="apple-touch-icon" href="https://developer.everfund.co.uk/favicon.png" />
 
       {/* OPEN GRAPH */}
       <meta property="og:type" key="og:type" content="website" />
@@ -50,11 +52,11 @@ export const Seo = withRouter(
         key="twitter:card"
         content="summary_large_image"
       />
-      <meta name="twitter:site" key="twitter:site" content="@tannerlinsley" />
+      <meta name="twitter:site" key="twitter:site" content="@everfunduk" />
       <meta
         name="twitter:creator"
         key="twitter:creator"
-        content="@tannerlinsley"
+        content="@everfunduk"
       />
       {title != undefined && (
         <meta name="twitter:title" key="twitter:title" content={title} />
@@ -77,4 +79,4 @@ export const Seo = withRouter(
       {children}
     </Head>
   )
-)
+);

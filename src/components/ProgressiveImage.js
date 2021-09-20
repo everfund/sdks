@@ -1,17 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 export class ProgressiveImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       image: props.placeholder,
-      isLoading: true
+      isLoading: true,
     };
   }
 
   componentDidMount() {
-    const {
-      src
-    } = this.props;
+    const { src } = this.props;
 
     if (src) {
       this.loadImage(src);
@@ -19,18 +17,18 @@ export class ProgressiveImage extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    const {
-      src,
-      placeholder
-    } = prevProps; // We only invalidate the current image if the src has changed.
+    const { src, placeholder } = prevProps; // We only invalidate the current image if the src has changed.
 
     if (src && src !== this.props.src) {
-      this.setState({
-        image: placeholder,
-        isLoading: true
-      }, () => {
-        this.loadImage(src);
-      });
+      this.setState(
+        {
+          image: placeholder,
+          isLoading: true,
+        },
+        () => {
+          this.loadImage(src);
+        }
+      );
     }
   }
 
@@ -41,7 +39,7 @@ export class ProgressiveImage extends React.Component {
     }
   }
 
-  loadImage = src => {
+  loadImage = (src) => {
     // If there is already an image we nullify the onload
     // and onerror props so it does not incorrectly set state
     // when it resolves
@@ -57,10 +55,7 @@ export class ProgressiveImage extends React.Component {
     image.src = src;
   };
   onLoad = () => {
-    const {
-      naturalWidth,
-      naturalHeight
-    } = this.image; // use this.image.src instead of this.props.src to
+    const { naturalWidth, naturalHeight } = this.image; // use this.image.src instead of this.props.src to
     // avoid the possibility of props being updated and the
     // new imageisLoading before the new props are available as
     // this.props.
@@ -69,15 +64,13 @@ export class ProgressiveImage extends React.Component {
       naturalHeight,
       naturalWidth,
       aspectRatio: naturalHeight / naturalWidth,
-      orientation: naturalWidth > naturalHeight ? 'landscape' : 'portrait',
+      orientation: naturalWidth > naturalHeight ? "landscape" : "portrait",
       image: this.image.src,
-      isLoading: false
+      isLoading: false,
     });
   };
-  onError = errorEvent => {
-    const {
-      onError
-    } = this.props;
+  onError = (errorEvent) => {
+    const { onError } = this.props;
 
     if (onError) {
       onError(errorEvent);
@@ -85,15 +78,12 @@ export class ProgressiveImage extends React.Component {
   };
 
   render() {
-    const {
-      children
-    } = this.props;
+    const { children } = this.props;
 
-    if (!children || typeof children !== 'function') {
+    if (!children || typeof children !== "function") {
       throw new Error(`ProgressiveImage requires a function as its only child`);
     }
 
     return children(this.state);
   }
-
 }

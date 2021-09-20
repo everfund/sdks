@@ -2,14 +2,15 @@
 id: donate-link
 title: Donation Link
 ---
+
 A Donation Link is the simplist way for charties to recieve digital donations outside of their websites with **no-code**. Donors either click on short links (e.g evr.fund/demo) online or scan QR codes in-person on print media to access a fast an easy way to make a donation no matter where a charity engages with their supporter.
 
 ```bash
 https://evr.fund/demo
 ```
 
-
 ## Options
+
 **Query Paramerters**
 
 - `redirect_on_success: string`

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import copy from 'copy-to-clipboard';
+import * as React from "react";
+import copy from "copy-to-clipboard";
 /**
  * React hook to copy content to clipboard
  *

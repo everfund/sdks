@@ -9,8 +9,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className="font-sans antialiased text-gray-900">
-     
+        <body className="text-gray-900 font-sans antialiased">
           <Main />
           <NextScript />
         </body>

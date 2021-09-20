@@ -16,7 +16,7 @@ html {
 
 .focus-ring {
   outline: none;
-  @apply ring border-blue-400;
+  @apply border-blue-400 ring;
 }
 
 /* purgecss start ignore */
@@ -60,11 +60,11 @@ html {
 }
 
 .anchor {
-  @apply text-gray-500 absolute ml-2 pr-1 underline;
+  @apply absolute ml-2 pr-1 text-gray-500 underline;
 }
 
 .anchor::after {
-  content: '#';
+  content: "#";
   visibility: hidden;
 }
 
@@ -79,56 +79,31 @@ h6:hover .anchor::after {
 
 /* Algolia v3 overrides */
 :root {
-  --docsearch-modal-background: #fff;
-  --docsearch-highlight-color: #1965e0;
-  --docsearch-primary-color: #0052cc;
-  --docsearch-searchbox-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
   --ifm-z-index-fixed: 1000;
-  --docsearch-searchbox-height: 48px;
-  --docsearch-icon-stroke-width: 1.4;
   --hover-overlay: rgba(0, 0, 0, 0.05);
   --fds-animation-fade-in: cubic-bezier(0, 0, 1, 1);
   --fds-animation-fade-out: cubic-bezier(0, 0, 1, 1);
 }
 
-.DocSearch--active #__next {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-}
-.DocSearch-SearchBar {
-  @apply mb-2;
-}
-
-.DocSearch-Form {
-  @apply rounded-md;
-}
-
-.DocSearch-Search-Icon {
-  height: 20px;
-  width: 20px;
-  stroke-width: 1.6;
-  @apply text-gray-600;
-}
-
 /* Custom Remark alerts */
 .alert {
-  @apply p-4 border-l-4  mb-4;
+  @apply mb-4 p-4 border-l-4;
 }
 
 .alert.alert-danger {
-  @apply bg-red-50 text-red-800 border-red-500;
+  @apply text-red-800 bg-red-50 border-red-500;
 }
 
 .alert.alert-success {
-  @apply bg-green-50 text-green-700 border-green-500;
+  @apply text-green-700 bg-green-50 border-green-500;
 }
 
 .alert.alert-warning {
-  @apply bg-yellow-50 text-yellow-800 border-yellow-500;
+  @apply text-yellow-800 bg-yellow-50 border-yellow-500;
 }
 
 .alert.alert-info {
-  @apply bg-blue-50 text-blue-800 border-blue-500;
+  @apply text-blue-800 bg-blue-50 border-blue-500;
 }
 
 .font-mono {
@@ -172,137 +147,134 @@ details > ol {
   @apply ml-8 list-decimal;
 }
 details {
-  @apply p-3 bg-gray-50 rounded-md border mb-3  text-sm leading-5 shadow-sm;
+  @apply mb-3 p-3 text-sm leading-5 bg-gray-50 border rounded-md shadow-sm;
 }
 details > p {
   @apply mt-2;
 }
 details > summary {
-  @apply font-bold text-base;
+  @apply text-base font-bold;
 }
 
 @tailwind utilities;
 /* purgecss end ignore */
 
-
-
-
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-thin.woff2') format('woff2'),
-    url('/fonts/visby-thin.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-thin.woff2") format("woff2"),
+    url("/fonts/visby-thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-thinoblique.woff2') format('woff2'),
-    url('/fonts/visby-thinoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-thinoblique.woff2") format("woff2"),
+    url("/fonts/visby-thinoblique.woff") format("woff");
   font-weight: 100;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-light.woff2') format('woff2'),
-    url('/fonts/visby-light.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-light.woff2") format("woff2"),
+    url("/fonts/visby-light.woff") format("woff");
   font-weight: 200;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-lightoblique.woff2') format('woff2'),
-    url('/fonts/visby-lightoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-lightoblique.woff2") format("woff2"),
+    url("/fonts/visby-lightoblique.woff") format("woff");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-regular.woff2') format('woff2'),
-    url('/fonts/visby-regular.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-regular.woff2") format("woff2"),
+    url("/fonts/visby-regular.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-regularoblique.woff2') format('woff2'),
-    url('/fonts/visby-regularoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-regularoblique.woff2") format("woff2"),
+    url("/fonts/visby-regularoblique.woff") format("woff");
   font-weight: 300;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-medium.woff2') format('woff2'),
-    url('/fonts/visby-medium.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-medium.woff2") format("woff2"),
+    url("/fonts/visby-medium.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-mediumoblique.woff2') format('woff2'),
-    url('/fonts/visby-mediumoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-mediumoblique.woff2") format("woff2"),
+    url("/fonts/visby-mediumoblique.woff") format("woff");
   font-weight: 400;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-demibold.woff2') format('woff2'),
-    url('/fonts/visby-demibold.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-demibold.woff2") format("woff2"),
+    url("/fonts/visby-demibold.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-demiboldoblique.woff2') format('woff2'),
-    url('/fonts/visby-demiboldoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-demiboldoblique.woff2") format("woff2"),
+    url("/fonts/visby-demiboldoblique.woff") format("woff");
   font-weight: 500;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-bold.woff2') format('woff2'),
-    url('/fonts/visby-bold.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-bold.woff2") format("woff2"),
+    url("/fonts/visby-bold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-boldoblique.woff2') format('woff2'),
-    url('/fonts/visby-boldoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-boldoblique.woff2") format("woff2"),
+    url("/fonts/visby-boldoblique.woff") format("woff");
   font-weight: 600;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-extrabold.woff2') format('woff2'),
-    url('/fonts/visby-extrabold.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-extrabold.woff2") format("woff2"),
+    url("/fonts/visby-extrabold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-extraboldoblique.woff2') format('woff2'),
-    url('/fonts/visby-extraboldoblique.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-extraboldoblique.woff2") format("woff2"),
+    url("/fonts/visby-extraboldoblique.woff") format("woff");
   font-weight: 700;
   font-style: oblique;
 }
 
 @font-face {
-  font-family: 'visby';
-  src: url('/fonts/visby-heavy.woff2') format('woff2'),
-    url('/fonts/visby-heavy.woff') format('woff');
+  font-family: "visby";
+  src: url("/fonts/visby-heavy.woff2") format("woff2"),
+    url("/fonts/visby-heavy.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }

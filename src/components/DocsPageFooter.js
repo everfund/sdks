@@ -1,31 +1,31 @@
-import * as React from 'react'
-import NextLink from 'next/link'
-import { removeFromLast } from '../lib/docs/utils'
-import { siteConfig } from 'siteConfig'
-import { FiThumbsDown, FiThumbsUp } from 'react-icons/fi'
-import { TWButton } from './TWButton'
+import * as React from "react";
+import NextLink from "next/link";
+import { removeFromLast } from "../lib/docs/utils";
+import { siteConfig } from "siteConfig";
+import { FiThumbsDown, FiThumbsUp } from "react-icons/fi";
+import { TWButton } from "./TWButton";
 
 function areEqual(prevProps, props) {
-  return prevProps.route?.path === props.route?.path
+  return prevProps.route?.path === props.route?.path;
 }
 
 export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
   const editUrl =
     route?.editUrl || route?.path
       ? `${siteConfig.editUrl}${route?.editUrl || route?.path}`
-      : null
+      : null;
 
   return (
     <>
       <div className="py-8">
-        <div className="flex space-between items-center">
+        <div className="space-between flex items-center">
           {prevRoute && prevRoute.path ? (
-            <NextLink href={removeFromLast(prevRoute.path, '.')}>
-              <a className="flex-grow  block">
-                <span className="text-sm block text-gray-500 mb-1 font-semibold">
+            <NextLink href={removeFromLast(prevRoute.path, ".")}>
+              <a className="block flex-grow">
+                <span className="block mb-1 text-gray-500 text-sm font-semibold">
                   ← Prev
                 </span>
-                <span className="text-xl block text-leafy-500 font-semibold">
+                <span className="block text-leafy-500 text-xl font-semibold">
                   {prevRoute.title}
                 </span>
               </a>
@@ -34,12 +34,12 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
             <div />
           )}
           {nextRoute && nextRoute.path && (
-            <NextLink href={removeFromLast(nextRoute.path, '.')}>
-              <a className="flex-grow text-right block">
-                <span className="text-sm block text-gray-500 mb-1 font-semibold">
+            <NextLink href={removeFromLast(nextRoute.path, ".")}>
+              <a className="block flex-grow text-right">
+                <span className="block mb-1 text-gray-500 text-sm font-semibold">
                   Next →
                 </span>
-                <span className="text-xl block text-leafy-500 font-semibold">
+                <span className="block text-leafy-500 text-xl font-semibold">
                   {nextRoute.title}
                 </span>
               </a>
@@ -71,6 +71,6 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
         </div>
       </div> */}
     </>
-  )
-}, areEqual)
-DocsPageFooter.displayName = 'DocsPageFooter'
+  );
+}, areEqual);
+DocsPageFooter.displayName = "DocsPageFooter";
