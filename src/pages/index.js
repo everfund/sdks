@@ -60,7 +60,7 @@ const Home = ({ sponsors }) => {
     <>
       <Seo
         title="Everfund"
-        description="Hooks for fetching, caching and updating asynchronous data in React"
+        description="Plug and Play donation system"
       />
       <Head>
         <title>Everfund - Plug and Play donation system</title>
