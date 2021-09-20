@@ -48,11 +48,11 @@ export const Nav = () => (
                   <a className="leading-6 font-medium bg-sunny-500 px-6 py-4">Get Started</a>
                 </Link>
               </div>
-              <div>
+              {/* <div>
                 <Link href="/examples/simple">
                   <a className="leading-6 font-medium bg-ivy text-white px-6 py-4">Demo</a>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
