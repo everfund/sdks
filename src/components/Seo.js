@@ -18,8 +18,8 @@ export const Seo = withRouter(
       {description != undefined && (
         <meta name="description" key="description" content={description} />
       )}
-      {/* <link rel="icon" type="image/x-icon" href={favicon} />
-      <link rel="apple-touch-icon" href={favicon} /> */}
+      <link rel="icon" type="image/x-icon" href="https://developer.everfund.co.uk/favicon.png" />
+      <link rel="apple-touch-icon" href="https://developer.everfund.co.uk/favicon.png" />
 
       {/* OPEN GRAPH */}
       <meta property="og:type" key="og:type" content="website" />
@@ -52,11 +52,11 @@ export const Seo = withRouter(
         key="twitter:card"
         content="summary_large_image"
       />
-      <meta name="twitter:site" key="twitter:site" content="@tannerlinsley" />
+      <meta name="twitter:site" key="twitter:site" content="@everfunduk" />
       <meta
         name="twitter:creator"
         key="twitter:creator"
-        content="@tannerlinsley"
+        content="@everfunduk"
       />
       {title != undefined && (
         <meta name="twitter:title" key="twitter:title" content={title} />

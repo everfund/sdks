@@ -22,7 +22,7 @@ const remarkPlugins = [
   require("remark-images"),
   [
     require("remark-github"),
-    { repository: "https://github.com/tannerlinsley/react-query" },
+    { repository: "https://github.com/everfund/dev-docs" },
   ],
   require("remark-unwrap-images"),
   [
