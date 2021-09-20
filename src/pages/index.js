@@ -9,50 +9,49 @@ import { Banner } from "../components/Banner";
 import { Sticky } from "../components/Sticky";
 import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
-import { ClientsMarquee } from "../components/clients/ClientsMarquee";
 import { Seo } from "../components/Seo";
 
 const Home = ({ sponsors }) => {
   const features = [
     {
       name: "Single Donations",
-      description:
-        "You can manage phone, email and chat conversations all from a single mailbox.",
+      // description:
+      //   "You can manage phone, email and chat conversations all from a single mailbox.",
     },
     {
       name: "Recurring Donations",
-      description:
-        "You can manage phone, email and chat conversations all from a single mailbox.",
+      // description:
+      //   "You can manage phone, email and chat conversations all from a single mailbox.",
     },
     {
       name: "GDPR Concent",
-      description:
-        "You can manage phone, email and chat conversations all from a single mailbox.",
+      // description:
+      //   "You can manage phone, email and chat conversations all from a single mailbox.",
     },
     {
       name: "Cover Processor Fees",
-      description:
-        "You can manage phone, email and chat conversations all from a single mailbox.",
+      // description:
+      //   "You can manage phone, email and chat conversations all from a single mailbox.",
     },
     {
       name: "Custom Emails",
-      description:
-        "Find what you need with advanced filters, bulk actions, and quick views.",
+      // description:
+      //   "Find what you need with advanced filters, bulk actions, and quick views.",
     },
     {
       name: "Customisable Donation System",
-      description:
-        "Find what you need with advanced filters, bulk actions, and quick views.",
+      // description:
+      //   "Find what you need with advanced filters, bulk actions, and quick views.",
     },
     {
       name: "Apple / Google Pay",
-      description:
-        "Find what you need with advanced filters, bulk actions, and quick views.",
+    //   description:
+    //     "Find what you need with advanced filters, bulk actions, and quick views.",
     },
     {
       name: "Bacs Direct Debits",
-      description:
-        "Find what you need with advanced filters, bulk actions, and quick views.",
+      // description:
+      //   "Find what you need with advanced filters, bulk actions, and quick views.",
     },
   ];
 
@@ -133,9 +132,9 @@ const Home = ({ sponsors }) => {
                         {feature.name}
                       </p>
                     </dt>
-                    <dd className="ml-9 mt-2 text-gray-500 text-base">
+                    {/* <dd className="ml-9 mt-2 text-gray-500 text-base">
                       {feature.description}
-                    </dd>
+                    </dd> */}
                   </div>
                 ))}
               </dl>
@@ -194,17 +193,3 @@ const Home = ({ sponsors }) => {
 
 export default Home;
 Home.displayName = "Home";
-const Check = React.memo(() => (
-  <svg
-    fill="none"
-    stroke="currentColor"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    strokeWidth="3"
-    className="w-3 h-3"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <path d="M20 6L9 17l-5-5"></path>
-  </svg>
-));

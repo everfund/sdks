@@ -18,20 +18,29 @@ import Link from "next/link";
   ```
 */
 const navigation = {
-  solutions: [
-    { name: "Donation Links", href: "#" },
-    { name: "Donation Widget", href: "#" },
-  ],
   support: [
-    { name: "Blog", href: "#" },
-    { name: "Developer Docs", href: "#" },
-    { name: "Helpdesk", href: "#" },
+    { name: "Main Website", href: "https://everfund.co.uk/" },
+    { name: "Donation Links", href: "https://everfund.co.uk/donation-link/" },
+    { name: "Blog", href: "https://everfund.co.uk/blog/" },
+    { name: "Developer Docs", href: "https://developer.everfund.co.uk/" },
   ],
   legal: [
-    { name: "Cookies Policy", href: "#" },
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms And Conditions", href: "#" },
-    { name: "Sub-Processors", href: "#" },
+    {
+      name: "Cookies Policy",
+      href: "https://everfund.co.uk/legal/cookies-policy/",
+    },
+    {
+      name: "Privacy Policy",
+      href: "https://everfund.co.uk/legal/privacy-policy/",
+    },
+    {
+      name: "Terms And Conditions",
+      href: "https://everfund.co.uk/legal/terms-and-conditions/",
+    },
+    {
+      name: "Sub-Processors",
+      href: "https://everfund.co.uk/legal/sub-processors/",
+    },
   ],
   social: [
     // {
