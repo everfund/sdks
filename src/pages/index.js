@@ -42,8 +42,7 @@ const Home = ({ sponsors }) => {
       />
       <Head>
         <title>
-          Everfund - Hooks for fetching, caching and updating asynchronous
-          data in React
+          Everfund - Plug and Play donation system
         </title>
       </Head>
       <div className="bg-white h-full min-h-full">
@@ -70,11 +69,9 @@ const Home = ({ sponsors }) => {
                         Get Started
                       </a>
                     </Link>
-                    <Link href="/">
-                      <a className="inline-flex items-center px-6 py-2 text-lg font-medium border border-transparent focus:outline-none transition focus:ring-2 focus:ring-offset-2  text-white bg-ivy hover:bg-black hover:text-white focus:ring-ivy">
+                      <a href="https://everfund.co.uk" className="inline-flex items-center px-6 py-2 text-lg font-medium border border-transparent focus:outline-none transition focus:ring-2 focus:ring-offset-2  text-white bg-ivy hover:bg-black hover:text-white focus:ring-ivy">
                         Main Website
                       </a>
-                    </Link>
                   </div>
                 </div>
               </div>

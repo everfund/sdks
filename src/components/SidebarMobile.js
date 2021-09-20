@@ -3,14 +3,14 @@ import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'bo
 import cn from 'classnames';
 import { Container } from './Container';
 import { FiChevronRight as ArrowRightSidebar } from 'react-icons/fi';
-import { Search } from './Search';
+// import { Search } from './Search';
 import { useRouter } from 'next/router';
 export function SidebarMobile({
   children
 }) {
   const [opened, setOpen] = React.useState(false);
   const menuRef = React.useRef(null);
-  const searchRef = React.useRef(null);
+  // const searchRef = React.useRef(null);
   const router = useRouter();
 
   const openMenu = () => {
@@ -47,9 +47,9 @@ export function SidebarMobile({
   }, [router.asPath]);
   return <div className="lg:hidden">
       <Container>
-        <div className="sidebar-search py-2 z-10">
+        {/* <div className="sidebar-search py-2 z-10">
           <Search />
-        </div>
+        </div> */}
         <label htmlFor="dropdown-input" className={cn('w-full', {
         opened
       })}>

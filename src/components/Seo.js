@@ -11,7 +11,7 @@ export const Seo = withRouter(
       {/* DEFAULT */}
 
       {title != undefined && (
-        <title key="title">{title} | React Query | TanStack</title>
+        <title key="title">{title} | Everfund | Plug and Play donation system</title>
       )}
       {description != undefined && (
         <meta name="description" key="description" content={description} />
@@ -24,7 +24,7 @@ export const Seo = withRouter(
       <meta
         property="og:url"
         key="og:url"
-        content={`https://react-query.tanstack.com${router.pathname}`}
+        content={`https://developer.everfund.co.uk${router.pathname}`}
       />
       {title != undefined && (
         <meta property="og:title" content={title} key="og:title" />
@@ -40,7 +40,7 @@ export const Seo = withRouter(
         <meta
           property="og:image"
           key="og:image"
-          content={`https://react-query.tanstack.com${image}`}
+          content={`https://developer.everfund.co.uk${image}`}
         />
       )}
 
@@ -70,7 +70,7 @@ export const Seo = withRouter(
         <meta
           name="twitter:image"
           key="twitter:image"
-          content={`https://react-query.tanstack.com${image}`}
+          content={`https://developer.everfund.co.uk${image}`}
         />
       )}
 

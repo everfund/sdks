@@ -2,7 +2,6 @@ import * as React from "react";
 import Link from "next/link";
 import logoSrc from "../images/logo.svg";
 import { siteConfig } from "siteConfig";
-import { Search } from "./Search";
 
 export const Nav = () => (
   <>
@@ -37,20 +36,11 @@ export const Nav = () => (
             </Link>
           </div>
 
-          {/* <div className="flex-grow hidden lg:block ml-8">
-          <Search />
-        </div> */}
-
           <div className="flex flex-grow items-center justify-between w-3/4 md:w-auto md:justify-end space-x-4 md:space-x-8 h-16">
             <div className="flex space-x-4 md:space-x-8 text-sm md:text-base">
               <div>
                 <Link href="/overview">
                   <a className="leading-6 font-medium bg-sunny-500 px-6 py-4">Get Started</a>
-                </Link>
-              </div>
-              <div>
-                <Link href="/examples/simple">
-                  <a className="leading-6 font-medium bg-ivy text-white px-6 py-4">Demo</a>
                 </Link>
               </div>
             </div>
