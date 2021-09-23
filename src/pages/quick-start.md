@@ -9,12 +9,10 @@ Everfund SDK can can be installed through multiple methods such as CDN and NPM i
 
 ### Install from NPM
 
-To install from NPM
-
 ```bash
-yarn add everfund-sdk
+yarn add @everfund/sdk
 // or
-npm install everfund-sdk
+npm install @everfund/sdk
 ```
 
 ### Install from CDN
