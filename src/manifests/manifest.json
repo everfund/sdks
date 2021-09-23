@@ -59,8 +59,8 @@
       "routes": [
         {
           "title": "Plain Javscript",
-          "path": "/examples/react",
-          "editUrl": "/examples/react.md"
+          "path": "/examples/simple",
+          "editUrl": "/examples/simple.mdx"
         },
         {
           "title": "React",
@@ -73,9 +73,9 @@
           "editUrl": "/examples/vue.md"
         },
         {
-          "title": "Sevelt",
-          "path": "/examples/sevelt",
-          "editUrl": "/examples/sevelt.md"
+          "title": "svelte",
+          "path": "/examples/svelte",
+          "editUrl": "/examples/svelte.md"
         }
       ]
     }
