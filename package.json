@@ -12,7 +12,7 @@
     "format": "yarn prettier --write ."
   },
   "author": "Christopher Burns",
-  "homepage": "https://developer.everfubd.io",
+  "homepage": "https://developer.everfund.io",
   "license": "MIT",
   "repository": {
     "type": "git",
