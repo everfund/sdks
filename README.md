@@ -2,10 +2,10 @@
     <a href="https://developer.everfund.io/" target="_blank">
       <img alt="Everfund" width="350" src="https://ik.imagekit.io/everfund/everfund-sticker_U4p0fY8gw.svg">
     </a>
-    <br>
+</p>
+
 Plug and play Donation System.
 Get peace of mind with secure, extensible charity donation system that’s built to scale. All with a few lines of code.
-</p>
 
 ## Quick Features
 
