@@ -73,9 +73,9 @@
           "editUrl": "/examples/vue.md"
         },
         {
-          "title": "svelte",
+          "title": "Svelte",
           "path": "/examples/svelte",
-          "editUrl": "/examples/svelte.md"
+          "editUrl": "/examples/svelte.mdx"
         }
       ]
     }
