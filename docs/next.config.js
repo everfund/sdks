@@ -22,7 +22,7 @@ const remarkPlugins = [
   require("remark-images"),
   [
     require("remark-github"),
-    { repository: "https://github.com/everfund/dev-docs" },
+    { repository: "https://github.com/everfund/everfund" },
   ],
   require("remark-unwrap-images"),
   [
