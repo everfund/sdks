@@ -179,7 +179,7 @@ export const Footer = (props) => {
             <h3 className="text-white text-sm font-semibold tracking-wider uppercase">
               Subscribe to our newsletter
             </h3>
-            <p className="mt-4 text-leafy-100 text-opacity-75 text-base">
+            <p className="text-leafy-100 mt-4 text-opacity-75 text-base">
               The latest news, articles, and resources, sent to your inbox
               weekly.
             </p>
@@ -193,13 +193,13 @@ export const Footer = (props) => {
                 id="email-address"
                 autoComplete="email"
                 required
-                className="placeholder-gray-500 focus:placeholder-gray-200 focus:z-10 px-4 py-2 w-full min-w-0 text-white text-sm bg-leafy-800 border focus:border-0 border-transparent rounded-none focus:outline-none appearance-none focus:ring-2 focus:ring-leafy-500 focus:ring-offset-2 focus:ring-offset-ivy"
+                className="placeholder-gray-500 focus:placeholder-gray-200 bg-leafy-800 focus:ring-leafy-500 focus:ring-offset-ivy focus:z-10 px-4 py-2 w-full min-w-0 text-white text-sm border focus:border-0 border-transparent rounded-none focus:outline-none appearance-none focus:ring-2 focus:ring-offset-2"
                 placeholder="Enter your email"
               />
               <div className="mt-3 sm:flex-shrink-0 sm:mt-0">
                 <button
                   type="submit"
-                  className="flex items-center justify-center px-4 py-2 w-full text-leafy-100 text-base font-medium bg-leafy-500 hover:bg-leafy-600 border border-transparent rounded-none focus:outline-none focus:ring-2 focus:ring-leafy-500 focus:ring-offset-2 focus:ring-offset-ivy"
+                  className="text-leafy-100 bg-leafy-500 hover:bg-leafy-600 focus:ring-leafy-500 focus:ring-offset-ivy flex items-center justify-center px-4 py-2 w-full text-base font-medium border border-transparent rounded-none focus:outline-none focus:ring-2 focus:ring-offset-2"
                 >
                   Subscribe
                 </button>

@@ -107,7 +107,7 @@ export const LayoutDocs = (props) => {
                     }}
                   >
                     <div className="sticky top-24 overflow-y-auto">
-                      <h4 className="inline-block mb-2 mt-2 px-4 py-2 text-white text-sm font-semibold bg-ivy uppercase">
+                      <h4 className="bg-ivy inline-block mb-2 mt-2 px-4 py-2 text-white text-sm font-semibold uppercase">
                         On this page
                       </h4>
                       <Toc title={props.meta.title} />
