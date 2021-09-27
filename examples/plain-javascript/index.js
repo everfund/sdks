@@ -13,6 +13,6 @@ document.getElementById("donate-modal").addEventListener("click", () => {
     onClose: function () {
       //
       console.log("Closed Modal");
-    }
+    },
   });
 });

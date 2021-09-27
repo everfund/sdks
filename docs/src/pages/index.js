@@ -45,8 +45,8 @@ const Home = ({ sponsors }) => {
     },
     {
       name: "Apple / Google Pay",
-    //   description:
-    //     "Find what you need with advanced filters, bulk actions, and quick views.",
+      //   description:
+      //     "Find what you need with advanced filters, bulk actions, and quick views.",
     },
     {
       name: "Bacs Direct Debits",
@@ -57,10 +57,7 @@ const Home = ({ sponsors }) => {
 
   return (
     <>
-      <Seo
-        title="Everfund"
-        description="Plug and Play donation system"
-      />
+      <Seo title="Everfund" description="Plug and Play donation system" />
       <Head>
         <title>Everfund - Plug and Play donation system</title>
       </Head>
@@ -74,7 +71,7 @@ const Home = ({ sponsors }) => {
             <div className="grid grid-cols-12 lg:gap-8">
               <div className="flex col-span-12 items-center justify-center lg:col-span-6">
                 <div className="text-center md:mx-auto md:max-w-2xl lg:text-left">
-                  <h1 className="pb-6 text-leafy-600 text-4xl font-extrabold tracking-tight leading-10 sm:text-6xl sm:leading-none lg:text-5xl xl:text-6xl">
+                  <h1 className="text-leafy-600 pb-6 text-4xl font-extrabold tracking-tight leading-10 sm:text-6xl sm:leading-none lg:text-5xl xl:text-6xl">
                     Plug and Play Donation system
                   </h1>
                   <p className="pb-6 text-gray-700 text-base sm:text-xl lg:text-lg xl:text-xl">
@@ -84,13 +81,13 @@ const Home = ({ sponsors }) => {
 
                   <div className="space-x-4">
                     <Link href="/overview">
-                      <a className="inline-flex items-center px-6 py-2 text-white hover:text-white text-lg font-medium bg-leafy-600 hover:bg-leafy-700 border border-transparent focus:outline-none transition focus:ring-2 focus:ring-leafy-500 focus:ring-offset-2">
+                      <a className="bg-leafy-600 hover:bg-leafy-700 focus:ring-leafy-500 inline-flex items-center px-6 py-2 text-white hover:text-white text-lg font-medium border border-transparent focus:outline-none transition focus:ring-2 focus:ring-offset-2">
                         Get Started
                       </a>
                     </Link>
                     <a
                       href="https://everfund.co.uk"
-                      className="inline-flex items-center px-6 py-2 text-white hover:text-white text-lg font-medium hover:bg-black bg-ivy border border-transparent focus:outline-none transition focus:ring-2 focus:ring-ivy focus:ring-offset-2"
+                      className="bg-ivy focus:ring-ivy inline-flex items-center px-6 py-2 text-white hover:text-white text-lg font-medium hover:bg-black border border-transparent focus:outline-none transition focus:ring-2 focus:ring-offset-2"
                     >
                       Main Website
                     </a>
@@ -107,7 +104,7 @@ const Home = ({ sponsors }) => {
         <div className="bg-sunny-100">
           <div className="mx-auto px-4 py-16 max-w-7xl sm:px-6 lg:grid lg:gap-x-8 lg:grid-cols-3 lg:px-8 lg:py-24">
             <div>
-              <h2 className="inline-block px-4 text-base font-semibold tracking-wide bg-sunny-500">
+              <h2 className="bg-sunny-500 inline-block px-4 text-base font-semibold tracking-wide">
                 Everything you need
               </h2>
               <p className="mt-4 text-gray-900 text-3xl font-extrabold">
@@ -159,14 +156,14 @@ const Home = ({ sponsors }) => {
             </p>
             <div className="flex items-center justify-center space-x-2">
               <Link href="/overview">
-                <a className="inline-flex items-center justify-center mt-8 px-5 py-3 w-full text-black text-base font-medium bg-sunny-500 hover:bg-sunny-600 border border-transparent sm:w-auto">
+                <a className="bg-sunny-500 hover:bg-sunny-600 inline-flex items-center justify-center mt-8 px-5 py-3 w-full text-black text-base font-medium border border-transparent sm:w-auto">
                   Get Started
                 </a>
               </Link>
 
               <button
                 onClick={() => $crisp.push(["do", "chat:open"])}
-                className="inline-flex items-center justify-center mt-8 px-5 py-3 w-full text-white text-base font-medium hover:bg-black bg-ivy border border-transparent sm:w-auto"
+                className="bg-ivy inline-flex items-center justify-center mt-8 px-5 py-3 w-full text-white text-base font-medium hover:bg-black border border-transparent sm:w-auto"
               >
                 Need Support?
               </button>

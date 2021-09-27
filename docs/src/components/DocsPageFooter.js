@@ -25,7 +25,7 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
                 <span className="block mb-1 text-gray-500 text-sm font-semibold">
                   ← Prev
                 </span>
-                <span className="block text-leafy-500 text-xl font-semibold">
+                <span className="text-leafy-500 block text-xl font-semibold">
                   {prevRoute.title}
                 </span>
               </a>
@@ -39,7 +39,7 @@ export const DocsPageFooter = React.memo(({ route, prevRoute, nextRoute }) => {
                 <span className="block mb-1 text-gray-500 text-sm font-semibold">
                   Next →
                 </span>
-                <span className="block text-leafy-500 text-xl font-semibold">
+                <span className="text-leafy-500 block text-xl font-semibold">
                   {nextRoute.title}
                 </span>
               </a>

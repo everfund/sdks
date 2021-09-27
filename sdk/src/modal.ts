@@ -57,7 +57,6 @@ class EverfundClient {
       close_on_success: closeOnSuccess,
     })}`
 
-
     // @ts-ignore
     modalFrame.allowPaymentRequest = true
     modalFrame.className = styles.embedIframe

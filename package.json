@@ -1,18 +1,27 @@
 {
-    "private": true,
-    "name": "everfund-monorepo",
-    "version": "1.0.0",
-    "workspaces": {
-      "packages": [
-        "docs",
-        "sdk"
-      ]
-    },
-    "author": "Christopher Burns",
-    "homepage": "https://developer.everfubd.io",
-    "license": "MIT",
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/everfund/everfund"
-    }
+  "private": true,
+  "name": "everfund-monorepo",
+  "version": "1.0.0",
+  "workspaces": {
+    "packages": [
+      "docs",
+      "sdk"
+    ]
+  },
+  "scripts": {
+    "format": "yarn prettier --write ."
+  },
+  "author": "Christopher Burns",
+  "homepage": "https://developer.everfubd.io",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everfund/everfund"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1",
+    "prettier-package-json": "^2.6.0",
+    "prettier-plugin-sort-imports": "^1.0.1",
+    "prettier-plugin-tailwind": "^2.2.12"
+  }
 }

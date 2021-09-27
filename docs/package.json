@@ -1,8 +1,8 @@
 {
-  "name": "fdocs3",
+  "name": "@everfund/docs",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jared Palmer <jared@palmer.net>",
+  "author": "Christopher Burns <christopher@everfund.co.uk>",
   "license": "MIT",
   "scripts": {
     "dev": "next",
@@ -48,9 +48,6 @@
     "dotenv-load": "^2.0.0",
     "postcss": "^8.3.6",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.4.1",
-    "prettier-plugin-sort-imports": "^1.0.1",
-    "prettier-plugin-tailwind": "^2.2.12",
     "remark-parse": "^8.0.3",
     "tailwindcss": "^2.2.15",
     "webp-loader": "^0.6.0"
