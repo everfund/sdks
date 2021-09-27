@@ -1,0 +1,61 @@
+{
+  "name": "fdocs3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jared Palmer <jared@palmer.net>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "index-docs": "node ./.next/serverless/scripts/index-docs.js"
+  },
+  "dependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@heroicons/react": "^1.0.4",
+    "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@mdx-js/tag": "^0.20.3",
+    "@next/mdx": "^11.1.2",
+    "@reactions/component": "^2.0.2",
+    "body-scroll-lock": "^3.1.5",
+    "classnames": "^2.3.1",
+    "copy-to-clipboard": "^3.3.1",
+    "framer-motion": "^4.1.17",
+    "gray-matter": "^4.0.3",
+    "next": "^11.1.2",
+    "next-images": "^1.8.1",
+    "next-optimized-images": "^2.6.2",
+    "prismjs": "^1.25.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-live": "^2.3.0",
+    "remark": "^13.0.0",
+    "remark-autolink-headings": "^6.1.0",
+    "remark-emoji": "^2.2.0",
+    "remark-footnotes": "^3.0.0",
+    "remark-github": "^10.1.0",
+    "remark-images": "^2.0.0",
+    "remark-slug": "^6.1.0",
+    "remark-toc": "^7.2.0",
+    "remark-unwrap-images": "^2.1.0",
+    "unist-util-visit": "^2.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.4",
+    "dotenv-load": "^2.0.0",
+    "postcss": "^8.3.6",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-sort-imports": "^1.0.1",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "remark-parse": "^8.0.3",
+    "tailwindcss": "^2.2.15",
+    "webp-loader": "^0.6.0"
+  },
+  "engines": {
+    "node": ">=12.x"
+  }
+}
