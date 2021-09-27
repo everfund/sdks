@@ -1,6 +1,6 @@
 {
   "name": "@everfund/docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
   "license": "MIT",
