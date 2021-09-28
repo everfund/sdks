@@ -4,7 +4,7 @@ import "core-js/features/array/includes"
 import "core-js/features/promise"
 import elementClosest from "element-closest"
 import "element-remove"
-import styles from "./modal.module.css"
+import { keyframes, css } from "@stitches/core"
 import { ModalProps } from "./types"
 
 export interface CustomWindow extends Window {
@@ -59,28 +59,45 @@ class EverfundClient {
 
     // @ts-ignore
     modalFrame.allowPaymentRequest = true
-    modalFrame.className = styles.embedIframe
+
+    const cssEmbedIframe = css({
+      border: "none",
+      width: "100%",
+      margin: 0,
+      height: "100%",
+    })
+
+    modalFrame.className = cssEmbedIframe()
 
     modalFrame.addEventListener("load", function () {
-      const loadingSpinner = document.querySelector<HTMLDivElement>(
-        "." + styles.ldsRing
-      )
-      const modalWrap = document.querySelector<HTMLDivElement>(
-        "." + styles.embedModal
-      )
+      const loadingSpinner = document.querySelector<HTMLDivElement>(".ldsRing")
+      const modalWrap = document.querySelector<HTMLDivElement>(".embedModal")
       loadingSpinner?.remove()
       modalWrap!.style.transform = "opacity(1)"
     })
 
     const modalWrap = document.createElement("div")
-    modalWrap.className = styles.embedModal
+
+    const cssEmbedModal = css({
+      pointerEvents: "all",
+      zIndex: "9999999",
+      display: "flex",
+      width: "100%",
+      transform: "opacity(0)",
+      transition: "transform 0.3s ease",
+      overflowY: "auto",
+      "-webkit-overflow-scrolling": "touch",
+      height: "100%",
+    })
+
+    modalWrap.className = `embedModal ${cssEmbedModal()}`
     modalWrap.appendChild(modalFrame)
 
     const closebutton = document.createElement("button")
-    closebutton.className = styles.closeButton
+    closebutton.className = "closeButton"
 
     closebutton.onclick = () => {
-      const embed = document.querySelector("." + styles.embedContainer)
+      const embed = document.querySelector("#embedContainer")
       embed && embed.remove()
       Everfund.modalOpen = false
       Everfund.onClose()
@@ -88,7 +105,43 @@ class EverfundClient {
     }
 
     const loadingSpinner = document.createElement("div")
-    loadingSpinner.className = styles.ldsRing
+
+    const cssKeyframeLDsring = keyframes({
+      "0%": { transform: "rotate(0deg)" },
+      "100%": { transform: "rotate(360deg)" },
+    })
+
+    const cssLdsRing = css({
+      display: "inline-block",
+      position: "absolute",
+      left: "calc(50% - 32px)",
+      top: "calc(50% - 32px)",
+      width: "64px",
+      height: "64px",
+      "& div": {
+        boxSizing: "border-box",
+        display: "block",
+        position: "absolute",
+        width: "51px",
+        height: "51px",
+        margin: "6px",
+        border: "6px solid white",
+        borderRadius: "50%",
+        animation: `${cssKeyframeLDsring} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite`,
+        borderColor: "white transparent transparent transparent",
+      },
+      "& div:nth-child(1)": {
+        animationDelay: " -0.45s",
+      },
+      "& div:nth-child(2)": {
+        animationDelay: " -0.3s",
+      },
+      "& div:nth-child(3)": {
+        animationDelay: " -0.15s",
+      },
+    })
+    loadingSpinner.className = `ldsRing ${cssLdsRing()}`
+
     const div = document.createElement("div")
 
     Array(4)
@@ -98,7 +151,22 @@ class EverfundClient {
       })
 
     const embedContainer = document.createElement("div")
-    embedContainer.className = styles.embedContainer
+
+    const cssEmbedContainer = css({
+      position: "fixed",
+      top: "0",
+      left: "0",
+      right: "0",
+      bottom: "0",
+      background: "rgba(0, 0, 0, 0.7)",
+      zIndex: "9999998",
+      display: "flex",
+      justifyContent: "space-around",
+      alignItems: "stretch",
+      backdropFilter: "blur(8px)",
+    })
+
+    embedContainer.className = `embedContainer ${cssEmbedContainer()}`
     embedContainer.appendChild(loadingSpinner)
     embedContainer.appendChild(modalWrap)
 
@@ -138,15 +206,6 @@ class EverfundClient {
   }
 
   private setupButtonListeners() {
-    var head = document.head
-    var link = document.createElement("link")
-
-    link.type = "text/css"
-    link.rel = "stylesheet"
-    link.href = "https://script.everfund.co.uk/m.css"
-
-    head.appendChild(link)
-
     document.addEventListener(
       "click",
       function (e: MouseEvent) {
@@ -201,11 +260,10 @@ class EverfundClient {
       function (e) {
         switch (e.data.message) {
           case "everfund:ready":
-            const loadingSpinner = document.querySelector<HTMLDivElement>(
-              "." + styles.ldsRing
-            )
+            const loadingSpinner =
+              document.querySelector<HTMLDivElement>("#ldsRing")
             const modalWrap = document.querySelector<HTMLDivElement>(
-              "." + styles.embedModal
+              "." + "embedModal"
             )
             loadingSpinner?.remove()
             modalWrap!.style.transform = "opacity(1)"
@@ -218,7 +276,7 @@ class EverfundClient {
             Everfund.onFailure(e.data.content)
             break
           case "everfund:close":
-            const embed = document.querySelector("." + styles.embedContainer)
+            const embed = document.querySelector("." + "embedContainer")
             embed && embed.remove()
             Everfund.modalOpen = false
             Everfund.onClose()

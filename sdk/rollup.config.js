@@ -3,18 +3,12 @@ import commonjs from "@rollup/plugin-commonjs"
 import gzipPlugin from "rollup-plugin-gzip"
 import resolve from "rollup-plugin-node-resolve"
 import external from "rollup-plugin-peer-deps-external"
-import postcss from "rollup-plugin-postcss"
 import typescript from "rollup-plugin-typescript2"
 import { uglify } from "rollup-plugin-uglify"
 import { brotliCompressSync } from "zlib"
 
 const plugins = [
   external(),
-  postcss({
-    extract: true,
-    modules: true,
-    minimize: true,
-  }),
   resolve(),
   typescript({
     rollupCommonJSResolveHack: true,
