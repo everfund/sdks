@@ -1,38 +1,65 @@
 {
-  "name": "@everfund/sdk",
   "version": "1.0.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "demo": "yarn parcel demo/index.html"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@everfund/sdk",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "deploy": "npm run build && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "serve ./dist",
-    "format": "yarn prettier --write ."
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^20.0.0",
-    "@types/element-closest": "^3.0.0",
-    "postcss": "^8.3.8",
-    "rollup": "^2.57.0",
-    "rollup-plugin-gzip": "^2.5.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.1",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "rollup-plugin-uglify": "^6.0.4",
-    "serve": "^12.0.1",
-    "typescript": "^4.4.3"
-  },
+  "module": "dist/sdk-new.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/sdk-new.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/sdk-new.esm.js",
+      "limit": "10 KB"
+    }
+  ],
   "dependencies": {
+    "@stitches/core": "^1.2.1",
     "core-js": "^3.18.1",
     "element-closest": "^3.0.2",
     "element-remove": "^1.0.4"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^5.0.5",
+    "@types/element-closest": "^3.0.0",
+    "husky": "^7.0.2",
+    "parcel": "^2.0.0-rc.0",
+    "size-limit": "^5.0.5",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
   }
 }

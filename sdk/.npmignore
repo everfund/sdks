@@ -4,3 +4,6 @@
 prettier.config.js
 rollup.config.js
 tsconfig.json
+demo
+.parcel-cache
+.github
