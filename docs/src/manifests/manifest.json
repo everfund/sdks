@@ -15,6 +15,17 @@
           "editUrl": "/quick-start.md"
         },
         {
+          "title": "Change log",
+          "path": "/changelog",
+          "editUrl": "/changelog.md"
+        }
+      ]
+    },
+    {
+      "title": "Donation Types",
+      "heading": true,
+      "routes": [
+        {
           "title": "Donation Link",
           "path": "/donation-link",
           "editUrl": "/donation-link.md"
