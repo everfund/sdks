@@ -11,11 +11,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
+    "start": "tsdx watch --format cjs,esm,umd --name ef-sdk",
+    "build": "tsdx build --format cjs,esm,umd --name ef-sdk",
+    "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
-    "prepare": "tsdx build",
+    "prepare": "tsdx build --format cjs,esm,umd --name ef-sdk",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "demo": "yarn parcel demo/index.html"
