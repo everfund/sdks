@@ -5,7 +5,6 @@ class Crisp extends React.Component {
     // Include the Crisp code here, without the <script></script> tags
     window.$crisp = []
     window.CRISP_WEBSITE_ID = "a4c6641c-a31d-4038-8663-bae82f05ea62"
-
     ;(function () {
       var d = document
       var s = d.createElement("script")

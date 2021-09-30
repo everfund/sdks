@@ -76,7 +76,7 @@
         {
           "title": "React",
           "path": "/examples/react",
-          "editUrl": "/examples/react.md"
+          "editUrl": "/examples/react.mdx"
         },
         {
           "title": "Vue",
