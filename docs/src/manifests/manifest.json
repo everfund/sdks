@@ -81,7 +81,7 @@
         {
           "title": "Vue",
           "path": "/examples/vue",
-          "editUrl": "/examples/vue.md"
+          "editUrl": "/examples/vue.mdx"
         },
         {
           "title": "Svelte",
