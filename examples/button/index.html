@@ -44,26 +44,26 @@
         function l() {
           if (!d.getElementById(i)) {
             var f = d.getElementsByTagName(s)[0],
-              e = d.createElement(s);
-            (e.type = "text/javascript"),
+              e = d.createElement(s)
+            ;(e.type = "text/javascript"),
               (e.async = !0),
               (e.src = "https://script.everfund.co.uk/m.js"),
-              f.parentNode.insertBefore(e, f);
+              f.parentNode.insertBefore(e, f)
           }
         }
         if ("function" != typeof w.Everfund) {
           var c = function () {
-            c.q.push(arguments);
-          };
-          (c.q = []),
+            c.q.push(arguments)
+          }
+          ;(c.q = []),
             (w.Everfund = c),
             "complete" === d.readyState
               ? l()
               : w.attachEvent
               ? w.attachEvent("onload", l)
-              : w.addEventListener("load", l, !1);
+              : w.addEventListener("load", l, !1)
         }
-      })(window, document, "everfund", "script");
+      })(window, document, "everfund", "script")
     </script>
   </body>
 </html>

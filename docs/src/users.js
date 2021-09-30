@@ -7,4 +7,4 @@ export const users = [
   "Bomber County Gateway Trust",
   "NW Counselling Hub",
   "Jerry Green",
-];
+]

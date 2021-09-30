@@ -1,6 +1,6 @@
-import React from "react";
-import Head from "next/head";
-import { withRouter } from "next/router";
+import React from "react"
+import Head from "next/head"
+import { withRouter } from "next/router"
 
 // const ogImage = require('images/react-query-og.png?url')
 // const favicon = require('images/favicon.png?url')
@@ -94,4 +94,4 @@ export const Seo = withRouter(
       {children}
     </Head>
   )
-);
+)

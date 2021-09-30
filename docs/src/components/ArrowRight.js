@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 export function ArrowRight({ fill = "#718096", width = 6, height = 10 }) {
   return (
     <svg
@@ -14,5 +14,5 @@ export function ArrowRight({ fill = "#718096", width = 6, height = 10 }) {
         strokeLinecap="square"
       />
     </svg>
-  );
+  )
 }

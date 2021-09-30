@@ -1,50 +1,50 @@
-import * as React from "react";
+import * as React from "react"
 import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
-} from "body-scroll-lock";
-import cn from "classnames";
-import { Container } from "./Container";
-import { FiChevronRight as ArrowRightSidebar } from "react-icons/fi";
-import { useRouter } from "next/router";
+} from "body-scroll-lock"
+import cn from "classnames"
+import { Container } from "./Container"
+import { FiChevronRight as ArrowRightSidebar } from "react-icons/fi"
+import { useRouter } from "next/router"
 export function SidebarMobile({ children }) {
-  const [opened, setOpen] = React.useState(false);
-  const menuRef = React.useRef(null);
-  const router = useRouter();
+  const [opened, setOpen] = React.useState(false)
+  const menuRef = React.useRef(null)
+  const router = useRouter()
 
   const openMenu = () => {
     if (menuRef.current != null) {
-      disableBodyScroll(menuRef.current);
-      setOpen(true);
+      disableBodyScroll(menuRef.current)
+      setOpen(true)
     }
-  };
+  }
 
   const closeMenu = () => {
     if (menuRef.current != null) {
-      enableBodyScroll(menuRef.current);
-      setOpen(false);
+      enableBodyScroll(menuRef.current)
+      setOpen(false)
     }
-  };
+  }
 
   const toggleOpen = () => {
     if (opened) {
-      closeMenu();
+      closeMenu()
     } else {
-      openMenu();
+      openMenu()
     }
-  };
+  }
 
   const onRouteChange = () => {
-    closeMenu();
-  };
+    closeMenu()
+  }
 
   React.useEffect(() => {
-    onRouteChange();
+    onRouteChange()
     return () => {
-      clearAllBodyScrollLocks();
-    };
-  }, [router.asPath]);
+      clearAllBodyScrollLocks()
+    }
+  }, [router.asPath])
   return (
     <div className="lg:hidden">
       <Container>
@@ -116,5 +116,5 @@ export function SidebarMobile({ children }) {
         `}</style>
       </Container>
     </div>
-  );
+  )
 }

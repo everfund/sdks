@@ -1,11 +1,11 @@
-import React from "react";
-import "../styles/index.css";
-import Head from "next/head";
-import dynamic from "next/dynamic";
+import React from "react"
+import "../styles/index.css"
+import Head from "next/head"
+import dynamic from "next/dynamic"
 
 const CrispWithNoSSR = dynamic(() => import("../components/Crisp"), {
   ssr: false,
-});
+})
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }) {
       <CrispWithNoSSR />
       <Component {...pageProps} />
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

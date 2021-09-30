@@ -1,12 +1,12 @@
-const is = require("unist-util-is");
-const visit = require("unist-util-visit");
+const is = require("unist-util-is")
+const visit = require("unist-util-visit")
 
 const sigils = {
   "=>": "success",
   "->": "info",
   "~>": "warning",
   "!>": "danger",
-};
+}
 
 module.exports = function paragraphCustomAlertsPlugin() {
   return function transformer(tree) {
@@ -15,7 +15,7 @@ module.exports = function paragraphCustomAlertsPlugin() {
         Object.keys(sigils).forEach((symbol) => {
           if (textNode.value.startsWith(`${symbol} `)) {
             // Remove the literal sigil symbol from string contents
-            textNode.value = textNode.value.replace(`${symbol} `, "");
+            textNode.value = textNode.value.replace(`${symbol} `, "")
 
             // Wrap matched nodes with <div> (containing proper attributes)
             parent.children = parent.children.map((node) => {
@@ -35,11 +35,11 @@ module.exports = function paragraphCustomAlertsPlugin() {
                       },
                     },
                   }
-                : node;
-            });
+                : node
+            })
           }
-        });
-      });
-    });
-  };
-};
+        })
+      })
+    })
+  }
+}

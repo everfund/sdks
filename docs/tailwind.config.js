@@ -1,6 +1,6 @@
 // tailwind.config.js
 
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 module.exports = {
   purge: {
@@ -124,4 +124,4 @@ module.exports = {
     }),
   },
   variants: {},
-};
+}

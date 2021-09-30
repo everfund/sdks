@@ -1,5 +1,5 @@
-import * as React from "react";
-import markdownStyles from "./markdown.module.css";
+import * as React from "react"
+import markdownStyles from "./markdown.module.css"
 export const Markdown = ({ html: content }) => {
   return (
     <div
@@ -8,6 +8,6 @@ export const Markdown = ({ html: content }) => {
         __html: content,
       }}
     />
-  );
-};
-Markdown.displayName = "PostBody";
+  )
+}
+Markdown.displayName = "PostBody"
