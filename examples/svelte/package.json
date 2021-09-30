@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "svelte": "^3.32.3",
-    "@everfund/sdk": "1.1.01"
+    "@everfund/sdk": "1.1.0"
   },
   "scripts": {
     "build": "rollup -c",
