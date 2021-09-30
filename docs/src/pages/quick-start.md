@@ -26,26 +26,27 @@ To load from the CDN use this universal asynchronous script to load everfunds SD
       function l() {
         if (!d.getElementById(i)) {
           var f = d.getElementsByTagName(s)[0],
-            e = d.createElement(s);
-          (e.type = "text/javascript"),
+            e = d.createElement(s)
+          ;(e.type = "text/javascript"),
             (e.async = !0),
-            (e.src = "https://cdn.jsdelivr.net/npm/@everfund/sdk@1.1.0/dist/m.js"),
-            f.parentNode.insertBefore(e, f);
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/@everfund/sdk@1.1.0/dist/m.js"),
+            f.parentNode.insertBefore(e, f)
         }
       }
       if ("function" != typeof w.Everfund) {
         var c = function () {
-          c.q.push(arguments);
-        };
-        (c.q = []),
+          c.q.push(arguments)
+        }
+        ;(c.q = []),
           (w.Everfund = c),
           "complete" === d.readyState
             ? l()
             : w.attachEvent
             ? w.attachEvent("onload", l)
-            : w.addEventListener("load", l, !1);
+            : w.addEventListener("load", l, !1)
       }
-    })(window, document, "everfund", "script");
+    })(window, document, "everfund", "script")
   }
 </script>
 ```

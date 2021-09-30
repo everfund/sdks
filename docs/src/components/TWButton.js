@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRefWithAs } from "./forwardRefWithAs";
-import cx from "classnames";
+import * as React from "react"
+import { forwardRefWithAs } from "./forwardRefWithAs"
+import cx from "classnames"
 const mapIntentToColor = {
   primary: "blue",
   success: "green",
   danger: "red",
   warning: "yellow",
-};
+}
 export const TWButton = forwardRefWithAs(
   (
     {
@@ -24,42 +24,42 @@ export const TWButton = forwardRefWithAs(
     },
     ref
   ) => {
-    const tailwindColor = mapIntentToColor[intent] ?? color;
+    const tailwindColor = mapIntentToColor[intent] ?? color
     const iconIsOnlyChild = !!(
       (icon && !iconRight && !children) ||
       (iconRight && !icon && !children)
-    );
-    let sizeClasses;
-    let iconClasses;
+    )
+    let sizeClasses
+    let iconClasses
 
     if (size === "xs") {
-      sizeClasses = "text-xs rounded-md leading-4";
-      sizeClasses += iconIsOnlyChild ? " p-1.5" : " py-1.5 px-2.5";
-      iconClasses = "h-3 w-3";
+      sizeClasses = "text-xs rounded-md leading-4"
+      sizeClasses += iconIsOnlyChild ? " p-1.5" : " py-1.5 px-2.5"
+      iconClasses = "h-3 w-3"
     }
 
     if (size === "sm") {
-      sizeClasses = "text-sm rounded-md leading-4";
-      sizeClasses += iconIsOnlyChild ? " p-2" : " py-2 px-3";
-      iconClasses = "h-3 w-3";
+      sizeClasses = "text-sm rounded-md leading-4"
+      sizeClasses += iconIsOnlyChild ? " p-2" : " py-2 px-3"
+      iconClasses = "h-3 w-3"
     }
 
     if (size === "md") {
-      sizeClasses = "text-sm rounded-md leading-5";
-      sizeClasses += iconIsOnlyChild ? " p-2" : " py-2 px-4";
-      iconClasses = "h-5 w-5";
+      sizeClasses = "text-sm rounded-md leading-5"
+      sizeClasses += iconIsOnlyChild ? " p-2" : " py-2 px-4"
+      iconClasses = "h-5 w-5"
     }
 
     if (size === "lg") {
-      sizeClasses = "text-base rounded-md leading-6";
-      sizeClasses += iconIsOnlyChild ? " p-2" : " py-2 px-4";
-      iconClasses = "h-6 w-6";
+      sizeClasses = "text-base rounded-md leading-6"
+      sizeClasses += iconIsOnlyChild ? " p-2" : " py-2 px-4"
+      iconClasses = "h-6 w-6"
     }
 
     if (size === "xl") {
-      sizeClasses = "text-base rounded-md leading-6";
-      sizeClasses += iconIsOnlyChild ? " p-3" : " py-3 px-6";
-      iconClasses = "h-6 w-6";
+      sizeClasses = "text-base rounded-md leading-6"
+      sizeClasses += iconIsOnlyChild ? " p-3" : " py-3 px-6"
+      iconClasses = "h-6 w-6"
     }
 
     const leftIcon = icon
@@ -79,7 +79,7 @@ export const TWButton = forwardRefWithAs(
             icon?.props.className
           ),
         })
-      : null;
+      : null
     const rightIcon = iconRight
       ? React.cloneElement(iconRight, {
           ...iconRight.props,
@@ -97,7 +97,7 @@ export const TWButton = forwardRefWithAs(
             iconRight?.props.className
           ),
         })
-      : null;
+      : null
     const propsToPass = {
       ...props,
       className: cx(
@@ -122,13 +122,13 @@ export const TWButton = forwardRefWithAs(
           {rightIcon}
         </>
       ),
-    };
+    }
     return React.createElement(is, {
       ...propsToPass,
       ref,
       onClick,
       className: propsToPass.className,
-    });
+    })
   }
-);
-TWButton.displayName = "TWButton";
+)
+TWButton.displayName = "TWButton"

@@ -1,13 +1,13 @@
-import * as React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import cn from "classnames";
+import * as React from "react"
+import Link from "next/link"
+import { useRouter } from "next/router"
+import cn from "classnames"
 export function SidebarNavLink({
   route: { href, pathname, title, selected },
   onClick,
 }) {
-  const router = useRouter();
-  const onlyHashChange = pathname === router.pathname;
+  const router = useRouter()
+  const onlyHashChange = pathname === router.pathname
 
   return (
     <div
@@ -73,6 +73,6 @@ export function SidebarNavLink({
         }
       `}</style>
     </div>
-  );
+  )
 }
-SidebarNavLink.displayName = "SidebarNavLink";
+SidebarNavLink.displayName = "SidebarNavLink"

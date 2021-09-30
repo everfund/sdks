@@ -1,5 +1,5 @@
-import * as React from "react";
-import cn from "classnames";
+import * as React from "react"
+import cn from "classnames"
 export const Sticky = ({ offset, children, shadow }) => {
   return (
     <div
@@ -25,6 +25,6 @@ export const Sticky = ({ offset, children, shadow }) => {
         }
       `}</style>
     </div>
-  );
-};
-Sticky.displayName = "Sticky";
+  )
+}
+Sticky.displayName = "Sticky"

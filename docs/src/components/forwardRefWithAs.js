@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 /**
  * React.Ref uses the readonly type `React.RefObject` instead of
  * `React.MutableRefObject`, We pretty much always assume ref objects are
@@ -21,7 +21,7 @@ import * as React from "react";
  * @param Comp
  */
 export function forwardRefWithAs(comp) {
-  return React.forwardRef(comp);
+  return React.forwardRef(comp)
 }
 /*
 Test components to make sure our dynamic As prop components work as intended 

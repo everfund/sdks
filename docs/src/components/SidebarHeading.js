@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 export const SidebarHeading = ({ title, children }) => {
   return (
     // <div>
@@ -16,6 +16,6 @@ export const SidebarHeading = ({ title, children }) => {
         }
       `}</style>
     </div>
-  );
-};
-SidebarHeading.displayName = "SidebarHeading";
+  )
+}
+SidebarHeading.displayName = "SidebarHeading"

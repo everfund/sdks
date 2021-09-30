@@ -1,6 +1,6 @@
-import { useRef, useState, useEffect } from "react";
-import cn from "classnames";
-import { FiChevronDown } from "react-icons/fi";
+import { useRef, useState, useEffect } from "react"
+import cn from "classnames"
+import { FiChevronDown } from "react-icons/fi"
 export function SidebarCategory({
   isMobile,
   level = 1,
@@ -9,45 +9,45 @@ export function SidebarCategory({
   opened,
   children,
 }) {
-  const ref = useRef(null);
+  const ref = useRef(null)
   const [{ toggle, shouldScroll = false }, setToggle] = useState({
     toggle: selected || opened,
-  });
+  })
 
   const toggleCategory = () => {
     setToggle({
       toggle: !toggle,
       shouldScroll: true,
-    });
-  };
+    })
+  }
 
-  const levelClass = `level-${level}`; // If a category is selected indirectly, open it. This can happen when using the search input
+  const levelClass = `level-${level}` // If a category is selected indirectly, open it. This can happen when using the search input
 
   useEffect(() => {
     if (selected) {
       setToggle({
         toggle: true,
-      });
+      })
     }
-  }, [selected]); // Navigate to the start of the category when manually opened
+  }, [selected]) // Navigate to the start of the category when manually opened
 
   useEffect(() => {
     if (toggle && shouldScroll && ref.current != null) {
       const content = document.querySelector(
         isMobile ? ".docs-dropdown" : ".sidebar-content"
-      );
+      )
 
       if (content) {
         // 10 is added for better margin
         const height =
-          ref.current.offsetTop - (isMobile ? 10 : content.offsetTop);
-        content.scrollTop = height;
+          ref.current.offsetTop - (isMobile ? 10 : content.offsetTop)
+        content.scrollTop = height
         setToggle({
           toggle,
-        });
+        })
       }
     }
-  }, [toggle, shouldScroll, isMobile]);
+  }, [toggle, shouldScroll, isMobile])
   return (
     <div
       ref={ref}
@@ -127,5 +127,5 @@ export function SidebarCategory({
         }
       `}</style>
     </div>
-  );
+  )
 }

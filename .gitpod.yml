@@ -1,15 +1,10 @@
-image:
-  file: .gitpod.Dockerfile
-
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - name: SDK
-    init: yarn install
+  - name: Install Yarn Scripts
+    init: yarn install && cd ./sdk && yarn install
 
 vscode:
   extensions:
-    - prisma.prisma
-    - graphql.vscode-graphql
     - esbenp.prettier-vscode
     - editorconfig.editorconfig
     - pflannery.vscode-versionlens
@@ -18,7 +13,6 @@ vscode:
     - jaspernorth.vscode-pigments
     - pkief.material-icon-theme
     - github.github-vscode-theme
-    - mgmcdermott.vscode-language-babel
 
 github:
   prebuilds:

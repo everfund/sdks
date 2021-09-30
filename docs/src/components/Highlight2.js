@@ -1,5 +1,5 @@
-import * as React from "react";
-import Highlight, { defaultProps } from "prism-react-renderer";
+import * as React from "react"
+import Highlight, { defaultProps } from "prism-react-renderer"
 // Original: https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-ghcolors.css
 
 /*:: import type { PrismTheme } from '../src/types' */
@@ -81,7 +81,7 @@ const theme =
         },
       },
     ],
-  };
+  }
 
 const Code = ({
   children,
@@ -89,7 +89,7 @@ const Code = ({
   className = "language-js",
   ...props
 }) => {
-  const language = className.replace(/language-/, "");
+  const language = className.replace(/language-/, "")
   return (
     <Highlight
       {...defaultProps}
@@ -139,7 +139,7 @@ const Code = ({
         </pre>
       )}
     </Highlight>
-  );
-};
+  )
+}
 
-export default Code;
+export default Code

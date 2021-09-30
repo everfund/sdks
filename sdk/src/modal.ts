@@ -1,11 +1,11 @@
-import "core-js/features"
-import "core-js/features/array/fill"
-import "core-js/features/array/includes"
-import "core-js/features/promise"
-import elementClosest from "element-closest"
-import "element-remove"
 import { keyframes, css } from "@stitches/core"
+import elementClosest from "element-closest"
+import "core-js/features/array/includes"
+import "core-js/features/array/fill"
 import { ModalProps } from "./types"
+import "core-js/features/promise"
+import "core-js/features"
+import "element-remove"
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient

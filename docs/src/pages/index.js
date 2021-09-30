@@ -1,15 +1,15 @@
-import * as React from "react";
-import Head from "next/head";
-import Link from "next/link";
+import * as React from "react"
+import Head from "next/head"
+import Link from "next/link"
 // import bgLines from '../images/line3.svg'
 /* This example requires Tailwind CSS v2.0+ */
-import { CheckIcon } from "@heroicons/react/outline";
-import { siteConfig } from "../siteConfig";
-import { Banner } from "../components/Banner";
-import { Sticky } from "../components/Sticky";
-import { Nav } from "../components/Nav";
-import { Footer } from "../components/Footer";
-import { Seo } from "../components/Seo";
+import { CheckIcon } from "@heroicons/react/outline"
+import { siteConfig } from "../siteConfig"
+import { Banner } from "../components/Banner"
+import { Sticky } from "../components/Sticky"
+import { Nav } from "../components/Nav"
+import { Footer } from "../components/Footer"
+import { Seo } from "../components/Seo"
 
 const Home = ({ sponsors }) => {
   const features = [
@@ -53,7 +53,7 @@ const Home = ({ sponsors }) => {
       // description:
       //   "Find what you need with advanced filters, bulk actions, and quick views.",
     },
-  ];
+  ]
 
   return (
     <>
@@ -185,8 +185,8 @@ const Home = ({ sponsors }) => {
         `}</style>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
-Home.displayName = "Home";
+export default Home
+Home.displayName = "Home"

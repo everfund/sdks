@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import everfund from "@everfund/sdk";
+import everfund from "@everfund/sdk"
 
 export default {
   name: "App",
@@ -37,19 +37,19 @@ export default {
       everfund.modal({
         code: "sfge",
         onSuccess: function (onSuccessPayload) {
-          console.log(onSuccessPayload);
+          console.log(onSuccessPayload)
         },
         onFailure: function (error) {
-          console.log(error);
+          console.log(error)
         },
         onClose: function () {
           //
-          console.log("Closed Modal");
+          console.log("Closed Modal")
         },
-      });
+      })
     },
   },
-};
+}
 </script>
 
 <style>

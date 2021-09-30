@@ -1,14 +1,14 @@
 export const throttle = (func, limit) => {
-  let inThrottle;
+  let inThrottle
   return function () {
-    const args = arguments; // @ts-ignore
+    const args = arguments // @ts-ignore
 
-    const context = this;
+    const context = this
 
     if (!inThrottle) {
-      func.apply(context, args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+      func.apply(context, args)
+      inThrottle = true
+      setTimeout(() => (inThrottle = false), limit)
     }
-  };
-};
+  }
+}

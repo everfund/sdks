@@ -1,5 +1,5 @@
-import * as React from "react";
-import Link from "next/link";
+import * as React from "react"
+import Link from "next/link"
 
 /*
   This example requires Tailwind CSS v2.0+ 
@@ -105,7 +105,7 @@ const navigation = {
     //   ),
     // },
   ],
-};
+}
 
 export const Footer = (props) => {
   return (
@@ -226,6 +226,6 @@ export const Footer = (props) => {
         </div>
       </div>
     </footer>
-  );
-};
-Footer.displayName = "Footer";
+  )
+}
+Footer.displayName = "Footer"

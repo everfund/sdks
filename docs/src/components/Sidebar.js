@@ -1,5 +1,5 @@
-import { useState } from "react";
-import cn from "classnames";
+import { useState } from "react"
+import cn from "classnames"
 
 export const Sidebar = ({ active, children, fixed }) => {
   return (
@@ -43,5 +43,5 @@ export const Sidebar = ({ active, children, fixed }) => {
         }
       `}</style>
     </aside>
-  );
-};
+  )
+}

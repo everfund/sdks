@@ -1,8 +1,8 @@
-import * as React from "react";
-import cx from "classnames";
-import { useTocHighlight } from "./useTocHighlight";
-import styles from "./Toc.module.css";
-const TOP_OFFSET = 100;
+import * as React from "react"
+import cx from "classnames"
+import { useTocHighlight } from "./useTocHighlight"
+import styles from "./Toc.module.css"
+const TOP_OFFSET = 100
 
 function getHeaderAnchors() {
   return [
@@ -10,7 +10,7 @@ function getHeaderAnchors() {
     ...[...document.getElementsByClassName("anchor")].filter(
       (el) => el.parentNode.nodeName === "H2" || el.parentNode.nodeName === "H3"
     ),
-  ].filter(Boolean);
+  ].filter(Boolean)
 }
 
 function getHeaderDataFromAnchors(el) {
@@ -18,7 +18,7 @@ function getHeaderDataFromAnchors(el) {
     url: el.getAttribute("href"),
     text: el.parentElement?.innerText,
     depth: Number(el.parentElement?.nodeName.replace("H", "")),
-  };
+  }
 }
 
 export const Toc = ({ title }) => {
@@ -29,7 +29,7 @@ export const Toc = ({ title }) => {
     getHeaderAnchors,
     getHeaderDataFromAnchors,
     (el) => el?.parentElement?.id
-  );
+  )
 
   return (
     <ul className="space-y-3">
@@ -56,5 +56,5 @@ export const Toc = ({ title }) => {
           ) : null
         )}
     </ul>
-  );
-};
+  )
+}

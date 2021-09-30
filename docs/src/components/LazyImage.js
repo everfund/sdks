@@ -1,9 +1,9 @@
-import * as React from "react";
-import { ProgressiveImage } from "./ProgressiveImage";
-import cn from "classnames";
+import * as React from "react"
+import { ProgressiveImage } from "./ProgressiveImage"
+import cn from "classnames"
 export class LazyImage extends React.Component {
   render() {
-    const { height, width, src, alt, className, style } = this.props;
+    const { height, width, src, alt, className, style } = this.props
     return (
       <ProgressiveImage
         src={src}
@@ -29,6 +29,6 @@ export class LazyImage extends React.Component {
           />
         )}
       </ProgressiveImage>
-    );
+    )
   }
 }
