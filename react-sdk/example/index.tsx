@@ -19,11 +19,11 @@ const App = () => {
         code="demo"
         open={showEverfundModal}
         onSuccess={(data) => {
-          console.log('Payhere success', data);
+          console.log('Everfund success', data);
           setSuccess(true);
         }}
         onFailure={(err) => {
-          console.log('Payhere failed', err);
+          console.log('Everfund failed', err);
           setSuccess(true);
         }}
         onClose={() => {
