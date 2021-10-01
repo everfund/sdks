@@ -36,11 +36,11 @@ export default function App() {
         code="demo"
         open={showPayhere}
         onSuccess={(data) => {
-          console.log("Payhere success", data)
+          console.log("Everfund success", data)
           setSuccess(true)
         }}
         onFailure={(err) => {
-          console.log("Payhere failed", err)
+          console.log("Everfund failed", err)
           setSuccess(true)
         }}
         onClose={() => {
