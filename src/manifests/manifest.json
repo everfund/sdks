@@ -39,16 +39,6 @@
           "title": "Wordpress",
           "path": "/integrations/wordpress",
           "editUrl": "/integrations/wordpress.md"
-        },
-        {
-          "title": "Webflow",
-          "path": "/integrations/webflow",
-          "editUrl": "/integrations/webflow.md"
-        },
-        {
-          "title": "Wix",
-          "path": "/integrations/wix",
-          "editUrl": "/integrations/wix.md"
         }
       ]
     },
