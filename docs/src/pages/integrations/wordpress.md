@@ -51,6 +51,6 @@ It should look like ```<a data-ef-modal="demo" class="wp-....">```
 On confirmation the Guttenberg editor it will believe that the block is invalid or unexpected cpontent and will give you an option to attempt to recover the block. **Do not** attempt to recover the block. Just click save and then go to the website and you'll see that the donation button looks normal and when clicked it will open up the everfund donation widget
 ![Attempt to recover block](https://ik.imagekit.io/everfund/docs/wp-7_1__2XTRpZFtN.png)
 
-## manualy coding it in somewhere
+## Using the widget outside the WP editor
 
 Instead of using the WordPress editor you can hard code the `data-ef-modal` anchor onto any element anywhere on the website using the [Donation button](/donation-button) or [model](/donation-modal).
