@@ -5,7 +5,7 @@ title: Wordpress
 
 ## Installing the wordpress plugin
 
-The easiest way to install ever fun into WordPress website is by downloading the plug-in in the WordPress plug-in store as it is version controlled and can always be updated automatically through WordPress plug-in system.
+The easiest way to install Everfund into WordPress website is by downloading the plug-in in the WordPress plug-in store as it is version controlled and can always be updated automatically through WordPress plug-in system.
 
 If you find it simpler you can just add the CD and link to your head attack through whatever method you would like and it would still work on your website
 
@@ -27,19 +27,19 @@ Go to the **Plugins Page** and click **Add New**
 2) Optional - Chose to enable auto updates to the everfund widget
 
 
-![Activating the everfund widget ](https://ik.imagekit.io/everfund/docs/wp-3_wScgyQ-Xy.png)
+![Activating the everfund widget](https://ik.imagekit.io/everfund/docs/wp-3_wScgyQ-Xy.png)
 
 
 ### Step 4
 Now that the widget is installed you see a new sidebar item has been added to donations this is just a quick way to quickly go to the witches and the donations on the dashboard Haverford has been fully set up and the script has been injected onto every single page.
-![Everfund Donation Admin Bar](https://ik.imagekit.io/everfund/docs/wp-4_mh9n-3tbU.png)
+![Everfund Donation admin Bar](https://ik.imagekit.io/everfund/docs/wp-4_mh9n-3tbU.png)
 
 ## Using the Gutenburg Editor to add in a donate button
-The Guttenberg editor is the latest editor that is now activated by default on every WordPress website. You can use the default button block to create a donation button for ever fun and follow the steps to find out how
+The Guttenberg editor is the latest editor that is now activated by default on every WordPress website. You can use the default button block to create a donation button for Everfund and follow the steps to find out how
 
 ### Step 1
 Create a donation button and then click edit as HTML
-![Test](https://ik.imagekit.io/everfund/docs/wp-5_1__ef-0_cp1C.png)
+![Create a button in the editor](https://ik.imagekit.io/everfund/docs/wp-5_1__ef-0_cp1C.png)
 
 ### Step 2
 Add the custom anchor of data-ef-model to the A tag 
