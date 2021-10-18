@@ -1,3 +1,5 @@
 .DS_*
 **/dist
 **/node_modules
+**/.cache
+examples/**/yarn.lock

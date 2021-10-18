@@ -38,7 +38,7 @@ class EverfundClient {
     if (onClose) this.onClose = onClose
     const origin = window.location.origin
 
-    this.disableBodyScroll()
+    // this.disableBodyScroll()
 
     const modalFrame = document.createElement("iframe")
 
@@ -57,6 +57,32 @@ class EverfundClient {
       close_on_success: closeOnSuccess,
     })}`
 
+
+    //@ts-ignore
+    var eventMethod = window.addEventListener
+      ? "addEventListener"
+      : "attachEvent"
+    var eventer = window[eventMethod]
+    var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message"
+
+    eventer(
+      messageEvent,
+      //@ts-ignore
+      function (e) {
+        // replay to child (iframe)
+        //@ts-ignore
+        modalFrame.contentWindow.postMessage(
+          {
+            event_id: "white_label_message",
+            wl: {
+              test: "hello-world",
+            },
+          },
+          "*"
+        )
+      },
+      false
+    )
     // @ts-ignore
     modalFrame.allowPaymentRequest = true
 
@@ -66,8 +92,10 @@ class EverfundClient {
       margin: 0,
       height: "100%",
     })
-
+    modalFrame.id = "ef-modal"
     modalFrame.className = cssEmbedIframe()
+
+    
 
     modalFrame.addEventListener("load", function () {
       const loadingSpinner = document.querySelector<HTMLDivElement>(".ldsRing")
@@ -189,21 +217,21 @@ class EverfundClient {
     }
   }
 
-  private disableBodyScroll({ savePosition = true } = {}): void {
-    if (document.readyState === "complete") {
-      if (document.body.scrollHeight > window.innerHeight) {
-        if (savePosition)
-          document.body.style.marginTop = `-${window.pageYOffset}px`
-        document.body.style.position = "fixed"
-        document.body.style.overflowY = "scroll"
-        document.body.style.width = "100%"
-      }
-    } else {
-      window.addEventListener("load", () =>
-        this.disableBodyScroll({ savePosition })
-      )
-    }
-  }
+  // private disableBodyScroll({ savePosition = true } = {}): void {
+  //   if (document.readyState === "complete") {
+  //     if (document.body.scrollHeight > window.innerHeight) {
+  //       if (savePosition)
+  //         document.body.style.marginTop = `-${window.pageYOffset}px`
+  //       document.body.style.position = "fixed"
+  //       document.body.style.overflowY = "scroll"
+  //       document.body.style.width = "100%"
+  //     }
+  //   } else {
+  //     window.addEventListener("load", () =>
+  //       this.disableBodyScroll({ savePosition })
+  //     )
+  //   }
+  // }
 
   private setupButtonListeners() {
     document.addEventListener(
