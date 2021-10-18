@@ -18,15 +18,18 @@ class EverfundClient {
   private onSuccess: ModalProps["onSuccess"] = () => {}
   private onFailure: ModalProps["onFailure"] = () => {}
   private onClose: ModalProps["onClose"] = () => {}
+  version: string
 
   constructor() {
     this.setupButtonListeners()
 
+    this.version = "1.2.0"
     elementClosest(window)
   }
 
   public modal({
     code,
+    domain,
     closeOnSuccess,
     onSuccess,
     onFailure,
@@ -51,12 +54,11 @@ class EverfundClient {
       return str.join("&")
     }
 
-    modalFrame.src = `https://evr.fund/${code}/modal?${makeQS({
+    modalFrame.src = `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
       embed_origin: origin,
       embeded: true,
       close_on_success: closeOnSuccess,
     })}`
-
 
     //@ts-ignore
     var eventMethod = window.addEventListener
@@ -94,8 +96,6 @@ class EverfundClient {
     })
     modalFrame.id = "ef-modal"
     modalFrame.className = cssEmbedIframe()
-
-    
 
     modalFrame.addEventListener("load", function () {
       const loadingSpinner = document.querySelector<HTMLDivElement>(".ldsRing")

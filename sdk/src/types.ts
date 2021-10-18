@@ -35,6 +35,8 @@ export type ModalProps = {
   donationLink?: string
   /** Donation Widget Code get from the dashboard */
   code: string
+
+  domain?: string
   /** Will close donation modal once payment has succeeded */
   closeOnSuccess?: boolean | null
   onSuccess(data: SuccessResponse): void
