@@ -54,11 +54,13 @@ class EverfundClient {
       return str.join("&")
     }
 
-    modalFrame.src = `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
+    let src = `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
       embed_origin: origin,
       embeded: true,
       close_on_success: closeOnSuccess,
     })}`
+    console.log(src)
+    modalFrame.src = src
 
     //@ts-ignore
     var eventMethod = window.addEventListener
