@@ -18,6 +18,7 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^20.0.0",
+    "@types/body-scroll-lock": "^3.1.0",
     "@types/element-closest": "^3.0.0",
     "rollup": "^2.57.0",
     "rollup-plugin-gzip": "^2.5.0",
@@ -30,6 +31,7 @@
   },
   "dependencies": {
     "@stitches/core": "^1.2.1",
+    "body-scroll-lock": "^4.0.0-beta.0",
     "core-js": "^3.18.1",
     "element-closest": "^3.0.2",
     "element-remove": "^1.0.4"

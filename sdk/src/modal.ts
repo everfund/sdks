@@ -6,7 +6,7 @@ import { ModalProps } from "./types"
 import "core-js/features/promise"
 import "core-js/features"
 import "element-remove"
-
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -23,7 +23,6 @@ class EverfundClient {
 
   constructor() {
     this.setupButtonListeners()
-
     this.version = "1.2.0"
     elementClosest(window)
   }
@@ -95,16 +94,8 @@ class EverfundClient {
       modalWrap.className = `embedModal ${cssEmbedModal()}`
       modalWrap.appendChild(modalFrame)
 
-      const closebutton = document.createElement("button")
-      closebutton.className = "closeButton"
-
-      closebutton.onclick = () => {
-        const embed = document.querySelector("#embedContainer")
-        embed && embed.remove()
-        Everfund.modalOpen = false
-        Everfund.onClose()
-        this.enableBodyScroll()
-      }
+      const embedContainer = document.createElement("div")
+      disableBodyScroll(embedContainer);
 
       const loadingSpinner = document.createElement("div")
 
@@ -152,8 +143,7 @@ class EverfundClient {
           loadingSpinner.appendChild(div)
         })
 
-      const embedContainer = document.createElement("div")
-
+    
       const cssEmbedContainer = css({
         position: "fixed",
         top: "0",
@@ -171,34 +161,16 @@ class EverfundClient {
       embedContainer.className = `embedContainer ${cssEmbedContainer()}`
       embedContainer.appendChild(loadingSpinner)
       embedContainer.appendChild(modalWrap)
-
+      // disableBodyScroll(embedContainer)
       document.body.appendChild(embedContainer)
     } catch (e) {
-      // Error on donation script
       console.log(e)
 
       window.location.replace(
-        `https://${domain || "evr.fund"}/${code}?${makeQS({
+        `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
           redirect_on_success: origin,
-          embed_origin: origin,
         })}`
       )
-    }
-  }
-
-  private enableBodyScroll(): void {
-    if (document.readyState === "complete") {
-      document.body.style.position = ""
-      document.body.style.overflowY = ""
-      document.body.style.width = ""
-
-      if (document.body.style.marginTop) {
-        const scrollTop = -parseInt(document.body.style.marginTop, 10)
-        document.body.style.marginTop = ""
-        window.scrollTo(window.pageXOffset, scrollTop)
-      }
-    } else {
-      window.addEventListener("load", this.enableBodyScroll)
     }
   }
 
@@ -245,7 +217,9 @@ class EverfundClient {
           code,
           onSuccess: () => { },
           onFailure: () => { },
-          onClose: () => { },
+          onClose: () => {
+            clearAllBodyScrollLocks()
+           },
         })
       },
       false
@@ -256,6 +230,7 @@ class EverfundClient {
     window.addEventListener(
       "message",
       function (e) {
+        const embed = document.querySelector("." + "embedContainer")
         switch (e.data.message) {
           case "everfund:ready":
             const loadingSpinner =
@@ -263,7 +238,6 @@ class EverfundClient {
             const modalWrap = document.querySelector<HTMLDivElement>(
               "." + "embedModal"
             )
-
             loadingSpinner?.remove()
             modalWrap!.style.transform = "opacity(1)"
             break
@@ -275,11 +249,11 @@ class EverfundClient {
             Everfund.onFailure(e.data.content)
             break
           case "everfund:close":
-            const embed = document.querySelector("." + "embedContainer")
-
+            embed && enableBodyScroll(embed);
             embed && embed.remove()
             Everfund.modalOpen = false
             Everfund.onClose()
+            // clearAllBodyScrollLocks();
             break
         }
       },
