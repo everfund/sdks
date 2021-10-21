@@ -168,7 +168,7 @@ class EverfundClient {
 
       window.location.replace(
         `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
-          redirect_on_success: origin,
+          return_url: origin,
         })}`
       )
     }
