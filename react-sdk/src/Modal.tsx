@@ -14,6 +14,7 @@ export const EverfundModal = ({
   open,
   selector,
   code,
+  domain,
   closeOnSuccess,
   onSuccess,
   onFailure,
@@ -143,15 +144,15 @@ export const EverfundModal = ({
     <EmbedContainer>
       {isLoading && (
         <LdsRing>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div />
+          <div />
+          <div />
+          <div />
         </LdsRing>
       )}
       <EmbedModal>
         <EmbedIframe
-          src={`https://evr.fund/${code}/modal?${makeQS({
+          src={`https://${domain || "evr.fund"}/${code}/modal?${makeQS({
             embed_origin: origin,
             embeded: true,
             close_on_success: closeOnSuccess,

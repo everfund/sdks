@@ -37,6 +37,7 @@ export type ModalProps = {
   code: string;
   /** Will close donation modal once payment has succeeded */
   closeOnSuccess?: boolean | null;
+  domain?: string;
   onSuccess(data: SuccessResponse): void;
   onFailure(data: Record<string, any>): void;
   onClose(): void;

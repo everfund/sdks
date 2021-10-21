@@ -6,6 +6,8 @@ import { ModalProps } from "./types"
 import "core-js/features/promise"
 import "core-js/features"
 import "element-remove"
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {version} from './version'
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -15,18 +17,20 @@ declare let window: CustomWindow
 
 class EverfundClient {
   private modalOpen: boolean = false
-  private onSuccess: ModalProps["onSuccess"] = () => {}
-  private onFailure: ModalProps["onFailure"] = () => {}
-  private onClose: ModalProps["onClose"] = () => {}
+  private onSuccess: ModalProps["onSuccess"] = () => { }
+  private onFailure: ModalProps["onFailure"] = () => { }
+  private onClose: ModalProps["onClose"] = () => { }
+  version: string
 
   constructor() {
     this.setupButtonListeners()
-
+    this.version = version
     elementClosest(window)
   }
 
   public modal({
     code,
+    domain,
     closeOnSuccess,
     onSuccess,
     onFailure,
@@ -38,10 +42,6 @@ class EverfundClient {
     if (onClose) this.onClose = onClose
     const origin = window.location.origin
 
-    this.disableBodyScroll()
-
-    const modalFrame = document.createElement("iframe")
-
     let makeQS = function (obj: any) {
       var str = []
       for (var p in obj)
@@ -51,159 +51,130 @@ class EverfundClient {
       return str.join("&")
     }
 
-    modalFrame.src = `https://evr.fund/${code}/modal?${makeQS({
-      embed_origin: origin,
-      embeded: true,
-      close_on_success: closeOnSuccess,
-    })}`
+    try {
+      const modalFrame = document.createElement("iframe")
+      modalFrame.src = `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
+        embed_origin: origin,
+        embeded: true,
+        close_on_success: closeOnSuccess,
+      })}`
 
-    // @ts-ignore
-    modalFrame.allowPaymentRequest = true
+      // @ts-ignore
+      modalFrame.allowPaymentRequest = true
 
-    const cssEmbedIframe = css({
-      border: "none",
-      width: "100%",
-      margin: 0,
-      height: "100%",
-    })
+      const cssEmbedIframe = css({
+        border: "none",
+        width: "100%",
+        margin: 0,
+        height: "100%",
+      })
+      modalFrame.id = "ef-modal"
+      modalFrame.className = cssEmbedIframe()
 
-    modalFrame.className = cssEmbedIframe()
-
-    modalFrame.addEventListener("load", function () {
-      const loadingSpinner = document.querySelector<HTMLDivElement>(".ldsRing")
-      const modalWrap = document.querySelector<HTMLDivElement>(".embedModal")
-      loadingSpinner?.remove()
-      modalWrap!.style.transform = "opacity(1)"
-    })
-
-    const modalWrap = document.createElement("div")
-
-    const cssEmbedModal = css({
-      pointerEvents: "all",
-      zIndex: "9999999",
-      display: "flex",
-      width: "100%",
-      transform: "opacity(0)",
-      transition: "transform 0.3s ease",
-      overflowY: "auto",
-      "-webkit-overflow-scrolling": "touch",
-      height: "100%",
-    })
-
-    modalWrap.className = `embedModal ${cssEmbedModal()}`
-    modalWrap.appendChild(modalFrame)
-
-    const closebutton = document.createElement("button")
-    closebutton.className = "closeButton"
-
-    closebutton.onclick = () => {
-      const embed = document.querySelector("#embedContainer")
-      embed && embed.remove()
-      Everfund.modalOpen = false
-      Everfund.onClose()
-      this.enableBodyScroll()
-    }
-
-    const loadingSpinner = document.createElement("div")
-
-    const cssKeyframeLDsring = keyframes({
-      "0%": { transform: "rotate(0deg)" },
-      "100%": { transform: "rotate(360deg)" },
-    })
-
-    const cssLdsRing = css({
-      display: "inline-block",
-      position: "absolute",
-      left: "calc(50% - 32px)",
-      top: "calc(50% - 32px)",
-      width: "64px",
-      height: "64px",
-      "& div": {
-        boxSizing: "border-box",
-        display: "block",
-        position: "absolute",
-        width: "51px",
-        height: "51px",
-        margin: "6px",
-        border: "6px solid white",
-        borderRadius: "50%",
-        animation: `${cssKeyframeLDsring} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite`,
-        borderColor: "white transparent transparent transparent",
-      },
-      "& div:nth-child(1)": {
-        animationDelay: " -0.45s",
-      },
-      "& div:nth-child(2)": {
-        animationDelay: " -0.3s",
-      },
-      "& div:nth-child(3)": {
-        animationDelay: " -0.15s",
-      },
-    })
-    loadingSpinner.className = `ldsRing ${cssLdsRing()}`
-
-    const div = document.createElement("div")
-
-    Array(4)
-      .fill(4)
-      .forEach(function () {
-        loadingSpinner.appendChild(div)
+      modalFrame.addEventListener("load", function () {
+        const loadingSpinner = document.querySelector<HTMLDivElement>(".ldsRing")
+        const modalWrap = document.querySelector<HTMLDivElement>(".embedModal")
+        loadingSpinner?.remove()
+        modalWrap!.style.transform = "opacity(1)"
       })
 
-    const embedContainer = document.createElement("div")
+      const modalWrap = document.createElement("div")
 
-    const cssEmbedContainer = css({
-      position: "fixed",
-      top: "0",
-      left: "0",
-      right: "0",
-      bottom: "0",
-      background: "rgba(0, 0, 0, 0.7)",
-      zIndex: "9999998",
-      display: "flex",
-      justifyContent: "space-around",
-      alignItems: "stretch",
-      backdropFilter: "blur(8px)",
-    })
+      const cssEmbedModal = css({
+        pointerEvents: "all",
+        zIndex: "9999999",
+        display: "flex",
+        width: "100%",
+        transform: "opacity(0)",
+        transition: "transform 0.3s ease",
+        overflowY: "auto",
+        "-webkit-overflow-scrolling": "touch",
+        height: "100%",
+      })
 
-    embedContainer.className = `embedContainer ${cssEmbedContainer()}`
-    embedContainer.appendChild(loadingSpinner)
-    embedContainer.appendChild(modalWrap)
+      modalWrap.className = `embedModal ${cssEmbedModal()}`
+      modalWrap.appendChild(modalFrame)
 
-    document.body.appendChild(embedContainer)
-  }
+      const embedContainer = document.createElement("div")
+      disableBodyScroll(embedContainer);
 
-  private enableBodyScroll(): void {
-    if (document.readyState === "complete") {
-      document.body.style.position = ""
-      document.body.style.overflowY = ""
-      document.body.style.width = ""
+      const loadingSpinner = document.createElement("div")
 
-      if (document.body.style.marginTop) {
-        const scrollTop = -parseInt(document.body.style.marginTop, 10)
-        document.body.style.marginTop = ""
-        window.scrollTo(window.pageXOffset, scrollTop)
-      }
-    } else {
-      window.addEventListener("load", this.enableBodyScroll)
-    }
-  }
+      const cssKeyframeLDsring = keyframes({
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(360deg)" },
+      })
 
-  private disableBodyScroll({ savePosition = true } = {}): void {
-    if (document.readyState === "complete") {
-      if (document.body.scrollHeight > window.innerHeight) {
-        if (savePosition)
-          document.body.style.marginTop = `-${window.pageYOffset}px`
-        document.body.style.position = "fixed"
-        document.body.style.overflowY = "scroll"
-        document.body.style.width = "100%"
-      }
-    } else {
-      window.addEventListener("load", () =>
-        this.disableBodyScroll({ savePosition })
+      const cssLdsRing = css({
+        display: "inline-block",
+        position: "absolute",
+        left: "calc(50% - 32px)",
+        top: "calc(50% - 32px)",
+        width: "64px",
+        height: "64px",
+        "& div": {
+          boxSizing: "border-box",
+          display: "block",
+          position: "absolute",
+          width: "51px",
+          height: "51px",
+          margin: "6px",
+          border: "6px solid white",
+          borderRadius: "50%",
+          animation: `${cssKeyframeLDsring} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite`,
+          borderColor: "white transparent transparent transparent",
+        },
+        "& div:nth-child(1)": {
+          animationDelay: " -0.45s",
+        },
+        "& div:nth-child(2)": {
+          animationDelay: " -0.3s",
+        },
+        "& div:nth-child(3)": {
+          animationDelay: " -0.15s",
+        },
+      })
+      loadingSpinner.className = `ldsRing ${cssLdsRing()}`
+
+      const div = document.createElement("div")
+
+      Array(4)
+        .fill(4)
+        .forEach(function () {
+          loadingSpinner.appendChild(div)
+        })
+
+    
+      const cssEmbedContainer = css({
+        position: "fixed",
+        top: "0",
+        left: "0",
+        right: "0",
+        bottom: "0",
+        background: "rgba(0, 0, 0, 0.7)",
+        zIndex: "9999998",
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "stretch",
+        backdropFilter: "blur(8px)",
+      })
+
+      embedContainer.className = `embedContainer ${cssEmbedContainer()}`
+      embedContainer.appendChild(loadingSpinner)
+      embedContainer.appendChild(modalWrap)
+      // disableBodyScroll(embedContainer)
+      document.body.appendChild(embedContainer)
+    } catch (e) {
+      console.log(e)
+
+      window.location.replace(
+        `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
+          return_url: origin,
+        })}`
       )
     }
   }
+
 
   private setupButtonListeners() {
     document.addEventListener(
@@ -227,11 +198,11 @@ class EverfundClient {
         if (
           !!new RegExp(
             "^(https?:\\/\\/)?" + // protocol
-              "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-              "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-              "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-              "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-              "(\\#[-a-z\\d_]*)?$",
+            "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+            "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+            "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+            "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+            "(\\#[-a-z\\d_]*)?$",
             "i"
           ).test(code)
         ) {
@@ -245,9 +216,11 @@ class EverfundClient {
         Everfund.modalOpen = true
         Everfund.modal({
           code,
-          onSuccess: () => {},
-          onFailure: () => {},
-          onClose: () => {},
+          onSuccess: () => { },
+          onFailure: () => { },
+          onClose: () => {
+            clearAllBodyScrollLocks()
+           },
         })
       },
       false
@@ -258,6 +231,7 @@ class EverfundClient {
     window.addEventListener(
       "message",
       function (e) {
+        const embed = document.querySelector("." + "embedContainer")
         switch (e.data.message) {
           case "everfund:ready":
             const loadingSpinner =
@@ -276,10 +250,11 @@ class EverfundClient {
             Everfund.onFailure(e.data.content)
             break
           case "everfund:close":
-            const embed = document.querySelector("." + "embedContainer")
+            embed && enableBodyScroll(embed);
             embed && embed.remove()
             Everfund.modalOpen = false
             Everfund.onClose()
+            // clearAllBodyScrollLocks();
             break
         }
       },
