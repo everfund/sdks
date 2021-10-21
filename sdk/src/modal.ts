@@ -7,6 +7,7 @@ import "core-js/features/promise"
 import "core-js/features"
 import "element-remove"
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import {version} from './version'
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -23,7 +24,7 @@ class EverfundClient {
 
   constructor() {
     this.setupButtonListeners()
-    this.version = "1.2.0"
+    this.version = version
     elementClosest(window)
   }
 

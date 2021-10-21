@@ -5,9 +5,10 @@
   "author": "Christopher Burns <christopher@everfund.co.uk>",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "yarn genversion && rollup -c",
     "watch": "rollup -c -w",
     "deploy": "npm run build && npm publish",
+    "genversion": "genversion --es6 --semi src/version.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "serve ./dist",
     "format": "yarn prettier --write ."
@@ -34,6 +35,7 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "core-js": "^3.18.1",
     "element-closest": "^3.0.2",
-    "element-remove": "^1.0.4"
+    "element-remove": "^1.0.4",
+    "genversion": "^3.0.2"
   }
 }
