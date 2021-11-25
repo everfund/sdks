@@ -11,7 +11,7 @@
     "format": "yarn prettier --write ."
   },
   "author": "Christopher Burns",
-  "homepage": "https://developer.everfund.io",
+  "homepage": "https://docs.everfund.io",
   "license": "MIT",
   "repository": {
     "type": "git",

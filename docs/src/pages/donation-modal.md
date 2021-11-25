@@ -7,7 +7,7 @@ The Donation modal is the **low-code** solution for integrating Everfund into a 
 
 ## Installation
 
-Make sure that you have added the script to the bottom of your **&#60/body&#62** or are using the **NPM Package**. [How to install](https://developer.everfund.io/quick-start)
+Make sure that you have added the script to the bottom of your **&#60/body&#62** or are using the **NPM Package**. [How to install](https://docs.everfund.io/quick-start)
 
 ## How to use
 

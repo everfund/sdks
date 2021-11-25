@@ -1,5 +1,5 @@
 <p>
-    <a href="https://developer.everfund.io/" target="_blank">
+    <a href="https://docs.everfund.io/" target="_blank">
       <img alt="Everfund" width="350" src="https://ik.imagekit.io/everfund/everfund-sticker_U4p0fY8gw.svg">
     </a>
     <br>
@@ -21,7 +21,7 @@ Get peace of mind with secure, extensible charity donation system that’s built
 
 ## Documentation
 
-For full documentation, visit [developer.everfund.io](https://developer.everfund.io).
+For full documentation, visit [docs.everfund.io](https://docs.everfund.io).
 
 ## Contributing
 

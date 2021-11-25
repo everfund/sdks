@@ -6,8 +6,8 @@
       "routes": [
         {
           "title": "Overview",
-          "path": "/overview",
-          "editUrl": "/overview.md"
+          "path": "/",
+          "editUrl": "/index.md"
         },
         {
           "title": "Quick Start",

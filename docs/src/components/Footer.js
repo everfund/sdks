@@ -19,27 +19,27 @@ import Link from "next/link"
 */
 const navigation = {
   support: [
-    { name: "Main Website", href: "https://everfund.co.uk/" },
-    { name: "Donation Links", href: "https://everfund.co.uk/donation-link/" },
-    { name: "Blog", href: "https://everfund.co.uk/blog/" },
-    { name: "Developer Docs", href: "https://developer.everfund.co.uk/" },
+    { name: "Main Website", href: "https://everfund.io/" },
+    { name: "Donation Links", href: "https://everfund.io/donation-link/" },
+    { name: "Blog", href: "https://everfund.io/blog/" },
+    { name: "Developer Docs", href: "https://docs.everfund.io/" },
   ],
   legal: [
     {
       name: "Cookies Policy",
-      href: "https://everfund.co.uk/legal/cookies-policy/",
+      href: "https://everfund.io/legal/cookies-policy/",
     },
     {
       name: "Privacy Policy",
-      href: "https://everfund.co.uk/legal/privacy-policy/",
+      href: "https://everfund.io/legal/privacy-policy/",
     },
     {
       name: "Terms And Conditions",
-      href: "https://everfund.co.uk/legal/terms-and-conditions/",
+      href: "https://everfund.io/legal/terms-and-conditions/",
     },
     {
       name: "Sub-Processors",
-      href: "https://everfund.co.uk/legal/sub-processors/",
+      href: "https://everfund.io/legal/sub-processors/",
     },
   ],
   social: [

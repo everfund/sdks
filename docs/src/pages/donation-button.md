@@ -3,7 +3,7 @@ id: donate-button
 title: Donation Button
 ---
 
-The donation button is an easy way to add a basic version of the [Donation Model](https://developer.everfund.io/donation-modal) to your website.
+The donation button is an easy way to add a basic version of the [Donation Model](https://docs.everfund.io/donation-modal) to your website.
 
 To integrate the donation button simply add the script tag to your page, and the button to your HTML.
 

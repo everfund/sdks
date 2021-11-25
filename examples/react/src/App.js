@@ -13,7 +13,7 @@ export default function App() {
       <div>
         <a
           className="logoContainer"
-          href="https://developer.everfund.io"
+          href="https://docs.everfund.io"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -21,23 +21,23 @@ export const Seo = withRouter(
       <link
         rel="icon"
         type="image/x-icon"
-        href="https://developer.everfund.co.uk/favicon.png"
+        href="https://docs.everfund.io/favicon.png"
       />
       <link
         rel="apple-touch-icon"
-        href="https://developer.everfund.co.uk/favicon.png"
+        href="https://docs.everfund.io/favicon.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href="https://developer.everfund.co.uk/favicon-32x32.png"
+        href="https://docs.everfund.io/favicon-32x32.png"
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href="https://developer.everfund.co.uk/favicon-16x16.png"
+        href="https://docs.everfund.io/favicon-16x16.png"
       />
 
       {/* OPEN GRAPH */}
@@ -45,7 +45,7 @@ export const Seo = withRouter(
       <meta
         property="og:url"
         key="og:url"
-        content={`https://developer.everfund.co.uk${router.pathname}`}
+        content={`https://docs.everfund.io${router.pathname}`}
       />
       {title != undefined && (
         <meta property="og:title" content={title} key="og:title" />
@@ -60,7 +60,7 @@ export const Seo = withRouter(
       <meta
         property="og:image"
         key="og:image"
-        content={`https://developer.everfund.co.uk/everfund-og.png`}
+        content={`https://docs.everfund.io/everfund-og.png`}
       />
 
       {/* TWITTER */}
@@ -88,7 +88,7 @@ export const Seo = withRouter(
       <meta
         name="twitter:image"
         key="twitter:image"
-        content={`https://developer.everfund.co.uk/everfund-twitter.png`}
+        content={`https://docs.everfund.io/everfund-twitter.png`}
       />
 
       {children}

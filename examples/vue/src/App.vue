@@ -6,7 +6,7 @@
     <div>
       <a
         class="logoContainer"
-        href="https://developer.everfund.io"
+        href="https://docs.everfund.io"
         target="_blank"
         rel="noopener noreferrer"
       >
