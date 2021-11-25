@@ -3,12 +3,12 @@ import { useState } from "react"
 
 export default function App() {
   const [success, setSuccess] = useState(false)
-  const [showPayhere, setShowPayhere] = useState(false)
+  const [showEverfundModal, setEverfundModal] = useState(false)
 
   return (
     <div className="app">
       <div className="buttonContainer">
-        <button onClick={() => setShowPayhere(true)}>Donate Now</button>
+        <button onClick={() => setEverfundModal(true)}>Donate Now</button>
       </div>
       <div>
         <a
@@ -34,7 +34,7 @@ export default function App() {
 
       <EverfundModal
         code="demo"
-        open={showPayhere}
+        open={showEverfundModal}
         onSuccess={(data) => {
           console.log("Everfund success", data)
           setSuccess(true)
@@ -44,7 +44,7 @@ export default function App() {
           setSuccess(true)
         }}
         onClose={() => {
-          setShowPayhere(false)
+          setEverfundModal(false)
           if (success) {
             console.log("Payment success")
           } else {
