@@ -1234,10 +1234,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@everfund/react-sdk@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.1.0.tgz#6545b37679a8995447c9f12d2331f0c2b97fb498"
-  integrity sha512-0ZD/pHBhlSZ73zVHppHi9B4sUZ6bEYM4q1g+FLJsUvZBEuDfinz3e7753BXVuIag20CbDf3AxgukvlPmlnGZFw==
+"@everfund/react-sdk@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.2.1.tgz#a96ee80763cb75867a30851db2aaa44ea44a2482"
+  integrity sha512-/2bH0LVRHTn3NTSVmEFlquo6Ynx50AMxcawiinoB1df96x+UzOhxvgicLvoGUbAi0SRWCMHVDIX3VECFi3U2iw==
   dependencies:
     "@stitches/react" "^1.2.1"
 
@@ -7276,9 +7276,9 @@ nanocolors@^0.2.12, nanocolors@^0.2.2, nanocolors@^0.2.8:
   integrity sha512-SFNdALvzW+rVlzqexid6epYdt8H9Zol7xDoQarioEFcFN0JHo4CYNztAxmtfgGTVRCmFlEOqqhBpoFGKqSAMug==
 
 nanoid@^3.1.25:
-  version "3.1.28"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.28.tgz#3c01bac14cb6c5680569014cc65a2f26424c6bd4"
-  integrity sha512-gSu9VZ2HtmoKYe/lmyPFES5nknFrHa+/DT9muUFWFMi6Jh9E1I7bkvlQ8xxf1Kos9pi9o8lBnIOkatMhKX/YUw==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.2.0.tgz#62667522da6673971cca916a6d3eff3f415ff80c"
+  integrity sha512-fmsZYa9lpn69Ad5eDn7FMcnnSR+8R34W9qJEijxYhTbfOWzr22n1QxCMzXLK+ODyW2973V3Fux959iQoUxzUIA==
 
 nanomatch@^1.2.9:
   version "1.2.13"
