@@ -1234,10 +1234,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@everfund/react-sdk@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.1.0.tgz#6545b37679a8995447c9f12d2331f0c2b97fb498"
-  integrity sha512-0ZD/pHBhlSZ73zVHppHi9B4sUZ6bEYM4q1g+FLJsUvZBEuDfinz3e7753BXVuIag20CbDf3AxgukvlPmlnGZFw==
+"@everfund/react-sdk@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.2.1.tgz#a96ee80763cb75867a30851db2aaa44ea44a2482"
+  integrity sha512-/2bH0LVRHTn3NTSVmEFlquo6Ynx50AMxcawiinoB1df96x+UzOhxvgicLvoGUbAi0SRWCMHVDIX3VECFi3U2iw==
   dependencies:
     "@stitches/react" "^1.2.1"
 
@@ -4988,9 +4988,9 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.3.6"
 
 follow-redirects@^1.0.0:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
-  integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 for-in@^1.0.2:
   version "1.0.2"
