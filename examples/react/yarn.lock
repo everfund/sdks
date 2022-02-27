@@ -1234,10 +1234,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@everfund/react-sdk@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.1.0.tgz#6545b37679a8995447c9f12d2331f0c2b97fb498"
-  integrity sha512-0ZD/pHBhlSZ73zVHppHi9B4sUZ6bEYM4q1g+FLJsUvZBEuDfinz3e7753BXVuIag20CbDf3AxgukvlPmlnGZFw==
+"@everfund/react-sdk@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.2.1.tgz#a96ee80763cb75867a30851db2aaa44ea44a2482"
+  integrity sha512-/2bH0LVRHTn3NTSVmEFlquo6Ynx50AMxcawiinoB1df96x+UzOhxvgicLvoGUbAi0SRWCMHVDIX3VECFi3U2iw==
   dependencies:
     "@stitches/react" "^1.2.1"
 
@@ -10691,9 +10691,9 @@ url-loader@4.1.1:
     schema-utils "^3.0.0"
 
 url-parse@^1.4.3, url-parse@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.3.tgz#71c1303d38fb6639ade183c2992c8cc0686df862"
-  integrity sha512-IIORyIQD9rvj0A4CLWsHkBBJuNqWpFQe224b6j9t/ABmquIS0qDU2pY6kl6AuOrL5OkCXHMCFNe1jBcuAggjvQ==
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
+  integrity sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
