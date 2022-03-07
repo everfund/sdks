@@ -46,6 +46,7 @@
   "devDependencies": {
     "autoprefixer": "^10.3.4",
     "dotenv-load": "^2.0.0",
+    "fathom-client": "^3.4.1",
     "postcss": "^8.3.6",
     "postcss-preset-env": "^6.7.0",
     "remark-parse": "^8.0.3",
