@@ -3,7 +3,7 @@ import "../styles/index.css"
 import Head from "next/head"
 import dynamic from "next/dynamic"
 import * as Fathom from "fathom-client"
-
+import { useEffect } from "react"
 const CrispWithNoSSR = dynamic(() => import("../components/Crisp"), {
   ssr: false,
 })
