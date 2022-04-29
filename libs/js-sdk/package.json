@@ -1,16 +1,16 @@
 {
   "name": "@everfund/js-sdk",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
   "source": "src/index.ts",
   "exports": {
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.modern.js"
+    "require": "./dist/js-sdk.cjs",
+    "default": "./dist/js-sdk.modern.js"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.module.js",
-  "unpkg": "./dist/index.umd.js",
+  "main": "./dist/js-sdk.cjs",
+  "module": "./dist/js-sdk.module.js",
+  "unpkg": "./dist/js-sdk.umd.js",
   "scripts": {
     "build:prod": "yarn genversion && microbundle --define process.env.NODE_ENV=production --sourcemap false --output dist --tsconfig ./tsconfig.json",
     "build:dev": "yarn genversion && microbundle --define process.env.NODE_ENV=development --sourcemap true --output dist --tsconfig ./tsconfig.json",
