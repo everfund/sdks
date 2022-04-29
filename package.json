@@ -2,11 +2,10 @@
   "private": true,
   "name": "everfund-monorepo",
   "version": "1.2.1",
-  "workspaces": {
-    "packages": [
-      "docs"
-    ]
-  },
+  "workspaces": [
+    "sdk",
+    "react-sdk"
+  ],
   "scripts": {
     "format": "yarn prettier --write ."
   },
@@ -21,5 +20,6 @@
     "prettier": "^2.4.1",
     "prettier-package-json": "^2.6.0",
     "prettier-plugin-sort-imports": "^1.0.1"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }

@@ -3,3 +3,10 @@
 **/node_modules
 **/.cache
 examples/**/yarn.lock
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
