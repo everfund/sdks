@@ -1,0 +1,8 @@
+.DS_*
+/node_modules
+/src
+prettier.config.js
+rollup.config.js
+tsconfig.json
+yarn.lock
+**/docs
