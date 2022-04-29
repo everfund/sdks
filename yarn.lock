@@ -1615,6 +1615,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@everfund/js-sdk@workspace:libs/js-sdk"
   dependencies:
+    "@rollup/plugin-commonjs": ^21.0.1
     "@types/body-scroll-lock": ^3.1.0
     "@types/element-closest": ^3.0.0
     body-scroll-lock: ^4.0.0-beta.0
@@ -2015,6 +2016,23 @@ __metadata:
   peerDependencies:
     rollup: ^2.30.0
   checksum: b83f05c7923ecc0f946eef3ef63b7cde090a7205b06aa7f43d29c06823c9848243691f4a799da9d6f07fb4915a9b12c66261c60913ea6f48441ff0715fb689a9
+  languageName: node
+  linkType: hard
+
+"@rollup/plugin-commonjs@npm:^21.0.1":
+  version: 21.1.0
+  resolution: "@rollup/plugin-commonjs@npm:21.1.0"
+  dependencies:
+    "@rollup/pluginutils": ^3.1.0
+    commondir: ^1.0.1
+    estree-walker: ^2.0.1
+    glob: ^7.1.6
+    is-reference: ^1.2.1
+    magic-string: ^0.25.7
+    resolve: ^1.17.0
+  peerDependencies:
+    rollup: ^2.38.3
+  checksum: e8280f4b6192729f2bdf878c48c451dc441075f2a12f22c688393f48a6b95e8ff83caaacc3df4eb1d81516e08a0e3a669213632879910d85dd630b37bb284df7
   languageName: node
   linkType: hard
 
