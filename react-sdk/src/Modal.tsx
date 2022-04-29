@@ -2,9 +2,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { ModalProps } from './types';
 import ReactDOM from 'react-dom';
 
-// import { styled, keyframes } from '@stitches/react';
-
-const { styled, keyframes } = require('@stitches/react');
+const stiches = require('@stitches/react');
 
 interface EverfundReactProps extends ModalProps {
   open: boolean;
@@ -13,6 +11,32 @@ interface EverfundReactProps extends ModalProps {
 }
 
 export const EverfundModal = ({
+  open,
+  selector,
+  code,
+  domain,
+  closeOnSuccess,
+  onSuccess,
+  onFailure,
+  onClose,
+}: EverfundReactProps) => {
+  console.warn(
+    '<EverfundModal /> is deprecated in the next update, please use <EverfundDonationWidget/> instead'
+  );
+
+  return EverfundDonationWidget({
+    open,
+    selector,
+    code,
+    domain,
+    closeOnSuccess,
+    onSuccess,
+    onFailure,
+    onClose,
+  });
+};
+
+export const EverfundDonationWidget = ({
   open,
   selector,
   code,
@@ -74,7 +98,7 @@ export const EverfundModal = ({
     return str.join('&');
   };
 
-  const EmbedModal = styled('div', {
+  const EmbedModal = stiches.styled('div', {
     pointerEvents: 'all',
     zIndex: '9999999',
     display: 'flex',
@@ -86,7 +110,7 @@ export const EverfundModal = ({
     height: '100%',
   });
 
-  const EmbedContainer = styled('div', {
+  const EmbedContainer = stiches.styled('div', {
     position: 'fixed',
     top: '0',
     left: '0',
@@ -100,19 +124,19 @@ export const EverfundModal = ({
     backdropFilter: 'blur(8px)',
   });
 
-  const EmbedIframe = styled('iframe', {
+  const EmbedIframe = stiches.styled('iframe', {
     border: 'none',
     width: '100%',
     margin: 0,
     height: '100%',
   });
 
-  const cssKeyframeLDsring = keyframes({
+  const cssKeyframeLDsring = stiches.keyframes({
     '0%': { transform: 'rotate(0deg)' },
     '100%': { transform: 'rotate(360deg)' },
   });
 
-  const LdsRing = styled('div', {
+  const LdsRing = stiches.styled('div', {
     display: 'inline-block',
     position: 'absolute',
     left: 'calc(50% - 32px)',

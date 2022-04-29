@@ -23,7 +23,7 @@ Once the everfund script has been loaded multiple buttons can be placed on the p
 
 ```html
 <body>
-  <button data-ef-modal="https://evr.fund/demo">Donate Now</button>
-  <button data-ef-modal="https://evr.fund/demo2">Donate Now</button>
+  <button data-ef-modal="rjww">Donate Now</button>
+  <button data-ef-modal="HuPW">Donate Now</button>
 </body>
 ```

@@ -1,1 +1,1 @@
-export { EverfundModal } from './Modal';
+export { EverfundModal, EverfundDonationWidget } from './Modal';

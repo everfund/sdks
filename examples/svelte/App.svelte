@@ -3,7 +3,7 @@
 
   function donate() {
     everfund.modal({
-      code: "demo",
+      code: "rjww",
       onSuccess: function(onSuccessPayload) {
         console.log(onSuccessPayload);
       },

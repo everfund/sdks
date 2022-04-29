@@ -33,7 +33,7 @@ export default function App() {
       </div>
 
       <EverfundModal
-        code="demo"
+        code="rjww"
         open={showEverfundModal}
         onSuccess={(data) => {
           console.log("Everfund success", data)

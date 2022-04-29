@@ -3,7 +3,7 @@ import everfund from "@everfund/sdk"
 document.getElementById("donate-modal").addEventListener("click", () => {
   console.log("launch Everfund Modal")
   everfund.modal({
-    code: "demo",
+    code: "rjww",
     onSuccess: function (onSuccessPayload) {
       console.log(onSuccessPayload)
     },

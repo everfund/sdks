@@ -35,7 +35,7 @@ export default {
   methods: {
     donate: function () {
       everfund.modal({
-        code: "sfge",
+        code: "rjww",
         onSuccess: function (onSuccessPayload) {
           console.log(onSuccessPayload)
         },
