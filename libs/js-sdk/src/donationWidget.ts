@@ -29,8 +29,9 @@ class EverfundClient {
   version: string
 
   constructor() {
-    this.setupButtonListeners()
     this.version = version
+    this.setupButtonListeners()
+    this.setupIframeListeners()
     elementClosest(window)
   }
 
@@ -61,7 +62,6 @@ class EverfundClient {
     onFailure,
     onClose,
   }: ModalProps) {
-    this.setupIframeListeners()
     if (onSuccess) this.onSuccess = onSuccess
     if (onFailure) this.onFailure = onFailure
     if (onClose) this.onClose = onClose

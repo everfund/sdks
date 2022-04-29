@@ -1615,7 +1615,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@everfund/js-sdk@workspace:libs/js-sdk"
   dependencies:
-    "@rollup/plugin-commonjs": ^21.0.1
+    "@rollup/plugin-commonjs": ^22.0.0
+    "@rollup/plugin-node-resolve": ^13.2.1
+    "@rollup/plugin-typescript": ^8.3.2
     "@types/body-scroll-lock": ^3.1.0
     "@types/element-closest": ^3.0.0
     body-scroll-lock: ^4.0.0-beta.0
@@ -1625,6 +1627,9 @@ __metadata:
     genversion: ^3.1.1
     goober: ^2.1.9
     microbundle: ^0.15.0
+    rollup: ^2.70.2
+    rollup-plugin-terser: ^7.0.2
+    rollup-plugin-uglify: ^6.0.4
     typescript: ^4.6.4
   languageName: unknown
   linkType: soft
@@ -2019,9 +2024,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-commonjs@npm:^21.0.1":
-  version: 21.1.0
-  resolution: "@rollup/plugin-commonjs@npm:21.1.0"
+"@rollup/plugin-commonjs@npm:^22.0.0":
+  version: 22.0.0
+  resolution: "@rollup/plugin-commonjs@npm:22.0.0"
   dependencies:
     "@rollup/pluginutils": ^3.1.0
     commondir: ^1.0.1
@@ -2031,8 +2036,8 @@ __metadata:
     magic-string: ^0.25.7
     resolve: ^1.17.0
   peerDependencies:
-    rollup: ^2.38.3
-  checksum: e8280f4b6192729f2bdf878c48c451dc441075f2a12f22c688393f48a6b95e8ff83caaacc3df4eb1d81516e08a0e3a669213632879910d85dd630b37bb284df7
+    rollup: ^2.68.0
+  checksum: fdcce2bf58875fde0e06f001544c0d9a0509a12929393862f72dcef8fcbf4d5d0ba0d5db6cf10ba4351335caf67a3dbdb95000678c468585e3972994f92e2ce9
   languageName: node
   linkType: hard
 
@@ -2063,6 +2068,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-node-resolve@npm:^13.2.1":
+  version: 13.2.1
+  resolution: "@rollup/plugin-node-resolve@npm:13.2.1"
+  dependencies:
+    "@rollup/pluginutils": ^3.1.0
+    "@types/resolve": 1.17.1
+    builtin-modules: ^3.1.0
+    deepmerge: ^4.2.2
+    is-module: ^1.0.0
+    resolve: ^1.19.0
+  peerDependencies:
+    rollup: ^2.42.0
+  checksum: d0ba3b6f35440b5ebc203a4f62a6c0d2c565491aed9746448288b71d0cd603d1d12fdd9d1381c1be0a4b192f167412e53c34b89fd25413db4ba7d1fa910a29a2
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-node-resolve@npm:^9.0.0":
   version: 9.0.0
   resolution: "@rollup/plugin-node-resolve@npm:9.0.0"
@@ -2088,6 +2109,20 @@ __metadata:
   peerDependencies:
     rollup: ^1.20.0 || ^2.0.0
   checksum: b2f1618ee5526d288e2f8ae328dcb326e20e8dc8bd1f60d3e14d6708a5832e4aa44811f7d493f4aed2deeadca86e3b6b0503cd39bf50cfb4b595bb9da027fad0
+  languageName: node
+  linkType: hard
+
+"@rollup/plugin-typescript@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "@rollup/plugin-typescript@npm:8.3.2"
+  dependencies:
+    "@rollup/pluginutils": ^3.1.0
+    resolve: ^1.17.0
+  peerDependencies:
+    rollup: ^2.14.0
+    tslib: "*"
+    typescript: ">=3.7.0"
+  checksum: bdbf3c11d26b04244228cbe2bd48dbac66044c16df4ee3658276480b1e050c33f9bc72ef7b6e05a88c4a48db3d5359ab6a3acf7ff288482af29863478d014881
   languageName: node
   linkType: hard
 
@@ -7021,7 +7056,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-worker@npm:^24.9.0":
+"jest-worker@npm:^24.0.0, jest-worker@npm:^24.9.0":
   version: 24.9.0
   resolution: "jest-worker@npm:24.9.0"
   dependencies:
@@ -9723,6 +9758,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rollup-plugin-uglify@npm:^6.0.4":
+  version: 6.0.4
+  resolution: "rollup-plugin-uglify@npm:6.0.4"
+  dependencies:
+    "@babel/code-frame": ^7.0.0
+    jest-worker: ^24.0.0
+    serialize-javascript: ^2.1.2
+    uglify-js: ^3.4.9
+  peerDependencies:
+    rollup: ">=0.66.0 <2"
+  checksum: 0cc46b7346906aa2af80d1729a292c547a9014a934daae07d54d6f4c858c822b71222e3f62cc12498880efaf1ddad26b9c0aca17e788b467aea61fde135e2ed3
+  languageName: node
+  linkType: hard
+
 "rollup-plugin-visualizer@npm:^5.6.0":
   version: 5.6.0
   resolution: "rollup-plugin-visualizer@npm:5.6.0"
@@ -9761,7 +9810,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.35.1":
+"rollup@npm:^2.35.1, rollup@npm:^2.70.2":
   version: 2.70.2
   resolution: "rollup@npm:2.70.2"
   dependencies:
@@ -9937,6 +9986,13 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 2fa3e877568cd6ce769c75c211beaed1f9fce80b28338cadd9d0b6c40f2e2862bafd62c19a6cff42f3d54292b7c623277bcab8816a2b5521cf15210d43e75232
+  languageName: node
+  linkType: hard
+
+"serialize-javascript@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "serialize-javascript@npm:2.1.2"
+  checksum: 16ce4e4886aff10d5cbbc46149cae3a63f31ea1578f218ef3a363ae413fa245dde61ab039f6733cc86db7b3ff940bfcba9b5a4bfc7b5dd1b3967737c0bbc017e
   languageName: node
   linkType: hard
 
@@ -11045,6 +11101,15 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 1cb434fbc637d347be90e3a0c6cd05e33c38f941713c8786d3031faf1842c2c148ba91d2fac01e7276b0ae3249b8633f1660e32686cc7a8c6a8fd5361dc52c66
+  languageName: node
+  linkType: hard
+
+"uglify-js@npm:^3.4.9":
+  version: 3.15.4
+  resolution: "uglify-js@npm:3.15.4"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 5f673c5dd7f3b3dd15d1d26aebfe29bccbb1b896c4b5423ec70a2e8b9506c70b6fb6a53dec83df5ad65a717ec9a850adf08e0aedf9b1711eac5eb080216615fa
   languageName: node
   linkType: hard
 
