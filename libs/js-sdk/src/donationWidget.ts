@@ -22,7 +22,7 @@ export interface CustomWindow extends Window {
 declare let window: CustomWindow
 
 class EverfundClient {
-  private modalOpen: boolean = false
+  private donationWidgetOpen: boolean = false
   private onSuccess: ModalProps["onSuccess"] = () => {}
   private onFailure: ModalProps["onFailure"] = () => {}
   private onClose: ModalProps["onClose"] = () => {}
@@ -206,7 +206,7 @@ class EverfundClient {
       function (e: MouseEvent) {
         const match = (e.target as HTMLElement).closest("[data-ef-modal]")
 
-        if (!match || Everfund.modalOpen) return
+        if (!match || Everfund.donationWidgetOpen) return
         e.preventDefault()
         e.stopPropagation()
 
@@ -237,8 +237,8 @@ class EverfundClient {
           code = new URL(code).pathname.replace("/", "")
         }
 
-        Everfund.modalOpen = true
-        Everfund.modal({
+        Everfund.donationWidgetOpen = true
+        Everfund.donationWidget({
           code,
           onSuccess: () => {},
           onFailure: () => {},
@@ -276,7 +276,7 @@ class EverfundClient {
           case "everfund:close":
             embed && enableBodyScroll(embed)
             embed && embed.remove()
-            Everfund.modalOpen = false
+            Everfund.donationWidgetOpen = false
             Everfund.onClose()
             // clearAllBodyScrollLocks();
             break
