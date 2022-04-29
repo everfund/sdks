@@ -30,7 +30,7 @@ To load from the CDN use this universal asynchronous script to load everfunds SD
           ;(e.type = "text/javascript"),
             (e.async = !0),
             (e.src =
-              "https://cdn.jsdelivr.net/npm/@everfund/js-sdk@1.3.0/dist/m.js"),
+              "https://cdn.jsdelivr.net/npm/@everfund/js-sdk@1.3.3/dist/js-sdk.umd.js"),
             f.parentNode.insertBefore(e, f)
         }
       }
