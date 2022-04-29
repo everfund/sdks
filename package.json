@@ -3,11 +3,13 @@
   "name": "everfund-monorepo",
   "version": "1.3.0",
   "workspaces": [
-    "sdk",
-    "react-sdk"
+    "libs/**"
   ],
   "scripts": {
-    "format": "yarn prettier --write ."
+    "format": "yarn prettier --write .",
+    "build:sdk": "cd libs/js-sdk && yarn build:prod",
+    "build:react": "cd libs/react-sdk && yarn build:prod",
+    "build": "yarn build:sdk && yarn build:react"
   },
   "author": "Christopher Burns",
   "homepage": "https://docs.everfund.io",

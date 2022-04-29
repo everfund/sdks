@@ -3,7 +3,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock"
-import { keyframes, css } from "@stitches/core"
+
 import elementClosest from "element-closest"
 import "core-js/features/array/includes"
 import "core-js/features/array/fill"
@@ -12,6 +12,8 @@ import "core-js/features/promise"
 import { version } from "./version"
 import "core-js/features"
 import "element-remove"
+
+import { css,keyframes } from "goober";
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -92,7 +94,7 @@ class EverfundClient {
         height: "100%",
       })
       modalFrame.id = "ef-modal"
-      modalFrame.className = cssEmbedIframe()
+      modalFrame.className = cssEmbedIframe
 
       modalFrame.addEventListener("load", function () {
         const loadingSpinner =
@@ -116,7 +118,7 @@ class EverfundClient {
         height: "100%",
       })
 
-      modalWrap.className = `embedModal ${cssEmbedModal()}`
+      modalWrap.className = `embedModal ${cssEmbedModal}`
       modalWrap.appendChild(modalFrame)
 
       const embedContainer = document.createElement("div")
@@ -158,7 +160,7 @@ class EverfundClient {
           animationDelay: " -0.15s",
         },
       })
-      loadingSpinner.className = `ldsRing ${cssLdsRing()}`
+      loadingSpinner.className = `ldsRing ${cssLdsRing}`
 
       const div = document.createElement("div")
 
@@ -182,7 +184,7 @@ class EverfundClient {
         backdropFilter: "blur(8px)",
       })
 
-      embedContainer.className = `embedContainer ${cssEmbedContainer()}`
+      embedContainer.className = `embedContainer ${cssEmbedContainer}`
       embedContainer.appendChild(loadingSpinner)
       embedContainer.appendChild(modalWrap)
       // disableBodyScroll(embedContainer)

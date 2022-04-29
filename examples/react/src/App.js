@@ -1,4 +1,4 @@
-import { EverfundModal } from "@everfund/react-sdk"
+import { EverfundDonationWidget } from "@everfund/react-sdk"
 import { useState } from "react"
 
 export default function App() {
@@ -32,7 +32,7 @@ export default function App() {
         </a>
       </div>
 
-      <EverfundModal
+      <EverfundDonationWidget
         code="rjww"
         open={showEverfundModal}
         onSuccess={(data) => {
