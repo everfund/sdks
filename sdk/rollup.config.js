@@ -1,15 +1,15 @@
 import pkg from "./package.json"
 import commonjs from "@rollup/plugin-commonjs"
 import gzipPlugin from "rollup-plugin-gzip"
-import resolve from "rollup-plugin-node-resolve"
+
 import external from "rollup-plugin-peer-deps-external"
 import typescript from "rollup-plugin-typescript2"
 import { uglify } from "rollup-plugin-uglify"
 import { brotliCompressSync } from "zlib"
-
+import { nodeResolve } from '@rollup/plugin-node-resolve'
 const plugins = [
   external(),
-  resolve(),
+  nodeResolve(),
   typescript({
     rollupCommonJSResolveHack: true,
     exclude: "**/__tests__/**",

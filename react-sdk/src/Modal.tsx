@@ -2,7 +2,9 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { ModalProps } from './types';
 import ReactDOM from 'react-dom';
 
-import { styled, keyframes } from '@stitches/react';
+// import { styled, keyframes } from '@stitches/react';
+
+const { styled, keyframes } = require('@stitches/react');
 
 interface EverfundReactProps extends ModalProps {
   open: boolean;
@@ -152,7 +154,7 @@ export const EverfundModal = ({
       )}
       <EmbedModal>
         <EmbedIframe
-          src={`https://${domain || "evr.fund"}/${code}/modal?${makeQS({
+          src={`https://${domain || 'evr.fund'}/${code}/modal?${makeQS({
             embed_origin: origin,
             embeded: true,
             close_on_success: closeOnSuccess,
