@@ -8,6 +8,7 @@ const CrispWithNoSSR = dynamic(() => import("../components/Crisp"), {
   ssr: false,
 })
 
+
 function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     // Initialize Fathom when the app loads
