@@ -34,7 +34,7 @@ export default {
   name: "App",
   methods: {
     donate: function () {
-      everfund.modal({
+      everfund.donationWidget({
         code: "rjww",
         onSuccess: function (onSuccessPayload) {
           console.log(onSuccessPayload)

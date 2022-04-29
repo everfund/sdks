@@ -2,7 +2,7 @@
   import everfund from "@everfund/js-sdk";
 
   function donate() {
-    everfund.modal({
+    everfund.donationWidget({
       code: "rjww",
       onSuccess: function(onSuccessPayload) {
         console.log(onSuccessPayload);
