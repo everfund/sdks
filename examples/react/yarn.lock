@@ -1234,10 +1234,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@everfund/react-sdk@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.1.0.tgz#6545b37679a8995447c9f12d2331f0c2b97fb498"
-  integrity sha512-0ZD/pHBhlSZ73zVHppHi9B4sUZ6bEYM4q1g+FLJsUvZBEuDfinz3e7753BXVuIag20CbDf3AxgukvlPmlnGZFw==
+"@everfund/react-sdk@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@everfund/react-sdk/-/react-sdk-1.2.1.tgz#a96ee80763cb75867a30851db2aaa44ea44a2482"
+  integrity sha512-/2bH0LVRHTn3NTSVmEFlquo6Ynx50AMxcawiinoB1df96x+UzOhxvgicLvoGUbAi0SRWCMHVDIX3VECFi3U2iw==
   dependencies:
     "@stitches/react" "^1.2.1"
 
@@ -2477,9 +2477,9 @@ async-limiter@~1.0.0:
   integrity sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==
 
 async@^2.6.2:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/async/-/async-2.6.3.tgz#d72625e2344a3656e3a3ad4fa749fa83299d82ff"
-  integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
+  version "2.6.4"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.6.4.tgz#706b7ff6084664cd7eae713f6f965433b5504221"
+  integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
   dependencies:
     lodash "^4.17.14"
 
