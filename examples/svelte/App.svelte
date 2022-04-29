@@ -1,5 +1,5 @@
 <script>
-  import everfund from "@everfund/sdk";
+  import everfund from "@everfund/js-sdk";
 
   function donate() {
     everfund.modal({

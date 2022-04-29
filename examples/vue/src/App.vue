@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import everfund from "@everfund/sdk"
+import everfund from "@everfund/js-sdk"
 
 export default {
   name: "App",

@@ -12,7 +12,7 @@ Make sure that you have added the script to the bottom of your **&#60/body&#62**
 ## How to use
 
 ```js
-import Everfund from "@everfund/sdk"
+import Everfund from "@everfund/js-sdk"
 
 Everfund.modal({
   code: "hdndyd7xXd0lp",
