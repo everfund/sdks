@@ -10,9 +10,9 @@ Everfund SDK can can be installed through multiple methods such as CDN and NPM i
 ### Install from NPM
 
 ```bash
-yarn add @everfund/sdk
+yarn add @everfund/js-sdk
 // or
-npm install @everfund/sdk
+npm install @everfund/js-sdk
 ```
 
 ### Install from CDN
@@ -30,7 +30,7 @@ To load from the CDN use this universal asynchronous script to load everfunds SD
           ;(e.type = "text/javascript"),
             (e.async = !0),
             (e.src =
-              "https://cdn.jsdelivr.net/npm/@everfund/sdk@1.2.1/dist/m.js"),
+              "https://cdn.jsdelivr.net/npm/@everfund/js-sdk@1.3.0/dist/m.js"),
             f.parentNode.insertBefore(e, f)
         }
       }

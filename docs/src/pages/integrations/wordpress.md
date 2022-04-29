@@ -49,7 +49,7 @@ Create a donation button and then click edit as HTML
 
 Add the custom anchor of data-ef-model to the A tag
 
-It should look like `<a data-ef-modal="demo" class="wp-....">`
+It should look like `<a data-ef-modal="rjww" class="wp-....">`
 
 ![Adding the custom data-anchor](https://ik.imagekit.io/everfund/docs/wp-6_1__DtMmWj-ev.png)
 

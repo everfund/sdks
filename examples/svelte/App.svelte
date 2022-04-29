@@ -1,9 +1,9 @@
 <script>
-  import everfund from "@everfund/sdk";
+  import everfund from "@everfund/js-sdk";
 
   function donate() {
-    everfund.modal({
-      code: "demo",
+    everfund.donationWidget({
+      code: "rjww",
       onSuccess: function(onSuccessPayload) {
         console.log(onSuccessPayload);
       },

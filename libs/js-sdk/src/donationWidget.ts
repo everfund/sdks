@@ -1,13 +1,19 @@
-import { keyframes, css } from "@stitches/core"
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock"
+
 import elementClosest from "element-closest"
 import "core-js/features/array/includes"
 import "core-js/features/array/fill"
 import { ModalProps } from "./types"
 import "core-js/features/promise"
+import { version } from "./version"
 import "core-js/features"
 import "element-remove"
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import {version} from './version'
+
+import { css,keyframes } from "goober";
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -16,10 +22,10 @@ export interface CustomWindow extends Window {
 declare let window: CustomWindow
 
 class EverfundClient {
-  private modalOpen: boolean = false
-  private onSuccess: ModalProps["onSuccess"] = () => { }
-  private onFailure: ModalProps["onFailure"] = () => { }
-  private onClose: ModalProps["onClose"] = () => { }
+  private donationWidgetOpen: boolean = false
+  private onSuccess: ModalProps["onSuccess"] = () => {}
+  private onFailure: ModalProps["onFailure"] = () => {}
+  private onClose: ModalProps["onClose"] = () => {}
   version: string
 
   constructor() {
@@ -29,6 +35,25 @@ class EverfundClient {
   }
 
   public modal({
+    code,
+    domain,
+    closeOnSuccess,
+    onSuccess,
+    onFailure,
+    onClose,
+  }: ModalProps) {
+    console.warn("everfund.modal is deprecated in the next update, please use everfund.donationWidget instead")
+    this.donationWidget({
+      code,
+      domain,
+      closeOnSuccess,
+      onSuccess,
+      onFailure,
+      onClose,
+    })
+  }
+
+  public donationWidget({
     code,
     domain,
     closeOnSuccess,
@@ -69,10 +94,11 @@ class EverfundClient {
         height: "100%",
       })
       modalFrame.id = "ef-modal"
-      modalFrame.className = cssEmbedIframe()
+      modalFrame.className = cssEmbedIframe
 
       modalFrame.addEventListener("load", function () {
-        const loadingSpinner = document.querySelector<HTMLDivElement>(".ldsRing")
+        const loadingSpinner =
+          document.querySelector<HTMLDivElement>(".ldsRing")
         const modalWrap = document.querySelector<HTMLDivElement>(".embedModal")
         loadingSpinner?.remove()
         modalWrap!.style.transform = "opacity(1)"
@@ -92,11 +118,11 @@ class EverfundClient {
         height: "100%",
       })
 
-      modalWrap.className = `embedModal ${cssEmbedModal()}`
+      modalWrap.className = `embedModal ${cssEmbedModal}`
       modalWrap.appendChild(modalFrame)
 
       const embedContainer = document.createElement("div")
-      disableBodyScroll(embedContainer);
+      disableBodyScroll(embedContainer)
 
       const loadingSpinner = document.createElement("div")
 
@@ -134,7 +160,7 @@ class EverfundClient {
           animationDelay: " -0.15s",
         },
       })
-      loadingSpinner.className = `ldsRing ${cssLdsRing()}`
+      loadingSpinner.className = `ldsRing ${cssLdsRing}`
 
       const div = document.createElement("div")
 
@@ -144,7 +170,6 @@ class EverfundClient {
           loadingSpinner.appendChild(div)
         })
 
-    
       const cssEmbedContainer = css({
         position: "fixed",
         top: "0",
@@ -159,7 +184,7 @@ class EverfundClient {
         backdropFilter: "blur(8px)",
       })
 
-      embedContainer.className = `embedContainer ${cssEmbedContainer()}`
+      embedContainer.className = `embedContainer ${cssEmbedContainer}`
       embedContainer.appendChild(loadingSpinner)
       embedContainer.appendChild(modalWrap)
       // disableBodyScroll(embedContainer)
@@ -175,14 +200,13 @@ class EverfundClient {
     }
   }
 
-
   private setupButtonListeners() {
     document.addEventListener(
       "click",
       function (e: MouseEvent) {
         const match = (e.target as HTMLElement).closest("[data-ef-modal]")
 
-        if (!match || Everfund.modalOpen) return
+        if (!match || Everfund.donationWidgetOpen) return
         e.preventDefault()
         e.stopPropagation()
 
@@ -190,7 +214,7 @@ class EverfundClient {
 
         if (!code) {
           console.error(
-            'Everfund: data-ef-modal is required! eg <button data-ef-modal="demo"> modal </button>'
+            'Everfund: data-ef-modal is required! eg <button data-ef-modal="rjww"> modal </button>'
           )
           return
         }
@@ -198,11 +222,11 @@ class EverfundClient {
         if (
           !!new RegExp(
             "^(https?:\\/\\/)?" + // protocol
-            "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-            "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-            "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-            "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-            "(\\#[-a-z\\d_]*)?$",
+              "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+              "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+              "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+              "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+              "(\\#[-a-z\\d_]*)?$",
             "i"
           ).test(code)
         ) {
@@ -213,14 +237,14 @@ class EverfundClient {
           code = new URL(code).pathname.replace("/", "")
         }
 
-        Everfund.modalOpen = true
-        Everfund.modal({
+        Everfund.donationWidgetOpen = true
+        Everfund.donationWidget({
           code,
-          onSuccess: () => { },
-          onFailure: () => { },
+          onSuccess: () => {},
+          onFailure: () => {},
           onClose: () => {
             clearAllBodyScrollLocks()
-           },
+          },
         })
       },
       false
@@ -250,9 +274,9 @@ class EverfundClient {
             Everfund.onFailure(e.data.content)
             break
           case "everfund:close":
-            embed && enableBodyScroll(embed);
+            embed && enableBodyScroll(embed)
             embed && embed.remove()
-            Everfund.modalOpen = false
+            Everfund.donationWidgetOpen = false
             Everfund.onClose()
             // clearAllBodyScrollLocks();
             break

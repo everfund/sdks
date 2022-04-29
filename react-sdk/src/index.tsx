@@ -1,1 +1,0 @@
-export { EverfundModal } from './Modal';
