@@ -118,9 +118,9 @@ export const EverfundDonationWidget = ({
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
-    zindex: 9999998;
+    z-index: 9999998;
     display: flex;
-    justify-ccontent: space-around;
+    justify-content: space-around;
     align-items: stretch;
     backdrop-filter: blur(8px);
   `;
