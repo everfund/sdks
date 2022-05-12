@@ -1640,7 +1640,7 @@ __metadata:
   dependencies:
     "@size-limit/preset-small-lib": ^7.0.8
     "@types/react": ^17.0.26
-    "@types/react-dom": ^17.0.9
+    "@types/react-dom": 17.0.17
     goober: ^2.1.9
     husky: ^7.0.4
     microbundle: ^0.15.0
@@ -2386,12 +2386,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.9":
-  version: 17.0.16
-  resolution: "@types/react-dom@npm:17.0.16"
+"@types/react-dom@npm:17.0.17":
+  version: 17.0.17
+  resolution: "@types/react-dom@npm:17.0.17"
   dependencies:
     "@types/react": ^17
-  checksum: 2f41a45ef955c8f68a7bcd22343715f15e1560a5e5ba941568b3c970d9151f78fe0975ecf4df7f691339af546555e0f23fa423a0a5bcd7ea4dd4f9c245509936
+  checksum: 23caf98aa03e968811560f92a2c8f451694253ebe16b670929b24eaf0e7fa62ba549abe9db0ac028a9d8a9086acd6ab9c6c773f163fa21224845edbc00ba6232
   languageName: node
   linkType: hard
 
