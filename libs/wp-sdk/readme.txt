@@ -65,5 +65,8 @@ Here are links to view JSDelivr's Policy's, [Acceptable Use Policy](https://www.
 
 == Changelog ==
 
+= 1.3.3 =
+* Brought into line with latest version of the npm version
+
 = 1.1.0 =
 * Initial Release
