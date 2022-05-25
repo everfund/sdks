@@ -53,7 +53,7 @@ function everfund_sdk_script()
     wp_enqueue_script('everfund', plugins_url('/js/js-sdk.umd.js', __FILE__));
 }
 
-function add_allowed_origins($origins)
+function everfund_add_allowed_origins($origins)
 {
     $origins[] = 'https://evr.fund';
     $origins[] = 'https://animals.charity';
@@ -72,7 +72,7 @@ function add_allowed_origins($origins)
     return $origins;
 }
 
-add_filter('allowed_http_origins', 'add_allowed_origins');
+add_filter('allowed_http_origins', 'everfund_add_allowed_origins');
 add_action('admin_enqueue_scripts', 'everfund_admin_styles');
 add_action('wp_enqueue_scripts', 'everfund_sdk_script');
 add_action('wp_head', 'everfund_sdk_script', 1);
