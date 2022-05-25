@@ -55,7 +55,7 @@ Stuck? Check out our developer documentation [here](https://developer.everfund.i
 
 == Disclosure ==
 
-Everfund Wordpress Plugin will automatically add the Everfund’s SDK to your header. It is hosted on [JSDeliver](https://www.jsdelivr.com) as a CDN Version of our [NPM Package](https://www.npmjs.com/package/@everfund/sdk)
+Everfund Wordpress Plugin will automatically add the Everfund’s SDK to your header. It is hosted on [JSDeliver](https://www.jsdelivr.com) as a CDN Version of our [NPM Package](https://www.npmjs.com/package/@everfund/js-sdk)
 Here are links to view JSDelivr's Policy's, [Acceptable Use Policy](https://www.jsdelivr.com/terms/acceptable-use-policy-jsdelivr-net) and [Privacy Policy](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net).
 
 == Screenshots ==
@@ -64,6 +64,9 @@ Here are links to view JSDelivr's Policy's, [Acceptable Use Policy](https://www.
 2. Everfund Dashboard
 
 == Changelog ==
+
+= 1.3.3 =
+* Brought into line with latest version of the npm version
 
 = 1.1.0 =
 * Initial Release
