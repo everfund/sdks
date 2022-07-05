@@ -1640,7 +1640,7 @@ __metadata:
   dependencies:
     "@size-limit/preset-small-lib": ^7.0.8
     "@types/react": ^17.0.26
-    "@types/react-dom": ^17.0.9
+    "@types/react-dom": 18.0.6
     goober: ^2.1.9
     husky: ^7.0.4
     microbundle: ^0.15.0
@@ -2386,16 +2386,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.9":
-  version: 17.0.16
-  resolution: "@types/react-dom@npm:17.0.16"
+"@types/react-dom@npm:18.0.6":
+  version: 18.0.6
+  resolution: "@types/react-dom@npm:18.0.6"
   dependencies:
-    "@types/react": ^17
-  checksum: 2f41a45ef955c8f68a7bcd22343715f15e1560a5e5ba941568b3c970d9151f78fe0975ecf4df7f691339af546555e0f23fa423a0a5bcd7ea4dd4f9c245509936
+    "@types/react": "*"
+  checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17, @types/react@npm:^17.0.26":
+"@types/react@npm:*":
+  version: 18.0.14
+  resolution: "@types/react@npm:18.0.14"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 608eb57a383eedc54c79949673e5e8314f6b0c61542bff58721c8c47a18c23e2832e77c656050c2c2c004b62cf25582136c7c56fe1b6263a285c065fae31dbcf
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17.0.26":
   version: 17.0.44
   resolution: "@types/react@npm:17.0.44"
   dependencies:
