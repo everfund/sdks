@@ -1,6 +1,6 @@
 {
   "name": "@everfund/js-sdk",
-  "version": "1.3.3",
+  "version": "1.4.0.beta",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
   "source": "src/index.ts",

@@ -1,2 +1,3 @@
-import Everfund from "./donationWidget"
-export default Everfund
+import { useReactTable } from "./hook"
+
+export default useReactTable

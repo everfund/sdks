@@ -1,15 +1,34 @@
-import { EverfundDonationWidget } from "@everfund/react-sdk"
+import { useDonationWidget } from "../../../packages/react-sdk/src"
 import ReactDOM from "react-dom/client"
 import * as React from "react"
 
 export default function App() {
   const [success, setSuccess] = React.useState(false)
-  const [showEverfundModal, setEverfundModal] = React.useState(false)
+  const { isShowing, toggle } = useDonationWidget({
+    code: "rjww",
+    onSuccess: (data) => {
+      console.log("Everfund success", data)
+      setSuccess(true)
+    },
+    onFailure: (err) => {
+      console.log("Everfund failed", err)
+      setSuccess(true)
+    },
+    onClose: () => {
+      if (success) {
+        console.log("Payment success")
+      } else {
+        console.log("Payment failed")
+      }
+    },
+  })
+
+  console.log(isShowing)
 
   return (
     <div className="app">
       <div className="buttonContainer">
-        <button className="button" onClick={() => setEverfundModal(true)}>
+        <button className="button" onClick={() => toggle()}>
           Donate Now
         </button>
       </div>
@@ -34,27 +53,6 @@ export default function App() {
           </svg>
         </a>
       </div>
-
-      <EverfundDonationWidget
-        code="rjww"
-        open={showEverfundModal}
-        onSuccess={(data) => {
-          console.log("Everfund success", data)
-          setSuccess(true)
-        }}
-        onFailure={(err) => {
-          console.log("Everfund failed", err)
-          setSuccess(true)
-        }}
-        onClose={() => {
-          setEverfundModal(false)
-          if (success) {
-            console.log("Payment success")
-          } else {
-            console.log("Payment failed")
-          }
-        }}
-      />
     </div>
   )
 }
