@@ -1,14 +1,17 @@
 import { EverfundDonationWidget } from "@everfund/react-sdk"
-import { useState } from "react"
+import ReactDOM from "react-dom/client"
+import * as React from "react"
 
 export default function App() {
-  const [success, setSuccess] = useState(false)
-  const [showEverfundModal, setEverfundModal] = useState(false)
+  const [success, setSuccess] = React.useState(false)
+  const [showEverfundModal, setEverfundModal] = React.useState(false)
 
   return (
     <div className="app">
       <div className="buttonContainer">
-        <button onClick={() => setEverfundModal(true)}>Donate Now</button>
+        <button className="button" onClick={() => setEverfundModal(true)}>
+          Donate Now
+        </button>
       </div>
       <div>
         <a
@@ -55,3 +58,12 @@ export default function App() {
     </div>
   )
 }
+
+const rootElement = document.getElementById("root")
+if (!rootElement) throw new Error("Failed to find the root element")
+
+ReactDOM.createRoot(rootElement).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)

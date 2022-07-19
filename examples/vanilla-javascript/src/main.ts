@@ -1,6 +1,6 @@
-import everfund from "@everfund/js-sdk"
+import everfund from "../../../packages/js-sdk/dist"
 
-document.getElementById("donate-modal").addEventListener("click", () => {
+document?.getElementById("donate-modal")?.addEventListener("click", () => {
   console.log("launch Everfund Modal")
   everfund.donationWidget({
     code: "rjww",

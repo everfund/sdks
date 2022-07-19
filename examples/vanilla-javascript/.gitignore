@@ -1,3 +1,6 @@
+dist-ssr
+*.local
+
 .DS_*
 **/dist
 **/node_modules

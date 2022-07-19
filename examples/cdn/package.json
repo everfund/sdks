@@ -1,10 +1,12 @@
 {
+  "name": "cdn",
+  "version": "0.0.0",
   "private": true,
   "main": "index.html",
   "scripts": {
     "start": "serve"
   },
   "devDependencies": {
-    "serve": "^13.0.2"
+    "serve": "^14.0.1"
   }
 }

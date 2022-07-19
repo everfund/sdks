@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import everfund from "@everfund/js-sdk";
 
   function donate() {

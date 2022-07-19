@@ -1,7 +1,10 @@
+dist-ssr
+*.local
+
 .DS_*
 **/dist
 **/node_modules
-**/.cache
+**/.parcel-cache
 examples/**/yarn.lock
 
 .yarn/*
