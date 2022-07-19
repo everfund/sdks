@@ -49,7 +49,8 @@
     }
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.8",

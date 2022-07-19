@@ -21,7 +21,8 @@
     "format": "yarn prettier --write ."
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "license": "MIT",
   "devDependencies": {

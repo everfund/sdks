@@ -8,12 +8,12 @@ import elementClosest from "element-closest"
 import "core-js/features/array/includes"
 import "core-js/features/array/fill"
 import { ModalProps } from "./types"
-import "core-js/features/promise"
 import { version } from "./version"
+import "core-js/features/promise"
 import "core-js/features"
 import "element-remove"
 
-import { css,keyframes } from "goober";
+import { css, keyframes } from "goober"
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -43,7 +43,9 @@ class EverfundClient {
     onFailure,
     onClose,
   }: ModalProps) {
-    console.warn("everfund.modal is deprecated in the next update, please use everfund.donationWidget instead")
+    console.warn(
+      "everfund.modal is deprecated in the next update, please use everfund.donationWidget instead"
+    )
     this.donationWidget({
       code,
       domain,

@@ -1,15 +1,19 @@
 {
   "private": true,
   "name": "everfund-monorepo",
+  "namespace": "@everfund",
   "version": "1.3.0",
   "workspaces": [
-    "libs/**"
+    "examples/**",
+    "packages/**"
   ],
   "scripts": {
     "format": "yarn prettier --write .",
     "build:sdk": "cd libs/js-sdk && yarn build:prod",
     "build:react": "cd libs/react-sdk && yarn build:prod",
-    "build": "yarn build:sdk && yarn build:react"
+    "build": "yarn build:sdk && yarn build:react",
+    "linkAll": "lerna exec 'npm link' --parallel",
+    "unlinkAll": "lerna exec 'npm unlink' --parallel"
   },
   "author": "Christopher Burns",
   "homepage": "https://docs.everfund.io",
@@ -19,9 +23,10 @@
     "url": "git+https://github.com/everfund/everfund"
   },
   "devDependencies": {
-    "prettier": "^2.6.2",
-    "prettier-package-json": "^2.6.3",
-    "prettier-plugin-sort-imports": "^1.6.0"
+    "lerna": "^4.0.0",
+    "prettier": "^2.7.1",
+    "prettier-package-json": "^2.6.4",
+    "prettier-plugin-sort-imports": "^1.7.0"
   },
   "packageManager": "yarn@3.2.0"
 }
