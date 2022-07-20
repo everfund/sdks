@@ -40,9 +40,9 @@ dist
 package-lock.json
 
 .yarn/*
-!.yarn/cache
+**/.yarn/install-state.gz
 !.yarn/patches
-!.yarn/plugins
 !.yarn/releases
+!.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
