@@ -15,7 +15,7 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@everfund/react-sdk": "1.4.0.beta",
+    "@everfund/react-sdk": "1.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

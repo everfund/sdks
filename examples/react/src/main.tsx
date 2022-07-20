@@ -1,10 +1,10 @@
-import { useDonationWidget } from "../../../packages/react-sdk/src"
+import { useDonationWidget } from "../../../packages/react-sdk"
 import ReactDOM from "react-dom/client"
 import * as React from "react"
 
 export default function App() {
   const [success, setSuccess] = React.useState(false)
-  const { isShowing, toggle } = useDonationWidget({
+  const { isOpen, openDonationWidget } = useDonationWidget({
     code: "rjww",
     onSuccess: (data) => {
       console.log("Everfund success", data)
@@ -23,12 +23,10 @@ export default function App() {
     },
   })
 
-  console.log(isShowing)
-
   return (
     <div className="app">
       <div className="buttonContainer">
-        <button className="button" onClick={() => toggle()}>
+        <button className="button" onClick={() => openDonationWidget()}>
           Donate Now
         </button>
       </div>

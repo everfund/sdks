@@ -1,12 +1,11 @@
 {
   "composite": true,
-  "extends": "../../../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   // "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
-    "resolveJsonModule": true,
     "baseUrl": "."
   },
   "files": ["src/main.ts"],

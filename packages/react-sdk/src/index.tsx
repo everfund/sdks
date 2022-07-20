@@ -1,29 +1,29 @@
-import { ModalProps } from '../../../packages/js-sdk/dist/types';
-import everfund from '../../../packages/js-sdk';
-import { useState } from 'react';
+import { ModalProps } from "@everfund/js-sdk/src/types"
+import everfund from "@everfund/js-sdk"
+import { useState } from "react"
 
 export function useDonationWidget(options: ModalProps) {
   // Compose in the generic options to the user options
-  const [isShowing, setIsShowing] = useState(false);
+  const [isOpen, setIsDonationWidgetOpen] = useState(false)
 
-  function toggle() {
-    setIsShowing(!isShowing);
+  function openDonationWidget() {
+    setIsDonationWidgetOpen(true)
     everfund.donationWidget({
       ...options,
       onSuccess: (data) => {
-        setIsShowing(false);
-        options.onSuccess(data);
+        setIsDonationWidgetOpen(false)
+        options.onSuccess(data)
       },
       onFailure: (err) => {
-        setIsShowing(false);
-        options.onFailure(err);
+        setIsDonationWidgetOpen(false)
+        options.onFailure(err)
       },
       onClose: () => {
-        setIsShowing(false);
-        options.onClose();
+        setIsDonationWidgetOpen(false)
+        options.onClose()
       },
-    });
+    })
   }
 
-  return { isShowing, toggle };
+  return { isOpen, openDonationWidget }
 }
