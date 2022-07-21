@@ -1,0 +1,57 @@
+.app {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #1fb292, #116452);
+}
+.buttonContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+  row-gap: 1.25rem;
+}
+.logoContainer {
+  width: 14rem;
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  display: block;
+  color: white;
+}
+.logoHeart {
+  color: #fbdc8e;
+}
+button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0;
+  transition-duration: 75ms;
+  background-color: #fbdc8e;
+  border: 0;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #000;
+}
