@@ -1625,17 +1625,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@everfund/react-sdk@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@everfund/react-sdk@npm:1.3.1"
-  dependencies:
-    goober: ^2.1.9
-  peerDependencies:
-    react: ">=16"
-  checksum: 7b8256d6e01f49b5367d48beeacc4a6e58a5377a14be288c785cec9b4cc675537a497a5429d4561f3b4076fb5a21bf34c65ef8d429d2434ac00cbba8b73499d7
-  languageName: node
-  linkType: hard
-
 "@gar/promisify@npm:^1.0.1, @gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -10601,7 +10590,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby@workspace:examples/gatsby"
   dependencies:
-    "@everfund/react-sdk": 1.3.1
+    "@everfund/react-sdk": 2.0.1
     "@types/node": ^17.0.45
     "@types/react": ^18.0.15
     "@types/react-dom": ^18.0.6
