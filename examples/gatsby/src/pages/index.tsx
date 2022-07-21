@@ -1,25 +1,25 @@
-import { useDonationWidget } from "../../../../packages/react-sdk"
-import "../styles/modern-normalize.css"
-import "../styles/globals.css"
-import * as React from "react"
+import { useDonationWidget } from '@everfund/react-sdk'
+import '../styles/modern-normalize.css'
+import '../styles/globals.css'
+import * as React from 'react'
 
 const Home = () => {
   const [success, setSuccess] = React.useState(false)
   const { isOpen, openDonationWidget } = useDonationWidget({
-    code: "rjww",
-    onSuccess: (data) => {
-      console.log("Everfund success", data)
+    code: 'rjww',
+    onSuccess: data => {
+      console.log('Everfund success', data)
       setSuccess(true)
     },
-    onFailure: (err) => {
-      console.log("Everfund failed", err)
+    onFailure: err => {
+      console.log('Everfund failed', err)
       setSuccess(true)
     },
     onClose: () => {
       if (success) {
-        console.log("Payment success")
+        console.log('Payment success')
       } else {
-        console.log("Payment failed")
+        console.log('Payment failed')
       }
     },
   })

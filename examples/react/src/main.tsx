@@ -1,24 +1,24 @@
-import { useDonationWidget } from "../../../packages/react-sdk"
-import ReactDOM from "react-dom/client"
-import * as React from "react"
+import { useDonationWidget } from '@everfund/react-sdk'
+import ReactDOM from 'react-dom/client'
+import * as React from 'react'
 
 export default function App() {
   const [success, setSuccess] = React.useState(false)
   const { isOpen, openDonationWidget } = useDonationWidget({
-    code: "rjww",
-    onSuccess: (data) => {
-      console.log("Everfund success", data)
+    code: 'rjww',
+    onSuccess: data => {
+      console.log('Everfund success', data)
       setSuccess(true)
     },
-    onFailure: (err) => {
-      console.log("Everfund failed", err)
+    onFailure: err => {
+      console.log('Everfund failed', err)
       setSuccess(true)
     },
     onClose: () => {
       if (success) {
-        console.log("Payment success")
+        console.log('Payment success')
       } else {
-        console.log("Payment failed")
+        console.log('Payment failed')
       }
     },
   })
@@ -55,8 +55,8 @@ export default function App() {
   )
 }
 
-const rootElement = document.getElementById("root")
-if (!rootElement) throw new Error("Failed to find the root element")
+const rootElement = document.getElementById('root')
+if (!rootElement) throw new Error('Failed to find the root element')
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
