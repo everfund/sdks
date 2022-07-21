@@ -14340,23 +14340,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"my-app@workspace:examples/next":
-  version: 0.0.0-use.local
-  resolution: "my-app@workspace:examples/next"
-  dependencies:
-    "@everfund/react-sdk": 1.3.1
-    "@types/node": 18.0.6
-    "@types/react": ^18.0.15
-    "@types/react-dom": ^18.0.6
-    eslint: 8.20.0
-    eslint-config-next: 12.2.2
-    next: 12.2.2
-    react: 18.2.0
-    react-dom: 18.2.0
-    typescript: 4.7.4
-  languageName: unknown
-  linkType: soft
-
 "nanoid@npm:^3.1.30, nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
@@ -14478,6 +14461,23 @@ __metadata:
   checksum: fb8ced6fb551c60c71a0fb8f443f0a15cd12aed0b1a21fbaba132c47863cccf7517dce8074b1572ba1f20c974d6e5329963a9c4fb89afe88fe22eb1505ba0db8
   languageName: node
   linkType: hard
+
+"next@workspace:examples/next":
+  version: 0.0.0-use.local
+  resolution: "next@workspace:examples/next"
+  dependencies:
+    "@everfund/react-sdk": 1.3.1
+    "@types/node": 18.0.6
+    "@types/react": ^18.0.15
+    "@types/react-dom": ^18.0.6
+    eslint: 8.20.0
+    eslint-config-next: 12.2.2
+    next: 12.2.2
+    react: 18.2.0
+    react-dom: 18.2.0
+    typescript: 4.7.4
+  languageName: unknown
+  linkType: soft
 
 "nice-try@npm:^1.0.4":
   version: 1.0.5

@@ -2,13 +2,12 @@ import {
   disableBodyScroll,
   enableBodyScroll,
   clearAllBodyScrollLocks,
-} from "body-scroll-lock"
+} from 'body-scroll-lock'
 
-import elementClosest from "element-closest"
-import { ModalProps } from "./types"
-import { version } from "./version"
+import { ModalProps } from './types'
+import { version } from './version'
 
-import { css, keyframes } from "goober"
+import { css, keyframes } from 'goober'
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient
@@ -18,17 +17,16 @@ declare let window: CustomWindow
 
 class EverfundClient {
   private donationWidgetOpen: boolean = false
-  private onSuccess: ModalProps["onSuccess"] = () => {}
-  private onFailure: ModalProps["onFailure"] = () => {}
-  private onClose: ModalProps["onClose"] = () => {}
+  private onSuccess: ModalProps['onSuccess'] = () => {}
+  private onFailure: ModalProps['onFailure'] = () => {}
+  private onClose: ModalProps['onClose'] = () => {}
   version: string
 
   constructor() {
     this.version = version
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       this.setupButtonListeners()
       this.setupIframeListeners()
-      elementClosest(window)
     }
   }
 
@@ -41,7 +39,7 @@ class EverfundClient {
     onClose,
   }: ModalProps) {
     console.warn(
-      "everfund.modal is deprecated in the next update, please use everfund.donationWidget instead"
+      'everfund.modal is deprecated in the next update, please use everfund.donationWidget instead'
     )
     this.donationWidget({
       code,
@@ -70,14 +68,14 @@ class EverfundClient {
       var str = []
       for (var p in obj)
         if (obj[p] && obj.hasOwnProperty(p)) {
-          str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]))
+          str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]))
         }
-      return str.join("&")
+      return str.join('&')
     }
 
     try {
-      const modalFrame = document.createElement("iframe")
-      modalFrame.src = `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
+      const modalFrame = document.createElement('iframe')
+      modalFrame.src = `https://${domain || 'evr.fund'}/${code}/modal?${makeQS({
         embed_origin: origin,
         embeded: true,
         close_on_success: closeOnSuccess,
@@ -87,81 +85,81 @@ class EverfundClient {
       modalFrame.allowPaymentRequest = true
 
       const cssEmbedIframe = css({
-        border: "none",
-        width: "100%",
+        border: 'none',
+        width: '100%',
         margin: 0,
-        height: "100%",
+        height: '100%',
       })
-      modalFrame.id = "ef-modal"
+      modalFrame.id = 'ef-modal'
       modalFrame.className = cssEmbedIframe
 
-      modalFrame.addEventListener("load", function () {
+      modalFrame.addEventListener('load', function () {
         const loadingSpinner =
-          document.querySelector<HTMLDivElement>(".ldsRing")
-        const modalWrap = document.querySelector<HTMLDivElement>(".embedModal")
+          document.querySelector<HTMLDivElement>('.ldsRing')
+        const modalWrap = document.querySelector<HTMLDivElement>('.embedModal')
         loadingSpinner?.remove()
-        modalWrap!.style.transform = "opacity(1)"
+        modalWrap!.style.transform = 'opacity(1)'
       })
 
-      const modalWrap = document.createElement("div")
+      const modalWrap = document.createElement('div')
 
       const cssEmbedModal = css({
-        pointerEvents: "all",
-        zIndex: "9999999",
-        display: "flex",
-        width: "100%",
-        transform: "opacity(0)",
-        transition: "transform 0.3s ease",
-        overflowY: "auto",
-        "-webkit-overflow-scrolling": "touch",
-        height: "100%",
+        pointerEvents: 'all',
+        zIndex: '9999999',
+        display: 'flex',
+        width: '100%',
+        transform: 'opacity(0)',
+        transition: 'transform 0.3s ease',
+        overflowY: 'auto',
+        '-webkit-overflow-scrolling': 'touch',
+        height: '100%',
       })
 
       modalWrap.className = `embedModal ${cssEmbedModal}`
       modalWrap.appendChild(modalFrame)
 
-      const embedContainer = document.createElement("div")
+      const embedContainer = document.createElement('div')
       disableBodyScroll(embedContainer)
 
-      const loadingSpinner = document.createElement("div")
+      const loadingSpinner = document.createElement('div')
 
       const cssKeyframeLDsring = keyframes({
-        "0%": { transform: "rotate(0deg)" },
-        "100%": { transform: "rotate(360deg)" },
+        '0%': { transform: 'rotate(0deg)' },
+        '100%': { transform: 'rotate(360deg)' },
       })
 
       const cssLdsRing = css({
-        display: "inline-block",
-        position: "absolute",
-        left: "calc(50% - 32px)",
-        top: "calc(50% - 32px)",
-        width: "64px",
-        height: "64px",
-        "& div": {
-          boxSizing: "border-box",
-          display: "block",
-          position: "absolute",
-          width: "51px",
-          height: "51px",
-          margin: "6px",
-          border: "6px solid white",
-          borderRadius: "50%",
+        display: 'inline-block',
+        position: 'absolute',
+        left: 'calc(50% - 32px)',
+        top: 'calc(50% - 32px)',
+        width: '64px',
+        height: '64px',
+        '& div': {
+          boxSizing: 'border-box',
+          display: 'block',
+          position: 'absolute',
+          width: '51px',
+          height: '51px',
+          margin: '6px',
+          border: '6px solid white',
+          borderRadius: '50%',
           animation: `${cssKeyframeLDsring} 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite`,
-          borderColor: "white transparent transparent transparent",
+          borderColor: 'white transparent transparent transparent',
         },
-        "& div:nth-child(1)": {
-          animationDelay: " -0.45s",
+        '& div:nth-child(1)': {
+          animationDelay: ' -0.45s',
         },
-        "& div:nth-child(2)": {
-          animationDelay: " -0.3s",
+        '& div:nth-child(2)': {
+          animationDelay: ' -0.3s',
         },
-        "& div:nth-child(3)": {
-          animationDelay: " -0.15s",
+        '& div:nth-child(3)': {
+          animationDelay: ' -0.15s',
         },
       })
       loadingSpinner.className = `ldsRing ${cssLdsRing}`
 
-      const div = document.createElement("div")
+      const div = document.createElement('div')
 
       Array(4)
         .fill(4)
@@ -170,17 +168,17 @@ class EverfundClient {
         })
 
       const cssEmbedContainer = css({
-        position: "fixed",
-        top: "0",
-        left: "0",
-        right: "0",
-        bottom: "0",
-        background: "rgba(0, 0, 0, 0.7)",
-        zIndex: "9999998",
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "stretch",
-        backdropFilter: "blur(8px)",
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        right: '0',
+        bottom: '0',
+        background: 'rgba(0, 0, 0, 0.7)',
+        zIndex: '9999998',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'stretch',
+        backdropFilter: 'blur(8px)',
       })
 
       embedContainer.className = `embedContainer ${cssEmbedContainer}`
@@ -192,7 +190,7 @@ class EverfundClient {
       console.log(e)
 
       window.location.replace(
-        `https://${domain || "evr.fund"}/${code}/modal?${makeQS({
+        `https://${domain || 'evr.fund'}/${code}/modal?${makeQS({
           return_url: origin,
         })}`
       )
@@ -201,15 +199,15 @@ class EverfundClient {
 
   private setupButtonListeners() {
     document.addEventListener(
-      "click",
+      'click',
       function (e: MouseEvent) {
-        const match = (e.target as HTMLElement).closest("[data-ef-modal]")
+        const match = (e.target as HTMLElement).closest('[data-ef-modal]')
 
         if (!match || Everfund.donationWidgetOpen) return
         e.preventDefault()
         e.stopPropagation()
 
-        let code = match.getAttribute("data-ef-modal")
+        let code = match.getAttribute('data-ef-modal')
 
         if (!code) {
           console.error(
@@ -220,20 +218,20 @@ class EverfundClient {
 
         if (
           !!new RegExp(
-            "^(https?:\\/\\/)?" + // protocol
-              "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-              "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-              "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-              "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-              "(\\#[-a-z\\d_]*)?$",
-            "i"
+            '^(https?:\\/\\/)?' + // protocol
+              '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+              '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+              '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+              '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+              '(\\#[-a-z\\d_]*)?$',
+            'i'
           ).test(code)
         ) {
           console.warn(
             `Everfund: url's are deprecated please use a code instead`
           )
 
-          code = new URL(code).pathname.replace("/", "")
+          code = new URL(code).pathname.replace('/', '')
         }
 
         Everfund.donationWidgetOpen = true
@@ -252,27 +250,27 @@ class EverfundClient {
 
   private setupIframeListeners() {
     window.addEventListener(
-      "message",
+      'message',
       function (e) {
-        const embed = document.querySelector("." + "embedContainer")
+        const embed = document.querySelector('.' + 'embedContainer')
         switch (e.data.message) {
-          case "everfund:ready":
+          case 'everfund:ready':
             const loadingSpinner =
-              document.querySelector<HTMLDivElement>("#ldsRing")
+              document.querySelector<HTMLDivElement>('#ldsRing')
             const modalWrap = document.querySelector<HTMLDivElement>(
-              "." + "embedModal"
+              '.' + 'embedModal'
             )
             loadingSpinner?.remove()
-            modalWrap!.style.transform = "opacity(1)"
+            modalWrap!.style.transform = 'opacity(1)'
             break
-          case "everfund:success":
+          case 'everfund:success':
             const data = e.data.content
             Everfund.onSuccess(data)
             break
-          case "everfund:failure":
+          case 'everfund:failure':
             Everfund.onFailure(e.data.content)
             break
-          case "everfund:close":
+          case 'everfund:close':
             embed && enableBodyScroll(embed)
             embed && embed.remove()
             Everfund.donationWidgetOpen = false

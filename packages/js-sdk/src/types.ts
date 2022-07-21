@@ -16,7 +16,7 @@ export type SuccessResponse = {
     }
   }
   /** Donation Type */
-  type?: "SINGLE" | "MONTHLY"
+  type?: 'SINGLE' | 'MONTHLY'
   /** Aggreed to gift aid */
   agreededToGiftAid: boolean
   contactByPhone: boolean

@@ -1,6 +1,6 @@
-import { ModalProps } from "@everfund/js-sdk/src/types"
-import everfund from "@everfund/js-sdk"
-import { useState } from "react"
+import { ModalProps } from '@everfund/js-sdk/src/types'
+import everfund from '@everfund/js-sdk'
+import { useState } from 'react'
 
 export function useDonationWidget(options: ModalProps) {
   // Compose in the generic options to the user options
@@ -10,11 +10,11 @@ export function useDonationWidget(options: ModalProps) {
     setIsDonationWidgetOpen(true)
     everfund.donationWidget({
       ...options,
-      onSuccess: (data) => {
+      onSuccess: data => {
         setIsDonationWidgetOpen(false)
         options.onSuccess(data)
       },
-      onFailure: (err) => {
+      onFailure: err => {
         setIsDonationWidgetOpen(false)
         options.onFailure(err)
       },
