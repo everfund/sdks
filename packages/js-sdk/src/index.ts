@@ -5,12 +5,8 @@ import {
 } from "body-scroll-lock"
 
 import elementClosest from "element-closest"
-import "core-js/features/array/includes"
-import "core-js/features/array/fill"
 import { ModalProps } from "./types"
 import { version } from "./version"
-import "core-js/features/promise"
-import "element-remove"
 
 import { css, keyframes } from "goober"
 
@@ -29,9 +25,11 @@ class EverfundClient {
 
   constructor() {
     this.version = version
-    this.setupButtonListeners()
-    this.setupIframeListeners()
-    elementClosest(window)
+    if (typeof window !== "undefined") {
+      this.setupButtonListeners()
+      this.setupIframeListeners()
+      elementClosest(window)
+    }
   }
 
   public modal({
