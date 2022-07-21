@@ -1,0 +1,34 @@
+{
+  "name": "@everfund/react-sdk",
+  "version": "1.3.3",
+  "license": "MIT",
+  "author": "Christopher Burns",
+  "sideEffects": false,
+  "main": "build/cjs/react-table/src/index.js",
+  "module": "build/esm/index.js",
+  "browser": "build/umd/index.production.js",
+  "types": "build/types/index.d.ts",
+  "files": [
+    "build/**",
+    "src"
+  ],
+  "dependencies": {
+    "@everfund/js-sdk": "1.3.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

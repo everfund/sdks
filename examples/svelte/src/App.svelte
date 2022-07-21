@@ -1,21 +1,39 @@
-<template>
-  <main>
-    <div class="buttonContainer">
-      <button v-on:click="donate">Donate Now</button>
-    </div>
-    <div>
-      <a
-        class="logoContainer"
-        href="https://docs.everfund.io"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg viewBox="0 0 2698.39 585.2" aria-labelledby="Everfund Logo">
-          <title>Everfund Logo</title>
-          <path
-            d="M342.87 585.2c-15.25 0-31.68-8.15-51.71-25.64-9.68-8.46-17.65-16.89-20.29-19.74C150.66 426.64 76.88 346.6 38.72 288 2.85 232.89 0 200.58 0 164.06c0-37 18.05-78.13 48.29-110.12C80.66 19.7 123.08 0 164.67 0h.14c124.29 0 200.77 144.46 204 150.61a324.3 324.3 0 0044.79 62.16c34.4 37.23 69.66 56.12 104.74 56.12h1A106 106 0 00593.5 238a103.07 103.07 0 0030.55-73.53A104.57 104.57 0 00519.61 60c-27.55 0-60.14 5.08-93 42.71a30 30 0 11-45.22-39.44C430.85 6.58 483.93 0 519.57 0 610.24 0 684 73.79 684 164.44a162.68 162.68 0 01-48.2 116 165.65 165.65 0 01-115.93 48.4h-1.59c-123.06 0-198.89-143.09-202.78-150.6a324.66 324.66 0 00-44.77-61.77C246.84 90.73 209 60 164.8 60h-.08C139.54 60 113 72.84 91.89 95.16 72.22 116 60 142.37 60 164.06c0 25 0 46.64 29 91.19 35.08 53.89 108.29 132.93 223.8 241.63.6.56 1.17 1.15 1.72 1.76a183.91 183.91 0 0025.4 23.18c10.12-8.28 29.55-25.8 61.73-57.93 29.93-29.88 63.73-65.3 82.2-86.13a30 30 0 0144.9 39.8c-18 20.28-55.35 59.78-92 96-19.27 19-35.44 34.35-48.06 45.47-23.03 20.3-33.31 26.17-45.82 26.17z"
-            fill="currentColor"
-            class="logoHeart"
+<script lang="ts">
+  import everfund from "@everfund/js-sdk";
+
+  function donate() {
+    everfund.donationWidget({
+      code: "rjww",
+      onSuccess: function(onSuccessPayload) {
+        console.log(onSuccessPayload);
+      },
+      onFailure: function(error) {
+        console.log(error);
+      },
+      onClose: function() {
+        console.log("Closed Modal");
+      }
+    });
+  }
+</script>
+
+<main>
+  <div class="buttonContainer">
+    <button on:click={donate}>Donate Now</button>
+  </div>
+  <div>
+    <a
+      class="logoContainer"
+      href="https://docs.everfund.io"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg viewBox="0 0 2698.39 585.2" aria-labelledby="Everfund Logo">
+        <title>Everfund Logo</title>
+        <path
+          d="M342.87 585.2c-15.25 0-31.68-8.15-51.71-25.64-9.68-8.46-17.65-16.89-20.29-19.74C150.66 426.64 76.88 346.6 38.72 288 2.85 232.89 0 200.58 0 164.06c0-37 18.05-78.13 48.29-110.12C80.66 19.7 123.08 0 164.67 0h.14c124.29 0 200.77 144.46 204 150.61a324.3 324.3 0 0044.79 62.16c34.4 37.23 69.66 56.12 104.74 56.12h1A106 106 0 00593.5 238a103.07 103.07 0 0030.55-73.53A104.57 104.57 0 00519.61 60c-27.55 0-60.14 5.08-93 42.71a30 30 0 11-45.22-39.44C430.85 6.58 483.93 0 519.57 0 610.24 0 684 73.79 684 164.44a162.68 162.68 0 01-48.2 116 165.65 165.65 0 01-115.93 48.4h-1.59c-123.06 0-198.89-143.09-202.78-150.6a324.66 324.66 0 00-44.77-61.77C246.84 90.73 209 60 164.8 60h-.08C139.54 60 113 72.84 91.89 95.16 72.22 116 60 142.37 60 164.06c0 25 0 46.64 29 91.19 35.08 53.89 108.29 132.93 223.8 241.63.6.56 1.17 1.15 1.72 1.76a183.91 183.91 0 0025.4 23.18c10.12-8.28 29.55-25.8 61.73-57.93 29.93-29.88 63.73-65.3 82.2-86.13a30 30 0 0144.9 39.8c-18 20.28-55.35 59.78-92 96-19.27 19-35.44 34.35-48.06 45.47-23.03 20.3-33.31 26.17-45.82 26.17z"
+          fill="currentColor"
+          class="logoHeart"
           ></path>
           <path
             fill="currentColor"
@@ -24,30 +42,6 @@
         </svg>
       </a>
     </div>
-  </main>
-</template>
+</main>
 
-<script lang="ts">
-import everfund from "@everfund/js-sdk"
 
-export default {
-  name: "App",
-  methods: {
-    donate: function () {
-      everfund.donationWidget({
-        code: "rjww",
-        onSuccess: function (onSuccessPayload) {
-          console.log(onSuccessPayload)
-        },
-        onFailure: function (error) {
-          console.log(error)
-        },
-        onClose: function () {
-          //
-          console.log("Closed Modal")
-        },
-      })
-    },
-  },
-}
-</script>
