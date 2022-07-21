@@ -1,9 +1,10 @@
-import everfund from "@everfund/js-sdk"
+import everfund from '@everfund/js-sdk'
 
-document?.getElementById("donate-modal")?.addEventListener("click", () => {
-  console.log("launch Everfund Modal")
+document?.getElementById('donate-modal')?.addEventListener('click', () => {
+  console.log('launch Everfund Modal')
   everfund.donationWidget({
-    code: "rjww",
+    code: 'rjww',
+    domain: 'http://localhost:4000/',
     onSuccess: function (onSuccessPayload) {
       console.log(onSuccessPayload)
     },
@@ -12,7 +13,7 @@ document?.getElementById("donate-modal")?.addEventListener("click", () => {
     },
     onClose: function () {
       //
-      console.log("Closed Modal")
+      console.log('Closed Modal')
     },
   })
 })

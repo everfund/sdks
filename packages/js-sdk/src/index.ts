@@ -75,7 +75,7 @@ class EverfundClient {
 
     try {
       const modalFrame = document.createElement('iframe')
-      modalFrame.src = `https://${domain || 'evr.fund'}/${code}/modal?${makeQS({
+      modalFrame.src = `${domain || 'https://evr.fund'}/${code}/modal?${makeQS({
         embed_origin: origin,
         embeded: true,
         close_on_success: closeOnSuccess,
@@ -92,7 +92,9 @@ class EverfundClient {
       })
       modalFrame.id = 'ef-modal'
       modalFrame.className = cssEmbedIframe
-
+      modalFrame.ariaModal = 'true'
+      modalFrame.ariaLabel = 'Everfund Donation Modal'
+      modalFrame.setAttribute('role', 'donation-modal')
       modalFrame.addEventListener('load', function () {
         const loadingSpinner =
           document.querySelector<HTMLDivElement>('.ldsRing')
@@ -186,6 +188,8 @@ class EverfundClient {
       embedContainer.appendChild(modalWrap)
       // disableBodyScroll(embedContainer)
       document.body.appendChild(embedContainer)
+      modalFrame.setAttribute('tabindex', '0')
+      modalFrame.focus()
     } catch (e) {
       console.log(e)
 
@@ -275,7 +279,7 @@ class EverfundClient {
             embed && embed.remove()
             Everfund.donationWidgetOpen = false
             Everfund.onClose()
-            // clearAllBodyScrollLocks();
+            clearAllBodyScrollLocks()
             break
         }
       },
