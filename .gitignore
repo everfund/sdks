@@ -46,3 +46,6 @@ package-lock.json
 !.yarn/plugins
 !.yarn/sdks
 !.yarn/versions
+
+wp-sdk/js/**
+!wp-sdk/js/.keep

@@ -8,7 +8,7 @@
     "vite": "^3.0.2"
   },
   "dependencies": {
-    "@everfund/js-sdk": "2.0.0"
+    "@everfund/js-sdk": "2.0.1"
   },
   "scripts": {
     "build": "vite build",
