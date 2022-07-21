@@ -5,7 +5,7 @@ Tags:  donation, donations, nonprofit, nonprofits, charity, charities, donation 
 Requires at least: 4.5.0
 Tested up to: 5.9.0
 Requires PHP: 5.3
-Stable tag: 1.3.3
+Stable tag: 2.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -65,7 +65,7 @@ Here are links to view JSDelivr's Policy's, [Acceptable Use Policy](https://www.
 
 == Changelog ==
 
-= 1.3.3 =
+= 2.0.0 =
 * Brought into line with latest version of the npm version
 
 = 1.1.0 =

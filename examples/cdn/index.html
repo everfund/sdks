@@ -47,26 +47,26 @@
             if (!d.getElementById(i)) {
               var f = d.getElementsByTagName(s)[0],
                 e = d.createElement(s)
-              ;(e.type = "text/javascript"),
+              ;(e.type = 'text/javascript'),
                 (e.async = !0),
                 (e.src =
-                  "https://cdn.jsdelivr.net/npm/@everfund/js-sdk@1.3.3/dist/js-sdk.umd.js"),
+                  'https://cdn.jsdelivr.net/npm/@everfund/js-sdk@2.0.0/build/umd/index.production.js'),
                 f.parentNode.insertBefore(e, f)
             }
           }
-          if ("function" != typeof w.Everfund) {
+          if ('function' != typeof w.Everfund) {
             var c = function () {
               c.q.push(arguments)
             }
             ;(c.q = []),
               (w.everfund = c()),
-              "complete" === d.readyState
+              'complete' === d.readyState
                 ? l()
                 : w.attachEvent
-                ? w.attachEvent("onload", l)
-                : w.addEventListener("load", l, !1)
+                ? w.attachEvent('onload', l)
+                : w.addEventListener('load', l, !1)
           }
-        })(window, document, "everfund", "script")
+        })(window, document, 'everfund', 'script')
       }
     </script>
   </body>
