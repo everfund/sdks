@@ -18734,6 +18734,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"svelte@npm:^3.44.0":
+  version: 3.50.1
+  resolution: "svelte@npm:3.50.1"
+  checksum: 58d2d8f2c2cdb1695ca41290d241780ad662aeb4d8af8def372820a5fac3185245d6abf5ac7bbae17b9033d907ccab0aa071d0650bc3f0379c5c3818001e41c5
+  languageName: node
+  linkType: hard
+
 "svelte@workspace:examples/svelte":
   version: 0.0.0-use.local
   resolution: "svelte@workspace:examples/svelte"
@@ -18741,6 +18748,7 @@ __metadata:
     "@everfund/js-sdk": 2.0.1
     "@rollup/plugin-replace": ^4.0.0
     "@sveltejs/vite-plugin-svelte": ^1.0.1
+    svelte: ^3.44.0
     vite: ^3.0.2
   languageName: unknown
   linkType: soft
