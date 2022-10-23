@@ -7895,6 +7895,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:3.26.0":
+  version: 3.26.0
+  resolution: "core-js@npm:3.26.0"
+  checksum: 0149eb9d3909fde9c17626af3a6e625c326e8598d0bb5e6c5b48a18e5fcd4eaf48d4964d873667d8148542ff590fb98eb3f93618da114ca54999d6bc0349734b
+  languageName: node
+  linkType: hard
+
 "core-js@npm:^3.22.3":
   version: 3.23.5
   resolution: "core-js@npm:3.23.5"
@@ -9883,7 +9890,7 @@ __metadata:
     "@rollup/plugin-replace": ^4.0.0
     "@rollup/plugin-typescript": ^8.3.2
     concurrently: ^7.3.0
-    core-js: ^3.22.3
+    core-js: 3.26.0
     current-git-branch: ^1.1.0
     git-log-parser: ^1.2.0
     lerna: ^4.0.0
