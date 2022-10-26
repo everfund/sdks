@@ -9887,7 +9887,7 @@ __metadata:
     current-git-branch: ^1.1.0
     git-log-parser: ^1.2.0
     lerna: ^4.0.0
-    luxon: ^2.3.2
+    luxon: ^3.0.0
     microbundle: ^0.15.0
     prettier: ^2.7.1
     prettier-package-json: ^2.6.4
@@ -13658,10 +13658,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^2.3.2":
-  version: 2.5.0
-  resolution: "luxon@npm:2.5.0"
-  checksum: 2fccce6bbdfc8f13c5a8c148ff045ab3b10f4f80cac28dd92575588fffce9b2d7197096d7fedcc61a6245b59f4233507797f530e63f22b9ae4c425dff2909ae3
+"luxon@npm:^3.0.0":
+  version: 3.0.4
+  resolution: "luxon@npm:3.0.4"
+  checksum: d0908c3951da2a10ccf23040210ead23b0da5366a9d0954e7d5db3560189a7bd703d8af1e00084f197effc9cd7158d1bddf32886d98a70d59ce9bc3fe88bbce0
   languageName: node
   linkType: hard
 
