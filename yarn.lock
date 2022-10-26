@@ -1546,23 +1546,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/parse@npm:^16.2.1":
-  version: 16.2.1
-  resolution: "@commitlint/parse@npm:16.2.1"
+"@commitlint/parse@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@commitlint/parse@npm:17.0.0"
   dependencies:
-    "@commitlint/types": ^16.2.1
+    "@commitlint/types": ^17.0.0
     conventional-changelog-angular: ^5.0.11
     conventional-commits-parser: ^3.2.2
-  checksum: 8f966c45b2838900dfe8af14fa5085707a2c2ece7d6f00d8e61dad1fdd617b202177cfcc428ef6f7a41b7e6872560c9a040cf92eb122ad31a8f7777e3f9bab7b
+  checksum: 86610df080665b8ba83037c598f4e6d0538a5ec40fdb0c2ad1925bfdf0f494934deafa020d2e21663f64dbc20fec4e889d21675573d3860c379c2d305db7a141
   languageName: node
   linkType: hard
 
-"@commitlint/types@npm:^16.2.1":
-  version: 16.2.1
-  resolution: "@commitlint/types@npm:16.2.1"
+"@commitlint/types@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@commitlint/types@npm:17.0.0"
   dependencies:
-    chalk: ^4.0.0
-  checksum: 93af3c26c36f3b11d99f0cbbb09c8952581eed2a6b7763eb728c0e7e7ecff5072de064a208b80225fb51533823af84ee3117d9c2efbcb63d1f5cfbf6fbfb8ed8
+    chalk: ^4.1.0
+  checksum: 210636d3923f93f7cfc409eac04376b0fe50356a0e08f25a37b43d5cd9ca4363f7b03ca2e7736cbf95b62d67733fe8e1028269d35b4fddd1b3f2a653c90ca85c
   languageName: node
   linkType: hard
 
@@ -9876,7 +9876,7 @@ __metadata:
     "@babel/preset-env": ^7.16.11
     "@babel/preset-react": ^7.16.7
     "@babel/preset-typescript": ^7.16.7
-    "@commitlint/parse": ^16.2.1
+    "@commitlint/parse": ^17.0.0
     "@rollup/plugin-babel": ^5.3.1
     "@rollup/plugin-commonjs": ^22.0.1
     "@rollup/plugin-node-resolve": ^13.2.1
