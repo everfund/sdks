@@ -3,7 +3,7 @@
 
   function donate() {
     everfund.donationWidget({
-      code: "rjww",
+      code: "j1q16MvJl5lqfji06bVFKei3HZkW",
       onSuccess: function(onSuccessPayload) {
         console.log(onSuccessPayload);
       },

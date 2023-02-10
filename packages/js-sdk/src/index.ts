@@ -215,7 +215,7 @@ class EverfundClient {
 
         if (!code) {
           console.error(
-            'Everfund: data-ef-modal is required! eg <button data-ef-modal="rjww"> modal </button>'
+            'Everfund: data-ef-modal is required! eg <button data-ef-modal="j1q16MvJl5lqfji06bVFKei3HZkW"> modal </button>'
           )
           return
         }

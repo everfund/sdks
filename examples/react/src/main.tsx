@@ -5,7 +5,7 @@ import * as React from 'react'
 export default function App() {
   const [success, setSuccess] = React.useState(false)
   const { isOpen, openDonationWidget } = useDonationWidget({
-    code: 'rjww',
+    code: 'j1q16MvJl5lqfji06bVFKei3HZkW',
     onSuccess: data => {
       console.log('Everfund success', data)
       setSuccess(true)

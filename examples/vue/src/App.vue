@@ -28,14 +28,14 @@
 </template>
 
 <script lang="ts">
-import everfund from "@everfund/js-sdk"
+import everfund from '@everfund/js-sdk'
 
 export default {
-  name: "App",
+  name: 'App',
   methods: {
     donate: function () {
       everfund.donationWidget({
-        code: "rjww",
+        code: 'j1q16MvJl5lqfji06bVFKei3HZkW',
         onSuccess: function (onSuccessPayload) {
           console.log(onSuccessPayload)
         },
@@ -44,7 +44,7 @@ export default {
         },
         onClose: function () {
           //
-          console.log("Closed Modal")
+          console.log('Closed Modal')
         },
       })
     },
