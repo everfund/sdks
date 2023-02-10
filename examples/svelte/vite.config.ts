@@ -1,7 +1,8 @@
-import { svelte } from "@sveltejs/vite-plugin-svelte"
-import rollupReplace from "@rollup/plugin-replace"
-import { defineConfig } from "vite"
-import * as path from "path"
+import { svelte } from '@sveltejs/vite-plugin-svelte'
+import rollupReplace from '@rollup/plugin-replace'
+import { defineConfig } from 'vite'
+
+import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +11,7 @@ export default defineConfig({
       preventAssignment: true,
       values: {
         __DEV__: JSON.stringify(true),
-        "process.env.NODE_ENV": JSON.stringify("development"),
+        'process.env.NODE_ENV': JSON.stringify('development'),
       },
     }),
     svelte(),
@@ -18,7 +19,7 @@ export default defineConfig({
   resolve: process.env.USE_SOURCE
     ? {
         alias: {
-          "js-sdk": path.resolve(__dirname, "../../libs/js-sdk/src/index.ts"),
+          'js-sdk': path.resolve(__dirname, '../../libs/js-sdk/src/index.ts'),
         },
       }
     : {},

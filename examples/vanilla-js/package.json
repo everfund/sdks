@@ -18,7 +18,7 @@
     "@everfund/js-sdk": "2.0.1"
   },
   "devDependencies": {
-    "@rollup/plugin-replace": "^3.0.1",
-    "vite": "^3.0.2"
+    "@rollup/plugin-replace": "^5.0.2",
+    "vite": "^4.1.1"
   }
 }
