@@ -48,7 +48,7 @@
     "prettier-plugin-sort-imports": "^1.7.0",
     "rollup": "^2.70.2",
     "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-size": "^0.2.2",
+    "rollup-plugin-size": "^0.3.0",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-uglify": "^6.0.4",
