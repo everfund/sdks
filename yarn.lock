@@ -9974,7 +9974,7 @@ __metadata:
     rollup-plugin-uglify: ^6.0.4
     rollup-plugin-visualizer: ^5.6.0
     stream-to-array: ^2.3.0
-    svelte: 3.49.0
+    svelte: 3.59.2
     ts-node: ^10.9.1
     tsc: ^2.0.4
     typescript: ^4.7.4
@@ -18954,10 +18954,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:3.49.0":
-  version: 3.49.0
-  resolution: "svelte@npm:3.49.0"
-  checksum: 5b7cb8dbf6b6581b50fab1de63cbcb81816081a1240b03e234b299268fff2f3237bf8f92b683a848f95453353b5694dfe26fa05a55da185a4bb0cd8b80d87dd4
+"svelte@npm:3.59.2":
+  version: 3.59.2
+  resolution: "svelte@npm:3.59.2"
+  checksum: 3e9d770292ab5a0061ff2d3a6f77b323014399de7458371ab507465f9860d04d0c8c7a50239d15c78b920cd42065953e3c4a36abb69a2285c52c825017621444
   languageName: node
   linkType: hard
 
