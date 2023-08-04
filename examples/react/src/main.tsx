@@ -1,6 +1,7 @@
 import { useDonationWidget } from '@everfund/react-sdk';
 import ReactDOM from 'react-dom/client';
 import * as React from 'react';
+import '@everfund/example-css';
 
 export default function App() {
   const [success, setSuccess] = React.useState(false);

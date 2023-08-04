@@ -1,6 +1,6 @@
-import { ModalProps } from '@everfund/js-sdk/src/types';
-import everfund from '@everfund/js-sdk/src/index';
+import everfund from '@everfund/js-sdk';
 import { useState } from 'react';
+import { ModalProps } from './types';
 
 export function useDonationWidget(options: ModalProps) {
   // Compose in the generic options to the user options

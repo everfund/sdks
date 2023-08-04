@@ -1,4 +1,5 @@
 import everfund from '@everfund/js-sdk';
+import '@everfund/example-css';
 
 document?.getElementById('donate-modal')?.addEventListener('click', () => {
   console.log('launch Everfund Modal');

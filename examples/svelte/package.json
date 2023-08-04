@@ -10,6 +10,7 @@
     "examples:start": "vite"
   },
   "dependencies": {
+    "@everfund/example-css": "workspace:*",
     "@everfund/js-sdk": "workspace:*"
   },
   "devDependencies": {
