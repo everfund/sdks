@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "serve": "vite preview",
-    "start": "vite"
+    "examples:build": "vite build",
+    "examples:dev": "vite",
+    "examples:serve": "vite preview",
+    "examples:start": "vite"
   },
   "browserslist": [
     ">0.2%",
@@ -15,10 +15,10 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@everfund/js-sdk": "2.0.1"
+    "@everfund/js-sdk": "workspace:*"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
-    "vite": "^4.1.1"
+    "vite": "^4.4.8"
   }
 }

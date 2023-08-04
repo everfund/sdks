@@ -3,23 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "examples:build": "vite build",
+    "examples:dev": "vite",
+    "examples:serve": "vite preview",
+    "examples:start": "vite"
   },
   "dependencies": {
-    "@everfund/react-sdk": "2.0.1",
-    "next": "13.1.6",
+    "@everfund/react-sdk":  "workspace:*",
+    "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "18.13.0",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
-    "eslint": "8.33.0",
-    "eslint-config-next": "13.1.6",
-    "typescript": "4.9.5"
+    "@types/node": "20.4.6",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "typescript": "5.1.6"
   }
 }

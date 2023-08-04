@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "serve": "vite preview",
-    "start": "vite"
+    "examples:build": "vite build",
+    "examples:dev": "vite",
+    "examples:serve": "vite preview",
+    "examples:start": "vite"
   },
   "browserslist": [
     ">0.2%",
@@ -15,14 +15,14 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@everfund/react-sdk": "2.0.1",
-    "@types/react-dom": "^18.0.10",
+    "@everfund/react-sdk": "workspace:*",
+    "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
-    "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.1.1"
+    "@vitejs/plugin-react": "^4.0.4",
+    "vite": "^4.4.8"
   }
 }

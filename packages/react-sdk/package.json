@@ -4,22 +4,27 @@
   "license": "MIT",
   "author": "Christopher Burns",
   "sideEffects": false,
-  "main": "build/cjs/react-table/src/index.js",
-  "module": "build/esm/index.js",
-  "browser": "build/umd/index.production.js",
-  "types": "build/types/index.d.ts",
+  "main": "./dist/react-sdk.js",
+  "module": "./dist/react-sdk.mjs",
+  "types": "./dist/react-sdk.d.ts",
   "files": [
-    "build/**",
+    "dist/**",
     "src"
   ],
+  "scripts": {
+    "build": "tsup --config ./tsup.config.json --dts",
+    "lint": "eslint \"**/*.ts\""
+  },
   "dependencies": {
-    "@everfund/js-sdk": "2.0.1"
+    "@everfund/js-sdk":  "workspace:*"
   },
   "devDependencies": {
-    "@types/react": "^18.0.15",
+    "@types/react": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^5.1.6",
+    "tsup": "^7.2.0",
+    "tsconfig": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=16",

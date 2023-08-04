@@ -1,5 +1,5 @@
 import { ModalProps } from '@everfund/js-sdk/src/types'
-import everfund from '@everfund/js-sdk'
+import everfund from '@everfund/js-sdk/src/index'
 import { useState } from 'react'
 
 export function useDonationWidget(options: ModalProps) {
