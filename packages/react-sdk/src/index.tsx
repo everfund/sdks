@@ -2,7 +2,7 @@ import everfund from '@everfund/js-sdk';
 import { useState } from 'react';
 import { ModalProps } from './types';
 
-export function useDonationWidgetTest(options: ModalProps) {
+export function useDonationWidget(options: ModalProps) {
   // Compose in the generic options to the user options
   const [isOpen, setIsDonationWidgetOpen] = useState(false);
 
