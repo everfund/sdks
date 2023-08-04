@@ -27,28 +27,6 @@ importers:
         specifier: 1.10.12
         version: 1.10.12
 
-  apps/web:
-    dependencies:
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
-    devDependencies:
-      '@everfund/eslint-config-everfund':
-        specifier: workspace:*
-        version: link:../../configs/eslint-config-everfund
-      eslint:
-        specifier: ^8.46.0
-        version: 8.46.0
-      tsconfig:
-        specifier: workspace:*
-        version: link:../../configs/tsconfig
-      typescript:
-        specifier: ^5.1.6
-        version: 5.1.6
-      vite:
-        specifier: ^4.4.8
-        version: 4.4.8
-
   configs/eslint-config-everfund:
     dependencies:
       '@typescript-eslint/eslint-plugin':
@@ -172,7 +150,7 @@ importers:
         specifier: workspace:*
         version: link:../../configs/example-css
       '@everfund/js-sdk':
-        specifier: 2.0.1
+        specifier: workspace:*
         version: link:../../packages/js-sdk
     devDependencies:
       '@rollup/plugin-replace':
@@ -194,7 +172,7 @@ importers:
         specifier: workspace:*
         version: link:../../configs/example-css
       '@everfund/js-sdk':
-        specifier: 2.0.1
+        specifier: workspace:*
         version: link:../../packages/js-sdk
     devDependencies:
       '@rollup/plugin-replace':
@@ -210,7 +188,7 @@ importers:
         specifier: workspace:*
         version: link:../../configs/example-css
       '@everfund/js-sdk':
-        specifier: 2.0.1
+        specifier: workspace:*
         version: link:../../packages/js-sdk
       vue:
         specifier: ^3.3.4
@@ -275,21 +253,6 @@ importers:
       tsup:
         specifier: ^7.2.0
         version: 7.2.0(typescript@5.1.6)
-      typescript:
-        specifier: ^5.1.6
-        version: 5.1.6
-
-  packages/ui:
-    devDependencies:
-      '@everfund/eslint-config-everfund':
-        specifier: workspace:*
-        version: link:../../configs/eslint-config-everfund
-      eslint:
-        specifier: ^8.46.0
-        version: 8.46.0
-      tsconfig:
-        specifier: workspace:*
-        version: link:../../configs/tsconfig
       typescript:
         specifier: ^5.1.6
         version: 5.1.6
