@@ -261,6 +261,7 @@ class EverfundClient {
     window.addEventListener(
       'message',
       function (e) {
+        console.log(e,e.data.message)
         const embed = document.querySelector('.' + 'embedContainer');
         switch (e.data.message) {
           case 'everfund:ready': {
