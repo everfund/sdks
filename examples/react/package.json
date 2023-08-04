@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@everfund/example-css": "workspace:*",
-    "@everfund/react-sdk": "workspace:*",
+    "@everfund/react-sdk": "2.0.1",
     "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

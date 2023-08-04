@@ -8,8 +8,8 @@
     "lint": "eslint \"**/*.ts\""
   },
   "devDependencies": {
+    "@everfund/eslint-config-everfund": "workspace:*",
     "eslint": "^8.46.0",
-    "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^5.1.6"
   }

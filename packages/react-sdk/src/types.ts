@@ -39,6 +39,6 @@ export type ModalProps = {
   closeOnSuccess?: boolean | null;
   domain?: string;
   onSuccess(data: SuccessResponse): void;
-  onFailure(data: Record<string, any>): void;
+  onFailure(data: Record<string, unknown>): void;
   onClose(): void;
 };

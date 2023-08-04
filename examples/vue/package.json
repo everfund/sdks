@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@everfund/example-css": "workspace:*",
-    "@everfund/js-sdk": "workspace:*"
+    "@everfund/js-sdk": "workspace:*",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
     "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.4.8",
-    "vue": "^3.3.4"
+    "vite": "^4.4.8"
   },
   "browserslist": [
     ">0.2%",

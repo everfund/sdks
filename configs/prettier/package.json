@@ -16,5 +16,8 @@
     "prettier-plugin-pkg": "^0.18.0",
     "prettier-plugin-sh": "^0.13.1",
     "prettier-plugin-tailwindcss": "0.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

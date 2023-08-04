@@ -8,6 +8,7 @@ import { ModalProps } from './types';
 import { version } from './version';
 
 import { css, keyframes } from 'goober';
+import { serializeQueryParams } from './libs/serializeQueryParams';
 
 export interface CustomWindow extends Window {
   Everfund: EverfundClient;
@@ -70,24 +71,19 @@ class EverfundClient {
     }
     const origin = window.location.origin;
 
-    let makeQS = function (obj: any) {
-      var str = [];
-      for (var p in obj) {
-        if (obj[p] && obj.hasOwnProperty(p)) {
-          str.push(encodeURIComponent(p) + '=' + encodeURIComponent(obj[p]));
-        }
-      }
-      return str.join('&');
-    };
-
     try {
       const modalFrame = document.createElement('iframe');
-      modalFrame.src = `${domain || 'https://evr.fund'}/${code}/modal?${makeQS({
+      modalFrame.src = `${
+        domain || 'https://evr.fund'
+      }/${code}/modal?${serializeQueryParams({
         embed_origin: origin,
         embeded: true,
         close_on_success: closeOnSuccess,
       })}`;
 
+      // deperciated
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowPaymentRequest
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       modalFrame.allowPaymentRequest = true;
 
@@ -201,7 +197,7 @@ class EverfundClient {
       console.log(e);
 
       window.location.replace(
-        `https://${domain || 'evr.fund'}/${code}/modal?${makeQS({
+        `https://${domain || 'evr.fund'}/${code}/modal?${serializeQueryParams({
           return_url: origin,
         })}`
       );
@@ -230,7 +226,7 @@ class EverfundClient {
         }
 
         if (
-          !!new RegExp(
+          new RegExp(
             '^(https?:\\/\\/)?' + // protocol
               '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
               '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
@@ -267,7 +263,7 @@ class EverfundClient {
       function (e) {
         const embed = document.querySelector('.' + 'embedContainer');
         switch (e.data.message) {
-          case 'everfund:ready':
+          case 'everfund:ready': {
             const loadingSpinner =
               document.querySelector<HTMLDivElement>('#ldsRing');
             const modalWrap = document.querySelector<HTMLDivElement>(
@@ -276,20 +272,24 @@ class EverfundClient {
             loadingSpinner?.remove();
             modalWrap!.style.transform = 'opacity(1)';
             break;
-          case 'everfund:success':
+          }
+          case 'everfund:success': {
             const data = e.data.content;
             Everfund.onSuccess(data);
             break;
-          case 'everfund:failure':
+          }
+          case 'everfund:failure': {
             Everfund.onFailure(e.data.content);
             break;
-          case 'everfund:close':
+          }
+          case 'everfund:close': {
             embed && enableBodyScroll(embed);
             embed && embed.remove();
             Everfund.donationWidgetOpen = false;
             Everfund.onClose();
             clearAllBodyScrollLocks();
             break;
+          }
         }
       },
       false

@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['custom'],
+  extends: ['@everfund/eslint-config-everfund'],
 };

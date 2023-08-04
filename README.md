@@ -19,7 +19,7 @@ This Turborepo includes the following packages and apps:
 - `docs`: a vanilla [vite](https://vitejs.dev) ts app
 - `web`: another vanilla [vite](https://vitejs.dev) ts app
 - `ui`: a stub component & utility library shared by both `web` and `docs` applications
-- `eslint-config-custom`: shared `eslint` configurations
+- `@everfund/eslint-config-everfund`: shared `eslint` configurations
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).

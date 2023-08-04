@@ -6,6 +6,7 @@ import * as path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    //@ts-ignore
     rollupReplace({
       preventAssignment: true,
       values: {
@@ -15,14 +16,30 @@ export default defineConfig({
     }),
     react(),
   ],
-  resolve: process.env.USE_SOURCE
-    ? {
-        alias: {
-          'react-sdk': path.resolve(
-            __dirname,
-            '../../libs/react-sdk/src/index.ts'
-          ),
+  resolve:
+    process.env.USE_SOURCE === 'true'
+      ? {
+          alias: {
+            '@everfund/js-sdk': path.resolve(
+              __dirname,
+              '../../packages/js-sdk/src/index.ts'
+            ),
+            '@everfund/react-sdk': path.resolve(
+              __dirname,
+              '../../packages/react-sdk/src/index.tsx'
+            ),
+            '@everfund/example-css': path.resolve(
+              __dirname,
+              '../../configs/example-css/example-css.css'
+            ),
+          },
+        }
+      : {
+          alias: {
+            '@everfund/example-css': path.resolve(
+              __dirname,
+              '../../configs/example-css/example-css.css'
+            ),
+          },
         },
-      }
-    : {},
 });
