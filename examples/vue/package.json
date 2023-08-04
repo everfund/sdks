@@ -8,12 +8,6 @@
     "examples:serve": "vite preview",
     "examples:start": "vite"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "dependencies": {
     "@everfund/js-sdk": "workspace:*"
   },
@@ -22,5 +16,11 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "vite": "^4.4.8",
     "vue": "^3.3.4"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

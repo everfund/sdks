@@ -1,21 +1,21 @@
 {
   "name": "svelte",
   "version": "0.0.0",
-  "private": true,
   "type": "module",
-  "devDependencies": {
-    "@rollup/plugin-replace": "^5.0.2",
-    "@sveltejs/vite-plugin-svelte": "^2.4.3",
-    "svelte": "^4.1.2",
-    "vite": "^4.4.8"
-  },
-  "dependencies": {
-    "@everfund/js-sdk": "workspace:*"
-  },
+  "private": true,
   "scripts": {
     "examples:build": "vite build",
     "examples:dev": "vite",
     "examples:serve": "vite preview",
     "examples:start": "vite"
+  },
+  "dependencies": {
+    "@everfund/js-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.2",
+    "@sveltejs/vite-plugin-svelte": "^2.4.3",
+    "svelte": "^4.1.2",
+    "vite": "^4.4.8"
   }
 }

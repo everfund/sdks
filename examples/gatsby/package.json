@@ -9,7 +9,7 @@
     "examples:start": "gatsby develop --port 3000"
   },
   "dependencies": {
-    "@everfund/react-sdk":  "workspace:*",
+    "@everfund/react-sdk": "workspace:*",
     "gatsby": "^5.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

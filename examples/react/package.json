@@ -8,12 +8,6 @@
     "examples:serve": "vite preview",
     "examples:start": "vite"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "dependencies": {
     "@everfund/react-sdk": "workspace:*",
     "@types/react-dom": "^18.2.7",
@@ -24,5 +18,11 @@
     "@rollup/plugin-replace": "^5.0.2",
     "@vitejs/plugin-react": "^4.0.4",
     "vite": "^4.4.8"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

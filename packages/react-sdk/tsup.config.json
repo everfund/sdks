@@ -1,7 +1,7 @@
 {
   "$schema": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
   "clean": true,
-  "entry": {"react-sdk": "src/index.tsx"},
+  "entry": { "react-sdk": "src/index.tsx" },
   "format": ["cjs", "esm", "iife"],
   "minify": true,
   "sourcemap": true,

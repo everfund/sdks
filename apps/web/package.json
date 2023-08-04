@@ -1,13 +1,13 @@
 {
   "name": "web",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
+  "private": true,
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "lint": "eslint \"src/**/*.ts\""
+    "dev": "vite",
+    "lint": "eslint \"src/**/*.ts\"",
+    "preview": "vite preview"
   },
   "dependencies": {
     "ui": "workspace:*"

@@ -8,17 +8,17 @@
     "examples:serve": "vite preview",
     "examples:start": "vite"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
   "dependencies": {
     "@everfund/js-sdk": "workspace:*"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
     "vite": "^4.4.8"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

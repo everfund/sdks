@@ -3,36 +3,36 @@
   "version": "2.0.1",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
-  "main": "./dist/js-sdk.js",
-  "module": "./dist/js-sdk.mjs",
-  "types": "./dist/js-sdk.d.ts",
-  "sideEffects": false,
+  "license": "MIT",
   "engines": {
     "node": ">=12"
   },
+  "main": "./dist/js-sdk.js",
+  "module": "./dist/js-sdk.mjs",
+  "types": "./dist/js-sdk.d.ts",
   "files": [
     "dist/**",
     "src"
   ],
   "scripts": {
-    "lint": "eslint \"**/*.ts\"",
-    "build": "tsup --config ./tsup.config.json --dts"
+    "build": "tsup --config ./tsup.config.json --dts",
+    "lint": "eslint \"**/*.ts\""
+  },
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "goober": "^2.1.13"
+  },
+  "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
+    "@types/element-closest": "^3.0.0",
+    "genversion": "^3.1.1",
+    "tsconfig": "workspace:*",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "@types/body-scroll-lock": "^3.1.0",
-    "@types/element-closest": "^3.0.0",
-    "genversion": "^3.1.1",
-    "typescript": "^5.1.6",
-    "tsup": "^7.2.0",
-    "tsconfig": "workspace:*"
-  },
-  "dependencies": {
-    "body-scroll-lock": "^4.0.0-beta.0",
-    "goober": "^2.1.13"
-  }
+  "sideEffects": false
 }

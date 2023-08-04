@@ -17,7 +17,6 @@
   "importOrderSortSpecifiers": false,
   "importOrderGroupNamespaceSpecifiers": false,
   "importOrderCaseInsensitive": false,
-  "astroAllowShorthand": false,
   "plugins": [
     "@prettier/plugin-xml",
     "@trivago/prettier-plugin-sort-imports",

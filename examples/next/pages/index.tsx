@@ -1,27 +1,27 @@
-import { useDonationWidget } from '@everfund/react-sdk'
+import { useDonationWidget } from '@everfund/react-sdk';
 
-import * as React from 'react'
+import * as React from 'react';
 
 const Home = () => {
-  const [success, setSuccess] = React.useState(false)
+  const [success, setSuccess] = React.useState(false);
   const { isOpen, openDonationWidget } = useDonationWidget({
     code: 'j1q16MvJl5lqfji06bVFKei3HZkW',
-    onSuccess: data => {
-      console.log('Everfund success', data)
-      setSuccess(true)
+    onSuccess: (data) => {
+      console.log('Everfund success', data);
+      setSuccess(true);
     },
-    onFailure: err => {
-      console.log('Everfund failed', err)
-      setSuccess(true)
+    onFailure: (err) => {
+      console.log('Everfund failed', err);
+      setSuccess(true);
     },
     onClose: () => {
       if (success) {
-        console.log('Payment success')
+        console.log('Payment success');
       } else {
-        console.log('Payment failed')
+        console.log('Payment failed');
       }
     },
-  })
+  });
   return (
     <>
       <div className="app">
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

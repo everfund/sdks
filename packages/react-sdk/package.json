@@ -1,9 +1,11 @@
 {
   "name": "@everfund/react-sdk",
   "version": "2.0.1",
-  "license": "MIT",
   "author": "Christopher Burns",
-  "sideEffects": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
   "main": "./dist/react-sdk.js",
   "module": "./dist/react-sdk.mjs",
   "types": "./dist/react-sdk.d.ts",
@@ -15,25 +17,23 @@
     "build": "tsup --config ./tsup.config.json --dts",
     "lint": "eslint \"**/*.ts\""
   },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
   "dependencies": {
-    "@everfund/js-sdk":  "workspace:*"
+    "@everfund/js-sdk": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^5.1.6",
+    "tsconfig": "workspace:*",
     "tsup": "^7.2.0",
-    "tsconfig": "workspace:*"
-  },
-  "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
-  },
-  "engines": {
-    "node": ">=12"
+    "typescript": "^5.1.6"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "sideEffects": false
 }

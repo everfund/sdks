@@ -1,8 +1,8 @@
-import { svelte } from '@sveltejs/vite-plugin-svelte'
-import rollupReplace from '@rollup/plugin-replace'
-import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte';
+import rollupReplace from '@rollup/plugin-replace';
+import { defineConfig } from 'vite';
 
-import * as path from 'path'
+import * as path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -23,4 +23,4 @@ export default defineConfig({
         },
       }
     : {},
-})
+});
