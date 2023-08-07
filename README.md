@@ -1,34 +1,34 @@
-# `Turborepo` Vite starter
+<p>
+    <a href="https://docs.everfund.io/" target="_blank">
+      <img alt="Everfund" width="350" src="https://ik.imagekit.io/everfund/everfund-sticker_U4p0fY8gw.svg">
+    </a>
+</p>
 
-This is an official starter Turborepo.
+Plug and play Donation System.
+Get peace of mind with secure, extensible charity donation system that’s built to scale. All with a few lines of code.
 
-## Using this example
+## Quick Features
 
-Run the following command:
+- Single Donations
+- Recurring Donations
+- GDPR Consent
+- Cover Processor Fees
+- Custom Emails
+- Customisable Donation System
+- Apple / Google Pay
+- Bacs Direct Debits (UK Only)
+- Gift Aid Colelction (UK Only)
 
-```sh
-npx create-turbo@latest -e with-vite
-```
+## Documentation
 
-## What's inside?
+For full documentation, visit [docs.everfund.com](https://docs.everfund.com).
 
-This Turborepo includes the following packages and apps:
+## Contributing
 
-### Apps and Packages
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-- `docs`: a vanilla [vite](https://vitejs.dev) ts app
-- `web`: another vanilla [vite](https://vitejs.dev) ts app
-- `ui`: a stub component & utility library shared by both `web` and `docs` applications
-- `@everfund/eslint-config-everfund`: shared `eslint` configurations
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+Please make sure to update tests as appropriate.
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+## License
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+[MIT](https://choosealicense.com/licenses/mit/)
