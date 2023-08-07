@@ -1,3 +1,31 @@
-**/.next
-**/node_modules
-**/dist
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn
+yarn.lock
+.node-version
+.nvmrc
+.editorconfig
+.keep
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# images
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.woff
+*.woff2
+*.sentry.properties
+*.txt
+*.ico
+
+# certificates
+apple-developer-merchantid-domain-association
+
+# production
+/build
+/dist
+

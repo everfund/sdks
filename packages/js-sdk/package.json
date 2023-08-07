@@ -3,39 +3,36 @@
   "version": "2.0.1",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
-  "module": "build/esm/index.js",
-  "main": "build/cjs/index.js",
-  "browser": "build/umd/index.production.js",
-  "types": "build/types/index.d.ts",
-  "sideEffects": false,
+  "license": "MIT",
   "engines": {
     "node": ">=12"
   },
+  "main": "./dist/js-sdk.js",
+  "module": "./dist/js-sdk.mjs",
+  "types": "./dist/js-sdk.d.ts",
   "files": [
-    "build/**",
+    "dist/**",
     "src"
   ],
   "scripts": {
-    "watch": "yarn genversion && microbundle watch",
-    "deploy": "npm run build && npm publish",
-    "genversion": "genversion --es6 --semi src/version.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "serve ./dist",
-    "format": "yarn prettier --write ."
+    "build": "tsup --config ./tsup.config.json --dts",
+    "lint": "eslint \"**/*.ts\""
+  },
+  "dependencies": {
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "goober": "^2.1.13"
+  },
+  "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
+    "@types/element-closest": "^3.0.0",
+    "genversion": "^3.1.1",
+    "tsconfig": "workspace:*",
+    "tsup": "^7.2.0",
+    "typescript": "^5.1.6"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "@types/body-scroll-lock": "^3.1.0",
-    "@types/element-closest": "^3.0.0",
-    "genversion": "^3.1.1",
-    "typescript": "^4.6.4"
-  },
-  "dependencies": {
-    "body-scroll-lock": "^4.0.0-beta.0",
-    "goober": "^2.1.9"
-  }
+  "sideEffects": false
 }

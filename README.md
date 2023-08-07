@@ -21,7 +21,7 @@ Get peace of mind with secure, extensible charity donation system that’s built
 
 ## Documentation
 
-For full documentation, visit [docs.everfund.io](https://docs.everfund.io).
+For full documentation, visit [docs.everfund.com](https://docs.everfund.com).
 
 ## Contributing
 

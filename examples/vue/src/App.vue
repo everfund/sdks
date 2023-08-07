@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import everfund from '@everfund/js-sdk'
+import everfund from '@everfund/js-sdk';
 
 export default {
   name: 'App',
@@ -37,17 +37,17 @@ export default {
       everfund.donationWidget({
         code: 'j1q16MvJl5lqfji06bVFKei3HZkW',
         onSuccess: function (onSuccessPayload) {
-          console.log(onSuccessPayload)
+          console.log(onSuccessPayload);
         },
         onFailure: function (error) {
-          console.log(error)
+          console.log(error);
         },
         onClose: function () {
           //
-          console.log('Closed Modal')
+          console.log('Closed Modal');
         },
-      })
+      });
     },
   },
-}
+};
 </script>

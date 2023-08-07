@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Everfund
- * Plugin URI: https://everfund.io
+ * Plugin URI: https://everfund.com
  * Description: Everfund takes the friction out of donating with an easy to set up donation portal for your WordPress website that help you convert more income for your charity and give your donors the best experience possible.
  * Tags: donation, donations, nonprofit, nonprofits, charity, charities, donation widget, fundraising, payment, payments, crowdfunding, campaign, stripe, campaigns, social causes, causes, credit card, credit cards, bacs, direct-debits
  * Requires at least: 5.3
