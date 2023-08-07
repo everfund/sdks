@@ -31,8 +31,6 @@ export type SuccessResponse = {
 };
 
 export type ModalProps = {
-  /** @deprecated use code field instead */
-  donationLink?: string;
   /** Donation Widget Code get from the dashboard */
   code: string;
 

@@ -31,27 +31,6 @@ class EverfundClient {
     }
   }
 
-  public modal({
-    code,
-    domain,
-    closeOnSuccess,
-    onSuccess,
-    onFailure,
-    onClose,
-  }: ModalProps) {
-    console.warn(
-      'everfund.modal is deprecated in the next update, please use everfund.donationWidget instead'
-    );
-    this.donationWidget({
-      code,
-      domain,
-      closeOnSuccess,
-      onSuccess,
-      onFailure,
-      onClose,
-    });
-  }
-
   public donationWidget({
     code,
     domain,
@@ -189,7 +168,7 @@ class EverfundClient {
       embedContainer.className = `embedContainer ${cssEmbedContainer}`;
       embedContainer.appendChild(loadingSpinner);
       embedContainer.appendChild(modalWrap);
-      
+
       document.body.appendChild(embedContainer);
       modalFrame.setAttribute('tabindex', '0');
       modalFrame.focus();

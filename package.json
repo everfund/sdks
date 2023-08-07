@@ -5,7 +5,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev --concurrency=20",
     "format": "prettier --write \"**/*\"",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "@everfund/eslint-config-everfund": "workspace:*",
@@ -13,7 +14,9 @@
     "eslint": "^8.46.0",
     "prettier": "^3.0.1",
     "tsup": "^7.2.0",
-    "turbo": "1.10.12"
+    "turbo": "1.10.12",
+    "vite": "^4.4.8",
+    "vitest": "^0.33.0"
   },
   "namespace": "@everfund"
 }
