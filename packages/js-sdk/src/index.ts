@@ -75,7 +75,7 @@ class EverfundClient {
       const modalFrame = document.createElement('iframe');
       modalFrame.src = `${
         domain || 'https://evr.fund'
-      }/${code}/modal?${serializeQueryParams({
+      }/${code}/modal${serializeQueryParams({
         embed_origin: origin,
         embeded: true,
         close_on_success: closeOnSuccess,
@@ -197,7 +197,7 @@ class EverfundClient {
       console.log(e);
 
       window.location.replace(
-        `https://${domain || 'evr.fund'}/${code}/modal?${serializeQueryParams({
+        `https://${domain || 'evr.fund'}/${code}/modal${serializeQueryParams({
           return_url: origin,
         })}`
       );
