@@ -24,13 +24,5 @@
     "prettier-plugin-curly",
     "prettier-plugin-pkg",
     "prettier-plugin-sh"
-  ],
-  "overrides": [
-    {
-      "files": "*.astro",
-      "options": {
-        "parser": "astro"
-      }
-    }
   ]
 }
