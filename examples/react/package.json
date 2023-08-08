@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "examples:build": "next build",
-    "examples:dev": "next dev",
-    "examples:serve": "next serve",
-    "examples:start": "next"
+    "examples:build": "vite build",
+    "examples:dev": "vite",
+    "examples:serve": "vite serve",
+    "examples:start": "vite"
   },
   "dependencies": {
     "@everfund/example-css": "workspace:*",

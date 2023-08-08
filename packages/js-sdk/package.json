@@ -16,7 +16,8 @@
   ],
   "scripts": {
     "build": "tsup --config ./tsup.config.json --dts",
-    "lint": "eslint \"**/*.ts\""
+    "lint": "eslint \"**/*.ts\"",
+    "test": "vitest"
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
@@ -26,9 +27,11 @@
     "@types/body-scroll-lock": "^3.1.0",
     "@types/element-closest": "^3.0.0",
     "genversion": "^3.1.1",
+    "jsdom": "^22.1.0",
     "tsconfig": "workspace:*",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vite": "^4.4.9"
   },
   "publishConfig": {
     "access": "public",
