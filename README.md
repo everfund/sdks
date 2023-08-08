@@ -25,6 +25,15 @@
   </a>
 </p>
 
+<p align="center">
+  <br/>
+  <a href="https://everfund.com">Everfund</a> helps web devs integrate donations with all the components they need to help ship modern nonprofit websites faster in a dev-first platform that abstracts the complexity of building from scratch
+  <br/>
+  <br/>
+</p>
+
+![Developer-centric donation expreiences for the Modern Web](.github/assets/github.png 'Developer-centric donation expreiences for the Modern Web')
+
 ## Documentation and Usage
 
 For how to get started with Everfund, you can refer to the official [documentation page](https://docs.everfund.com).
