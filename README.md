@@ -63,4 +63,20 @@ Additionally there are packages which act as shared utilities or building blocks
 - `pnpm install`.
 - `pnpm build`.
 
-\* See the [docs folder](./docs) for additional repository documentation.
+See the [docs folder](./docs) for additional repository documentation.
+
+## Contributing
+
+At Everfund, we strive to create an inclusive and welcoming environment for all contributors.
+
+To ensure a productive and respectful experience for everyone involved, we have established a few ground rules.
+
+Please review our [Code of Conduct](https://github.com/everfund/everfund/blob/docs/CODE_OF_CONDUCT.md) before getting started.
+
+If you're new to the project, you may want to start with one of our designated ["good first issues"](https://github.com/everfund/everfund/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22) These issues are specifically chosen to be accessible and easy to understand, making them a great introduction to the project.
+
+Together, let's build something amazing!
+
+<a href="https://github.com/everfund/everfund/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=everfund/everfund" />
+</a>
