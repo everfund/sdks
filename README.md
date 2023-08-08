@@ -80,3 +80,9 @@ Together, let's build something amazing!
 <a href="https://github.com/everfund/everfund/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=everfund/everfund" />
 </a>
+
+## License
+
+This project is licensed under the **MIT license**.
+
+See [LICENSE](https://github.com/everfund/everfund/blob/main/LICENCE.md) for more information.
