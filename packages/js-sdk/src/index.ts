@@ -189,7 +189,7 @@ class EverfundClient {
       embedContainer.className = `embedContainer ${cssEmbedContainer}`;
       embedContainer.appendChild(loadingSpinner);
       embedContainer.appendChild(modalWrap);
-      
+
       document.body.appendChild(embedContainer);
       modalFrame.setAttribute('tabindex', '0');
       modalFrame.focus();

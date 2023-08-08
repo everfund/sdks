@@ -2,6 +2,8 @@
 
 We take the security of our systems seriously, and we value the security community. The disclosure of security vulnerabilities helps us ensure the security and privacy of our users.
 
+At this time, we do not have an established bug bounty program. However, as a small team tackling a big mission, we kindly request that any vulnerabilities discovered be disclosed responsibly. By working collaboratively, we can create a more secure application that benefits nonprofits everywhere.
+
 ## Reporting a Vulnerability
 
 **Please do not report security vulnerabilities through public GitHub issues.**
@@ -16,4 +18,4 @@ We will evaluate the vulnerability and, if necessary, release a fix or mitigatin
 
 Please **do not disclose the vulnerability publicly** until a fix is released.
 
-Once we have either a) published a fix, or b) declined to address the vulnerability for whatever reason, you are free to publicly disclose it.****
+Once we have either a) published a fix, or b) declined to address the vulnerability for whatever reason, you are free to publicly disclose it.
