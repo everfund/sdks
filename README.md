@@ -5,6 +5,7 @@
       <img alt="logo" src="https://ik.imagekit.io/everfund/everfund-light?tr=w-350">
     </picture>
   </a>
+  <br/>
 </p>
 
 <p align="center">
