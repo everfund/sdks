@@ -54,7 +54,7 @@ npm install @everfund/js-sdk
 For package specific details on installation, architecture and usage usage, you can refer to the package's README file.
 
 - [`@everfund/js-sdk`](./packages/js-sdk): Functionalities regarded as "core" for Everfund to operate with.
-- [`@everfund/react-sdk`](./packages/react-sdk) Everfund package for React applications.
+- [`@everfund/react-sdk`](./packages/react-sdk): Everfund package for React applications.
 
 Additionally there are packages which act as shared utilities or building blocks.
 
