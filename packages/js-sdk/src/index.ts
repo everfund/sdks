@@ -1,5 +1,5 @@
-import { checkoutModal } from './donationCheckoutModal'
+import { checkoutModal } from './donationCheckoutModal';
 
 export default checkoutModal;
 
-export { checkoutModal }
+export { checkoutModal };

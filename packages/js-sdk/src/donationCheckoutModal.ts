@@ -278,6 +278,4 @@ class DonationCheckoutModal {
 
 const checkoutModal = new DonationCheckoutModal();
 
-export {
-  checkoutModal
-};
+export { checkoutModal };
