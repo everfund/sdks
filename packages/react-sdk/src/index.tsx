@@ -1,3 +1,3 @@
-import { useDonationWidget } from './hooks/useDonationWidget';
+import { useDonationCheckoutModal } from './hooks/useDonationCheckoutModal';
 
-export { useDonationWidget };
+export { useDonationCheckoutModal };

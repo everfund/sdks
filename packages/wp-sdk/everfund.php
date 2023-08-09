@@ -50,7 +50,7 @@ function everfund_plugin_settings_page()
 
 function everfund_sdk_script()
 {
-    wp_enqueue_script('everfund', plugins_url('/js/js-sdk.umd.js', __FILE__));
+    wp_enqueue_script('everfund', plugins_url('/js/js-sdk.global.js', __FILE__));
 }
 
 function everfund_add_allowed_origins($origins)

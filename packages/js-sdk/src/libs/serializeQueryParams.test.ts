@@ -17,7 +17,7 @@ describe('serializeQueryParams', () => {
 
   it('should serialize query params with empty values', () => {
     const params = {
-      foo: ''
+      foo: '',
     };
 
     const result = serializeQueryParams(params);
@@ -27,7 +27,7 @@ describe('serializeQueryParams', () => {
 
   it('should not serialize query params with undefined values', () => {
     const params = {
-      foo: undefined
+      foo: undefined,
     };
 
     const result = serializeQueryParams(params);

@@ -1,11 +1,11 @@
-import { useDonationWidget } from '@everfund/react-sdk';
+import { useDonationCheckoutModal } from '@everfund/react-sdk';
 import ReactDOM from 'react-dom/client';
 import * as React from 'react';
 import '@everfund/example-css';
 
 export default function App() {
   const [success, setSuccess] = React.useState(false);
-  const { isOpen, openDonationWidget } = useDonationWidget({
+  const { isOpen, openModal } = useDonationCheckoutModal({
     code: 'j1q16MvJl5lqfji06bVFKei3HZkW',
     onSuccess: (data) => {
       console.log('Everfund success', data);
@@ -27,7 +27,7 @@ export default function App() {
   return (
     <div className="app">
       <div className="buttonContainer">
-        <button className="button" onClick={() => openDonationWidget()}>
+        <button className="button" onClick={() => openModal()}>
           Donate Now
         </button>
       </div>

@@ -28,13 +28,13 @@
 </template>
 
 <script lang="ts">
-import everfund from '@everfund/js-sdk';
+import { checkoutModal } from '@everfund/js-sdk';
 
 export default {
   name: 'App',
   methods: {
     donate: function () {
-      everfund.donationWidget({
+      checkoutModal.modal({
         code: 'j1q16MvJl5lqfji06bVFKei3HZkW',
         onSuccess: function (onSuccessPayload) {
           console.log(onSuccessPayload);

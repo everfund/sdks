@@ -1,21 +1,21 @@
 import { describe, it, expect, vi } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
-import { useDonationWidget } from './useDonationWidget';
+import { useDonationCheckoutModal } from './useDonationCheckoutModal';
 
-const everfundMock = vi.hoisted(() => ({
-  donationWidget: vi.fn(),
+const donationCheckoutModalMock = vi.hoisted(() => ({
+  modal: vi.fn(),
 }));
 
 vi.mock('@everfund/js-sdk', () => ({
-  default: everfundMock,
+  checkoutModal: donationCheckoutModalMock,
 }));
 
-describe('useDonationWidget', () => {
+describe('useDonationCheckoutModal', () => {
   const code = 'some-code';
 
   it('isOpen is false on first use', () => {
     const { result } = renderHook(() =>
-      useDonationWidget({
+      useDonationCheckoutModal({
         code,
         onSuccess: () => {},
         onFailure: () => {},
@@ -26,9 +26,9 @@ describe('useDonationWidget', () => {
     expect(result.current.isOpen).toBe(false);
   });
 
-  it('isOpen is true when openDonationWidget is called', () => {
+  it('isOpen is true when openModal is called', () => {
     const { result } = renderHook(() =>
-      useDonationWidget({
+      useDonationCheckoutModal({
         code,
         onSuccess: () => {},
         onFailure: () => {},
@@ -37,10 +37,10 @@ describe('useDonationWidget', () => {
     );
 
     act(() => {
-      result.current.openDonationWidget();
+      result.current.openModal();
     });
 
     expect(result.current.isOpen).toBe(true);
-    expect(everfundMock.donationWidget).toHaveBeenCalled();
+    expect(donationCheckoutModalMock.modal).toHaveBeenCalled();
   });
 });

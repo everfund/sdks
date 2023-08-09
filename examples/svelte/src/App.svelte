@@ -1,8 +1,8 @@
 <script lang="ts">
-  import everfund from "@everfund/js-sdk";
+  import { checkoutModal } from "@everfund/js-sdk";
 
   function donate() {
-    everfund.donationWidget({
+    checkoutModal.modal({
       code: "j1q16MvJl5lqfji06bVFKei3HZkW",
       onSuccess: function(onSuccessPayload) {
         console.log(onSuccessPayload);

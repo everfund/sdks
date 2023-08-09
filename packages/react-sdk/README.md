@@ -64,16 +64,16 @@ npm install @everfund/react-sdk
 ## Usage
 
 ```jsx
-import { useDonationWidget } from '@everfund/react-sdk'
+import { useDonationCheckoutModal } from '@everfund/react-sdk'
 import { useState } from 'react'
 
 export const DonateNow = () => {
-  const { openDonationWidget } = useDonationWidget({
+  const { openModal } = useDonationCheckoutModal({
     code: 'demo',
   })
 
   return (
-    <button className="button" onClick={() => openDonationWidget()}>
+    <button className="button" onClick={() => openModal()}>
       Donate Now
     </button>
   )
