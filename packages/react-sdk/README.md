@@ -61,27 +61,6 @@ yarn add @everfund/react-sdk
 npm install @everfund/react-sdk
 ```
 
-```js
-import everfund from '@everfund/react-sdk';
-
-document?.getElementById('donate-modal')?.addEventListener('click', () => {
-  console.log('launch Everfund Modal');
-  everfund.donationWidget({
-    code: '078f',
-    onSuccess: function (onSuccessPayload) {
-      console.log(onSuccessPayload);
-    },
-    onFailure: function (error) {
-      console.log(error);
-    },
-    onClose: function () {
-      //
-      console.log('Closed Modal');
-    },
-  });
-});
-```
-
 ## Usage
 
 ```jsx
