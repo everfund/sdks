@@ -2,12 +2,7 @@ import { checkoutModal } from '@everfund/js-sdk';
 import { useState } from 'react';
 import { ModalProps } from '../types';
 
-type useDonationCheckoutModalPropsReturn = {
-  isOpen?: boolean;
-  openModal: () => void;
-}
-
-export function useDonationCheckoutModal(options: ModalProps):useDonationCheckoutModalPropsReturn {
+export function useDonationCheckoutModal(options: ModalProps) {
   // Compose in the generic options to the user options
   const [isOpen, setIsDonationWidgetOpen] = useState(false);
 
