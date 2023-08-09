@@ -72,7 +72,7 @@ At Everfund, we strive to create an inclusive and welcoming environment for all 
 
 To ensure a productive and respectful experience for everyone involved, we have established a few ground rules.
 
-Please review our [Code of Conduct](https://github.com/everfund/everfund/blob/docs/CODE_OF_CONDUCT.md) before getting started.
+Please review our [Code of Conduct](https://github.com/everfund/everfund/blob/CODE_OF_CONDUCT.md) before getting started.
 
 If you're new to the project, you may want to start with one of our designated ["good first issues"](https://github.com/everfund/everfund/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22) These issues are specifically chosen to be accessible and easy to understand, making them a great introduction to the project.
 

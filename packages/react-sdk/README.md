@@ -61,27 +61,6 @@ yarn add @everfund/react-sdk
 npm install @everfund/react-sdk
 ```
 
-```js
-import everfund from '@everfund/react-sdk';
-
-document?.getElementById('donate-modal')?.addEventListener('click', () => {
-  console.log('launch Everfund Modal');
-  everfund.donationWidget({
-    code: '078f',
-    onSuccess: function (onSuccessPayload) {
-      console.log(onSuccessPayload);
-    },
-    onFailure: function (error) {
-      console.log(error);
-    },
-    onClose: function () {
-      //
-      console.log('Closed Modal');
-    },
-  });
-});
-```
-
 ## Usage
 
 ```jsx
@@ -117,7 +96,7 @@ At Everfund, we strive to create an inclusive and welcoming environment for all 
 
 To ensure a productive and respectful experience for everyone involved, we have established a few ground rules.
 
-Please review our [Code of Conduct](https://github.com/everfund/everfund/blob/docs/CODE_OF_CONDUCT.md) before getting started.
+Please review our [Code of Conduct](https://github.com/everfund/everfund/blob/CODE_OF_CONDUCT.md) before getting started.
 
 If you're new to the project, you may want to start with one of our designated ["good first issues"](https://github.com/everfund/everfund/issues?q=is%3Aissue+is%3Aopen+label%3A%22Good+First+Issue%22) These issues are specifically chosen to be accessible and easy to understand, making them a great introduction to the project.
 
@@ -129,7 +108,7 @@ Together, let's build something amazing!
 
 `@everfund/react-sdk` is provided **"as is"** without any **warranty**. Use at your own risk.
 
-_For more information and to report security issues, please refer to our [security documentation](https://github.com/everfund/everfund/blob/main/docs/SECURITY.md)._
+_For more information and to report security issues, please refer to our [security documentation](https://github.com/everfund/everfund/blob/main/SECURITY.md)._
 
 ## License
 
