@@ -97,7 +97,7 @@ Add the following script to your site's `<body>` element:
           (e.type = 'text/javascript'),
             (e.async = !0),
             (e.src =
-              'https://cdn.jsdelivr.net/npm/@everfund/js-sdk/dist/js-sdk.umd.js'),
+              'https://cdn.jsdelivr.net/npm/@everfund/js-sdk/dist/js-sdk.global.js'),
             f.parentNode.insertBefore(e, f);
         }
       }
