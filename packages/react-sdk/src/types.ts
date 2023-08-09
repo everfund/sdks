@@ -31,14 +31,13 @@ export type SuccessResponse = {
 };
 
 export type ModalProps = {
-  /** @deprecated use code field instead */
-  donationLink?: string;
   /** Donation Widget Code get from the dashboard */
   code: string;
   /** Will close donation modal once payment has succeeded */
   closeOnSuccess?: boolean | null;
   domain?: string;
-  onSuccess(data: SuccessResponse): void;
-  onFailure(data: Record<string, unknown>): void;
-  onClose(): void;
+  /** Will close donation modal once payment has failed */
+  onSuccess?(data: SuccessResponse): void;
+  onFailure?(data: Record<string, unknown>): void;
+  onClose?(): void;
 };

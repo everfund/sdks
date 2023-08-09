@@ -254,18 +254,18 @@ class DonationCheckoutModal {
           }
           case 'everfund:success': {
             const data = e.data.content;
-            checkoutModal.onSuccess(data);
+            checkoutModal.onSuccess && checkoutModal.onSuccess(data);
             break;
           }
           case 'everfund:failure': {
-            checkoutModal.onFailure(e.data.content);
+            checkoutModal.onFailure && checkoutModal.onFailure(e.data.content);
             break;
           }
           case 'everfund:close': {
             embed && enableBodyScroll(embed);
             embed && embed.remove();
             checkoutModal.donationWidgetOpen = false;
-            checkoutModal.onClose();
+            checkoutModal.onClose && checkoutModal.onClose();
             clearAllBodyScrollLocks();
             break;
           }
