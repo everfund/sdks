@@ -1,8 +1,8 @@
 import { describe, it, expect, afterEach, vi } from 'vitest';
-import everfund from './index';
+import { checkoutModal } from './donationCheckoutModal';
 import type { SuccessResponse } from './types';
 
-describe('everfund', () => {
+describe('donationCheckoutModal', () => {
   const code = 'some-code';
 
   afterEach(() => {
@@ -10,19 +10,19 @@ describe('everfund', () => {
   });
 
   it('should be defined', () => {
-    expect(everfund).toBeDefined();
+    expect(checkoutModal).toBeDefined();
   });
 
   it('should have a version', () => {
-    expect(everfund.version).toBeDefined();
+    expect(checkoutModal.version).toBeDefined();
   });
 
-  it('should have a donationWidget method', () => {
-    expect(everfund.donationWidget).toBeDefined();
+  it('should have a modal method', () => {
+    expect(checkoutModal.modal).toBeDefined();
   });
 
   it('renders iframe with correct src', () => {
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       onSuccess: () => {},
       onFailure: () => {},
@@ -38,7 +38,7 @@ describe('everfund', () => {
   });
 
   it('renders iframe with attributes', () => {
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       onSuccess: () => {},
       onFailure: () => {},
@@ -57,7 +57,7 @@ describe('everfund', () => {
   });
 
   it('renders iframe with correct src with custom domain', () => {
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       domain: 'https://new.domain',
       onSuccess: () => {},
@@ -74,7 +74,7 @@ describe('everfund', () => {
   });
 
   it('renders iframe with closeOnSuccess on src', () => {
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       closeOnSuccess: true,
       onSuccess: () => {},
@@ -99,14 +99,14 @@ describe('everfund', () => {
       contactByEmail: false,
     };
     const onSuccess = vi.fn();
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       onSuccess,
       onFailure: () => {},
       onClose: () => {},
     });
 
-    everfund['onSuccess'](mockSuccessResponse);
+    checkoutModal['onSuccess'](mockSuccessResponse);
 
     expect(onSuccess).toHaveBeenCalledWith(mockSuccessResponse);
   });
@@ -116,34 +116,34 @@ describe('everfund', () => {
       id: 'fake-id',
     };
     const onFailure = vi.fn();
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       onSuccess: () => {},
       onFailure,
       onClose: () => {},
     });
 
-    everfund['onFailure'](mockFailureResponse);
+    checkoutModal['onFailure'](mockFailureResponse);
 
     expect(onFailure).toHaveBeenCalledWith(mockFailureResponse);
   });
 
   it('onClose is called', () => {
     const onClose = vi.fn();
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       onSuccess: () => {},
       onFailure: () => {},
       onClose,
     });
 
-    everfund['onClose']();
+    checkoutModal['onClose']();
 
     expect(onClose).toHaveBeenCalled();
   });
 
   it('should match snapshot', () => {
-    everfund.donationWidget({
+    checkoutModal.modal({
       code,
       onSuccess: () => {},
       onFailure: () => {},

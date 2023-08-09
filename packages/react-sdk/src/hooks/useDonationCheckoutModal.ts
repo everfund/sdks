@@ -1,14 +1,14 @@
-import everfund from '@everfund/js-sdk';
+import { checkoutModal } from '@everfund/js-sdk';
 import { useState } from 'react';
 import { ModalProps } from '../types';
 
-export function useDonationWidget(options: ModalProps) {
+export function useDonationCheckoutModal(options: ModalProps) {
   // Compose in the generic options to the user options
   const [isOpen, setIsDonationWidgetOpen] = useState(false);
 
-  function openDonationWidget() {
+  function openModal() {
     setIsDonationWidgetOpen(true);
-    everfund.donationWidget({
+    checkoutModal.modal({
       ...options,
       onSuccess: (data) => {
         setIsDonationWidgetOpen(false);
@@ -25,5 +25,5 @@ export function useDonationWidget(options: ModalProps) {
     });
   }
 
-  return { isOpen, openDonationWidget };
+  return { isOpen, openModal };
 }
