@@ -61,7 +61,7 @@ yarn add @everfund/react-sdk
 npm install @everfund/react-sdk
 ```
 
-## Usage
+## Usage Checkout Modal
 
 ```jsx
 import { useDonationCheckoutModal } from '@everfund/react-sdk'
@@ -78,6 +78,20 @@ export const DonateNow = () => {
     </button>
   )
 }
+```
+
+
+## Usage Donation Form
+
+```jsx
+import { DonationForm } from '@everfund/react-sdk'
+
+export const App = () => (<div>
+  <div>Some content</div>
+  <div>
+    <DonationForm code="demo" />
+  </div>
+</div>)
 ```
 
 _For further details and examples, please refer to our [Documentation](https://docs.everfund.com)._
