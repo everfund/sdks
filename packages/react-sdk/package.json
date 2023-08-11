@@ -23,11 +23,14 @@
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@everfund/js-sdk": "workspace:*"
+    "@everfund/js-sdk": "workspace:*",
+    "goober": "^2.1.13"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.18",
+    "@vitejs/plugin-react": "^4.0.4",
     "jsdom": "^22.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

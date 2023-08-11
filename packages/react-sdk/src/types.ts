@@ -41,3 +41,14 @@ export type ModalProps = {
   onFailure?(data: Record<string, unknown>): void;
   onClose?(): void;
 };
+
+export type DonationFormProps = {
+  /** Donation Widget Code get from the dashboard */
+  code: string;
+  domain?: string;
+
+  onSuccess?(data: SuccessResponse): void;
+  onFailure?(data: Record<string, unknown>): void;
+
+  styles?: React.CSSProperties;
+};
