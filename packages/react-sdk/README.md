@@ -80,7 +80,6 @@ export const DonateNow = () => {
 }
 ```
 
-
 ## Usage Donation Form
 
 ```jsx
