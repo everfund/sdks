@@ -13,7 +13,7 @@
     <img alt="Everfund Docs" src="https://img.shields.io/badge/everfund-docs-blue.svg?&l&style=for-the-badge" />
   </a>
   <a href="https://github.com/everfund/everfund/actions">
-    <img alt="Github Action Test Status"src="https://img.shields.io/github/actions/workflow/status/everfund/everfund/tests.yml?style=for-the-badge&logo=github">
+    <img alt="Github Action Test Status"src="https://img.shields.io/github/actions/workflow/status/everfund/everfund/ci.yml?style=for-the-badge&logo=github">
   </a>
   <a href="https://bundlephobia.com/package/@everfund/js-sdk">
     <img alt="" src="https://img.shields.io/bundlephobia/min/%40everfund%2Fjs-sdk?style=for-the-badge&color=green">
