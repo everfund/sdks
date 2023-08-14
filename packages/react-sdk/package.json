@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "tsup --config ./tsup.config.json --dts",
-    "lint": "eslint \"**/*.ts\"",
+    "lint": "eslint",
     "test": "vitest"
   },
   "peerDependencies": {
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.2.18",
+    "@types/react": "^18.2.20",
     "@vitejs/plugin-react": "^4.0.4",
     "jsdom": "^22.1.0",
     "react": "^18.2.0",

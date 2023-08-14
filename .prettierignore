@@ -22,6 +22,9 @@ pnpm-workspace.yaml
 *.txt
 *.ico
 
+*.example
+*.xml
+
 # certificates
 apple-developer-merchantid-domain-association
 
