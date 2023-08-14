@@ -12,11 +12,11 @@
   "devDependencies": {
     "@everfund/eslint-config-everfund": "workspace:*",
     "@everfund/prettier": "workspace:*",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "prettier": "^3.0.1",
     "tsup": "^7.2.0",
     "turbo": "1.10.12",
-    "vite": "^4.4.8",
+    "vite": "^4.4.9",
     "vitest": "^0.33.0"
   },
   "namespace": "@everfund"

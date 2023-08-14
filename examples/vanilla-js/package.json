@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
-    "vite": "^4.4.8"
+    "vite": "^4.4.9"
   },
   "browserslist": [
     ">0.2%",
