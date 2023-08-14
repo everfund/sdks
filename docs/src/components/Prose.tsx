@@ -5,6 +5,7 @@ export function Prose({
   as: Component = 'div',
   className,
   ...props
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 }: ReactComponent<{ as?: any }>) {
   return (
     <Component

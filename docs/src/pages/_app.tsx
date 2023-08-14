@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Head from 'next/head'
 import { slugifyWithCounter } from '@sindresorhus/slugify'
 import { Crisp } from 'crisp-sdk-web'
@@ -13,7 +14,7 @@ import { useEffect } from 'react'
 
 function getNodeText(node: any) {
   let text = ''
-  for (let child of node.children ?? []) {
+  for (const child of node.children ?? []) {
     if (typeof child === 'string') {
       text += child
     }
@@ -23,13 +24,13 @@ function getNodeText(node: any) {
 }
 
 function collectHeadings(nodes: any, slugify = slugifyWithCounter()): any {
-  let sections = []
+  const sections = []
 
-  for (let node of nodes) {
+  for (const node of nodes) {
     if (node.name === 'Heading' || node.name === 'h3') {
-      let title = getNodeText(node)
+      const title = getNodeText(node)
       if (title) {
-        let id = slugify(title)
+        const id = slugify(title)
         node.attributes.id = id
         if (node.attributes.level === 3) {
           if (!sections[sections.length - 1]) {
@@ -90,15 +91,15 @@ const MyApp: AppType = ({
     }
   }, [router.events])
 
-  let title = pageProps.markdoc?.frontmatter.title
+  const title = pageProps.markdoc?.frontmatter.title
 
-  let pageTitle =
+  const pageTitle =
     pageProps.markdoc?.frontmatter.pageTitle ||
     `${pageProps.markdoc?.frontmatter.title} - Docs`
 
-  let description = pageProps.markdoc?.frontmatter.description
+  const description = pageProps.markdoc?.frontmatter.description
 
-  let tableOfContents = pageProps.markdoc?.content
+  const tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
 

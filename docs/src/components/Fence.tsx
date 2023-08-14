@@ -7,6 +7,7 @@ export function Fence({
   language,
 }: {
   language: Language
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any
   copy: boolean
 }) {

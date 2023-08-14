@@ -8,7 +8,7 @@ export function Navigation({
   navigation,
   className,
 }: ReactComponent<{ navigation: NavigationProps }>) {
-  let router = useRouter()
+  const router = useRouter()
 
   return (
     <nav className={clsx('text-base lg:text-sm', className)}>

@@ -44,9 +44,11 @@ function SystemIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
   )
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function ThemeSelector(props: any): JSX.Element {
-  let [selectedTheme, setSelectedTheme] = useState<{
+  const [selectedTheme, setSelectedTheme] = useState<{
     name: string
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     value: any
   }>()
 

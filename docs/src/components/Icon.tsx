@@ -18,6 +18,7 @@ import { CDNIcon } from '@/components/icons/CDNIcon'
 import { SourceIcon } from '@/components/icons/SourceIcon'
 import { GithubIcon } from '@/components/icons/GithubIcon'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const icons: any = {
   installation: InstallationIcon,
   presets: PresetsIcon,
@@ -42,8 +43,8 @@ interface IIconProps extends SVGProps<SVGSVGElement> {
 }
 
 export function Icon({ icon, className, ...props }: IIconProps) {
-  let id = useId()
-  let IconComponent = icons[icon]
+  const id = useId()
+  const IconComponent = icons[icon]
 
   return (
     <svg

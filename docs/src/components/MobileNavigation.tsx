@@ -42,8 +42,8 @@ export function MobileNavigation({
 }: {
   navigation: NavigationProps
 }) {
-  let router = useRouter()
-  let [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     if (!isOpen) return

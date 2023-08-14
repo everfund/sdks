@@ -1,5 +1,4 @@
 import { Fragment, SVGProps } from 'react'
-import Image from 'next/future/image'
 import clsx from 'clsx'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 

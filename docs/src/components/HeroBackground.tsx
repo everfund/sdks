@@ -3,7 +3,7 @@ import { SVGProps, useId } from 'react'
 export function HeroBackground(
   props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
 ) {
-  let id = useId()
+  const id = useId()
 
   return (
     <svg
