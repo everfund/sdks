@@ -11,6 +11,8 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       everfund.io
+ *
+ * @package           create-block
  */
 function everfund_show_apple_pay_domain_verification_file()
 {
@@ -53,6 +55,10 @@ function everfund_sdk_script()
     wp_enqueue_script('everfund', plugins_url('/js/js-sdk.global.js', __FILE__));
 }
 
+function create_block_init() {
+	register_block_type( __DIR__ . '/build' );
+}
+
 function everfund_add_allowed_origins($origins)
 {
     $origins[] = 'https://evr.fund';
@@ -78,3 +84,4 @@ add_action('wp_enqueue_scripts', 'everfund_sdk_script');
 add_action('wp_head', 'everfund_sdk_script', 1);
 add_action('plugins_loaded', 'everfund_show_apple_pay_domain_verification_file');
 add_action('admin_menu', 'everfund_create_menu');
+add_action( 'init', 'create_block_init' );

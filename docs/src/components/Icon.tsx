@@ -53,7 +53,7 @@ export function Icon({ icon, className, ...props }: IIconProps) {
       fill="none"
       className={clsx(
         className,
-        '[--icon-foreground:theme(colors.slate.900)] [--icon-background:theme(colors.gold)]',
+        '[--icon-background:theme(colors.gold)] [--icon-foreground:theme(colors.slate.900)]',
       )}
       {...props}
     >

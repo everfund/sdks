@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "everfund/donation-button",
+  "version": "0.1.0",
+  "title": "Everfund Donation Button",
+  "category": "widgets",
+  "description": "Adds a button that links to an Everfund donation modal.",
+  "attributes": {
+    "buttonText": {
+      "type": "string",
+      "attribute": "buttonText",
+      "default": "Donate Now"
+    },
+    "code": {
+      "type": "string",
+      "attribute": "code"
+    }
+  },
+  "supports": {
+    "html": true
+  },
+  "editorScript": "file:./index.js"
+}

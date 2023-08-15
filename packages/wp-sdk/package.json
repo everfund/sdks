@@ -1,0 +1,19 @@
+{
+  "name": "@everfund/wp-sdk",
+  "version": "2.0.1",
+  "description": "Plug and Play Donation System",
+  "author": "Christopher Burns <christopher@everfund.co.uk>",
+  "license": "MIT",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint": "eslint \"**/*.js\" --ignore-path .eslintignore",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.10.0"
+  }
+}
