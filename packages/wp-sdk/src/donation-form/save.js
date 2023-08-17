@@ -1,5 +1,3 @@
-// import { useEffect } from '@wordpress/element';
-import { serializeQueryParams } from '../libs/serializeQueryParams';
 import './styles.scss';
 
 export default function save({ attributes }) {
@@ -21,9 +19,7 @@ export default function save({ attributes }) {
           id="ef-donationForm"
           src={`${
             domain || 'https://evr.fund'
-          }/${code}/widget${serializeQueryParams({
-            embed_origin: origin,
-          })}`}
+          }/${code}/widget?embed_origin=${origin}`}
           className="iframeStyles"
         />
       </div>
