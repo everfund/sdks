@@ -56,7 +56,9 @@ function everfund_sdk_script()
 }
 
 function create_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type(__DIR__ . '/build');
+	register_block_type(__DIR__ . '/build/donation-checkout-modal');
+	register_block_type(__DIR__ . '/build/donation-form');
 }
 
 function everfund_add_allowed_origins($origins)
@@ -84,4 +86,4 @@ add_action('wp_enqueue_scripts', 'everfund_sdk_script');
 add_action('wp_head', 'everfund_sdk_script', 1);
 add_action('plugins_loaded', 'everfund_show_apple_pay_domain_verification_file');
 add_action('admin_menu', 'everfund_create_menu');
-add_action( 'init', 'create_block_init' );
+add_action('init', 'create_block_init');

@@ -1,9 +1,9 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "everfund/donation-button",
+  "name": "everfund/donation-checkout-modal",
   "version": "0.1.0",
-  "title": "Everfund Donation Button",
+  "title": "Everfund Donation Checkout Modal",
   "category": "widgets",
   "description": "Adds a button that links to an Everfund donation modal.",
   "attributes": {
