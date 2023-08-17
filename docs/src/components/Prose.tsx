@@ -4,8 +4,7 @@ import clsx from 'clsx'
 export function Prose({
   as: Component = 'div',
   className,
-  ...props
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...props // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }: ReactComponent<{ as?: any }>) {
   return (
     <Component
@@ -25,12 +24,12 @@ export function Prose({
         // hr
         'dark:prose-hr:border-slate-800',
         //code
-        'prose-code:font-regular prose-code:rounded prose-code:bg-ever-500 prose-code:bg-opacity-20 prose-code:py-0.5 prose-code:px-1 prose-code:text-ever-600',
+        'prose-code:font-regular prose-code:rounded prose-code:bg-ever-500 prose-code:bg-opacity-20 prose-code:px-1 prose-code:py-0.5 prose-code:text-ever-600',
 
         //table
         'prose-table:my-0 prose-table:min-w-full prose-table:divide-y prose-table:divide-gray-300',
         'prose-thead:bg-gray-50',
-        'prose-th:font-regular prose-th:py-3.5 prose-th:px-3 prose-th:text-left prose-th:font-sans prose-th:text-sm prose-th:text-gray-900 first:prose-th:pl-4 first:prose-th:pr-3 ',
+        'prose-th:font-regular prose-th:px-3 prose-th:py-3.5 prose-th:text-left prose-th:font-sans prose-th:text-sm prose-th:text-gray-900 first:prose-th:pl-4 first:prose-th:pr-3 ',
         'prose-td:prose-td:py-4 prose-td:px-3 prose-td:text-sm prose-td:text-gray-500',
       )}
       {...props}

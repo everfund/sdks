@@ -20,7 +20,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "body-scroll-lock": "^4.0.0-beta.0",
+    "body-scroll-lock": "4.0.0-beta.0",
     "goober": "^2.1.13"
   },
   "devDependencies": {

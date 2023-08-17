@@ -38,7 +38,7 @@ export function Fence({
             Copy
           </button>
           <pre className={clsx(className, 'relative')} style={style}>
-            <code className="!rounded-none !bg-transparent !py-0 !px-0 !text-inherit">
+            <code className="!rounded-none !bg-transparent !px-0 !py-0 !text-inherit">
               {tokens.map((line, lineIndex) => (
                 <Fragment key={lineIndex}>
                   {line

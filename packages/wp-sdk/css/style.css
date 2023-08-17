@@ -18,12 +18,11 @@
 
 .everfund-modal .everfund-button {
   border: 0 none;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   padding: 14px 30px 15px;
   cursor: pointer;
-  display: inline-block;
   width: 200px;
   display: block;
   margin-left: auto;
@@ -46,21 +45,21 @@
 .everfund-title {
   color: #555459;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 700;
   margin: 0;
 }
 
 .everfund-subtitle {
   color: #555459;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   margin: 12px 0 26px;
 }
 
 .everfund-stuck {
   color: #555459;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 400;
   margin: 12px 0 0;
 }
 

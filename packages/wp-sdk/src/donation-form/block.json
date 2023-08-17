@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "everfund/donation-form",
+  "version": "0.1.0",
+  "title": "Everfund Donation Form",
+  "category": "widgets",
+  "description": "Adds a Donation Form to the page.",
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "height": {
+      "type": "string"
+    },
+    "width": {
+      "type": "string"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "script": "file:./script.js",
+  "style": "file:./index.css"
+}
