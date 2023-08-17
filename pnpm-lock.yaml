@@ -370,13 +370,6 @@ importers:
         version: 4.4.9(@types/node@20.5.0)
 
   packages/wp-sdk:
-    dependencies:
-      react:
-        specifier: '>=16'
-        version: 18.2.0
-      react-dom:
-        specifier: '>=16'
-        version: 18.2.0(react@18.2.0)
     devDependencies:
       '@wordpress/scripts':
         specifier: ^26.10.0
