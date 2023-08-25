@@ -169,9 +169,6 @@ importers:
 
   examples/next:
     dependencies:
-      '@everfund/example-css':
-        specifier: workspace:*
-        version: link:../../configs/example-css
       '@everfund/react-sdk':
         specifier: workspace:*
         version: link:../../packages/react-sdk
@@ -206,9 +203,6 @@ importers:
 
   examples/react:
     dependencies:
-      '@everfund/example-css':
-        specifier: workspace:*
-        version: link:../../configs/example-css
       '@everfund/react-sdk':
         specifier: workspace:*
         version: link:../../packages/react-sdk
@@ -234,9 +228,6 @@ importers:
 
   examples/svelte:
     dependencies:
-      '@everfund/example-css':
-        specifier: workspace:*
-        version: link:../../configs/example-css
       '@everfund/js-sdk':
         specifier: workspace:*
         version: link:../../packages/js-sdk
@@ -256,9 +247,6 @@ importers:
 
   examples/vanilla-js:
     dependencies:
-      '@everfund/example-css':
-        specifier: workspace:*
-        version: link:../../configs/example-css
       '@everfund/js-sdk':
         specifier: workspace:*
         version: link:../../packages/js-sdk
@@ -272,9 +260,6 @@ importers:
 
   examples/vue:
     dependencies:
-      '@everfund/example-css':
-        specifier: workspace:*
-        version: link:../../configs/example-css
       '@everfund/js-sdk':
         specifier: workspace:*
         version: link:../../packages/js-sdk
