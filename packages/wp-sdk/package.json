@@ -1,6 +1,6 @@
 {
   "name": "@everfund/wp-sdk",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
   "license": "MIT",

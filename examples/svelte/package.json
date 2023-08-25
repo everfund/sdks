@@ -10,7 +10,7 @@
     "examples:start": "vite"
   },
   "dependencies": {
-    "@everfund/js-sdk": "workspace:*"
+    "@everfund/js-sdk": "3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",

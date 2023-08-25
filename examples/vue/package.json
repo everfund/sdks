@@ -9,7 +9,7 @@
     "examples:start": "vite"
   },
   "dependencies": {
-    "@everfund/js-sdk": "workspace:*",
+    "@everfund/js-sdk": "3.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
