@@ -170,7 +170,7 @@ importers:
   examples/next:
     dependencies:
       '@everfund/react-sdk':
-        specifier: workspace:*
+        specifier: 3.0.0
         version: link:../../packages/react-sdk
       next:
         specifier: 13.4.12
@@ -204,7 +204,7 @@ importers:
   examples/react:
     dependencies:
       '@everfund/react-sdk':
-        specifier: workspace:*
+        specifier: 3.0.0
         version: link:../../packages/react-sdk
       '@types/react-dom':
         specifier: ^18.2.7
@@ -229,7 +229,7 @@ importers:
   examples/svelte:
     dependencies:
       '@everfund/js-sdk':
-        specifier: workspace:*
+        specifier: 3.0.0
         version: link:../../packages/js-sdk
     devDependencies:
       '@rollup/plugin-replace':
@@ -248,7 +248,7 @@ importers:
   examples/vanilla-js:
     dependencies:
       '@everfund/js-sdk':
-        specifier: workspace:*
+        specifier: 3.0.0
         version: link:../../packages/js-sdk
     devDependencies:
       '@rollup/plugin-replace':
@@ -261,7 +261,7 @@ importers:
   examples/vue:
     dependencies:
       '@everfund/js-sdk':
-        specifier: workspace:*
+        specifier: 3.0.0
         version: link:../../packages/js-sdk
       vue:
         specifier: ^3.3.4
