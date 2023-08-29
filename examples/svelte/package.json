@@ -4,10 +4,10 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "examples:build": "vite build",
-    "examples:dev": "vite",
-    "examples:serve": "vite preview",
-    "examples:start": "vite"
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "vite preview",
+    "start": "vite"
   },
   "dependencies": {
     "@everfund/js-sdk": "3.0.0"

@@ -18,7 +18,7 @@ const nextConfig = {
               '../../packages/react-sdk/src/index.ts'
             ),
           }
-        : {};
+        : { ...config.resolve.alias };
 
     return config;
   },
