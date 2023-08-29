@@ -1,6 +1,6 @@
 import { TextControl } from '@wordpress/components';
 import { useBlockProps } from '@wordpress/block-editor';
-import Logo from '../components/logo'
+import Logo from '../components/logo';
 
 export default function Edit({ attributes, setAttributes }) {
   const blockProps = useBlockProps();

@@ -39,7 +39,8 @@
     margin: 6px;
     border: 6px solid #000;
     border-radius: 50%;
-    animation: everfund-donation-form-loadingRings 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    animation: everfund-donation-form-loadingRings 1.2s
+      cubic-bezier(0.5, 0, 0.5, 1) infinite;
     border-color: #000 transparent transparent transparent;
   }
 

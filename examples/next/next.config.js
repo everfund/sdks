@@ -17,17 +17,8 @@ const nextConfig = {
               __dirname,
               '../../packages/react-sdk/src/index.ts'
             ),
-            '@everfund/example-css': path.resolve(
-              __dirname,
-              '../../configs/example-css/example-css.css'
-            ),
           }
-        : {
-            '@everfund/example-css': path.resolve(
-              __dirname,
-              '../../configs/example-css/example-css.css'
-            ),
-          };
+        : {};
 
     return config;
   },

@@ -1,7 +1,7 @@
 import { useDonationCheckoutModal, DonationForm } from '@everfund/react-sdk';
 import ReactDOM from 'react-dom/client';
 import * as React from 'react';
-import '@everfund/example-css';
+import './demo.css';
 
 const code = 'j1q16MvJl5lqfji06bVFKei3HZkW';
 

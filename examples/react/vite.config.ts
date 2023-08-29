@@ -28,18 +28,9 @@ export default defineConfig({
               __dirname,
               '../../packages/react-sdk/src/index.tsx'
             ),
-            '@everfund/example-css': path.resolve(
-              __dirname,
-              '../../configs/example-css/example-css.css'
-            ),
           },
         }
       : {
-          alias: {
-            '@everfund/example-css': path.resolve(
-              __dirname,
-              '../../configs/example-css/example-css.css'
-            ),
-          },
+          alias: {},
         },
 });

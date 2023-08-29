@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import '@everfund/example-css';
+import './demo.css';
 
 createApp(App).mount('#app');

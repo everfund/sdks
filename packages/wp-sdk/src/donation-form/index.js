@@ -8,7 +8,7 @@ import { registerBlockType } from '@wordpress/blocks';
 /**
  * Internal dependencies
  */
-import Logo from '../components/logo'
+import Logo from '../components/logo';
 import Edit from './edit';
 import save from './save';
 import metadata from './block.json';
@@ -28,7 +28,7 @@ registerBlockType(metadata.name, {
     },
   },
   icon: {
-    src: (<Logo />),
+    src: <Logo />,
   },
   /**
    * @see ./edit.js

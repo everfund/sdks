@@ -1,5 +1,5 @@
 import { checkoutModal } from '@everfund/js-sdk';
-import '@everfund/example-css';
+import './demo.css';
 
 document?.getElementById('donate-modal')?.addEventListener('click', () => {
   console.log('launch Everfund Modal');
