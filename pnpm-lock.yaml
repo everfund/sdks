@@ -45,8 +45,6 @@ importers:
         specifier: ^8.10.0
         version: 8.10.0(eslint@8.47.0)
 
-  configs/example-css: {}
-
   configs/prettier:
     devDependencies:
       '@prettier/plugin-xml':

@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import '@everfund/example-css';
+import '../styles/styles.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
