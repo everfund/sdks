@@ -312,7 +312,7 @@ importers:
   packages/react-sdk:
     dependencies:
       '@everfund/js-sdk':
-        specifier: workspace:*
+        specifier: 3.0.0
         version: link:../js-sdk
       goober:
         specifier: ^2.1.13
