@@ -2,12 +2,21 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^build:sdks", "^build:examples", "^build:docs"]
+    },
+    "build:sdks": {
       "outputs": ["dist/**"]
+    },
+    "build:examples": {
+      "dependsOn": ["^build:sdks"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "build:docs": {
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "lint": {},
     "test": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["^build:sdks"]
     },
     "dev": {
       "cache": false,
