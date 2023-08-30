@@ -4,7 +4,6 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --concurrency=20",
-    "build": "turbo run build",
     "format": "prettier --write \"**/*\"",
     "lint": "turbo run lint",
     "test": "turbo run test"
