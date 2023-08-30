@@ -24,10 +24,10 @@ export default defineConfig({
             '@everfund/js-sdk': path.resolve(
               __dirname,
               '../../packages/js-sdk/src/index.ts'
-            ),
-          },
+            )
+          }
         }
       : {
-          alias: {},
+          alias: {}
         },
 });

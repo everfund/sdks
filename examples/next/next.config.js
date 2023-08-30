@@ -9,11 +9,11 @@ const nextConfig = {
       process.env.USE_SOURCE === 'true'
         ? {
             ...config.resolve.alias,
-            'js-sdk': path.resolve(
+            '@everfund/js-sdk': path.resolve(
               __dirname,
               '../../packages/js-sdk/src/index.ts'
             ),
-            'react-sdk': path.resolve(
+            '@everfund/react-sdk': path.resolve(
               __dirname,
               '../../packages/react-sdk/src/index.ts'
             ),
