@@ -15,7 +15,7 @@ const nextConfig = {
             ),
             '@everfund/react-sdk': path.resolve(
               __dirname,
-              '../../packages/react-sdk/src/index.ts'
+              '../../packages/react-sdk/src/index.tsx'
             ),
           }
         : { ...config.resolve.alias };
