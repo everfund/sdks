@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "examples:build": "next build",
-    "examples:dev": "next dev",
-    "examples:serve": "next preview",
-    "examples:start": "next"
+    "build": "next build",
+    "dev": "next dev",
+    "serve": "next preview",
+    "start": "next"
   },
   "dependencies": {
     "@everfund/react-sdk": "3.0.0",
