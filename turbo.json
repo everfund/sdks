@@ -12,7 +12,7 @@
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "build:docs": {
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
     "test": {
