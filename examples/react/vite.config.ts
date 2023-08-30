@@ -20,10 +20,6 @@ export default defineConfig({
     process.env.USE_SOURCE === 'true'
       ? {
           alias: {
-            '@everfund/js-sdk': path.resolve(
-              __dirname,
-              '../../packages/js-sdk/src/index.ts'
-            ),
             '@everfund/react-sdk': path.resolve(
               __dirname,
               '../../packages/react-sdk/src/index.tsx'

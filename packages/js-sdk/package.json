@@ -15,7 +15,8 @@
     "src"
   ],
   "scripts": {
-    "build:sdks": "tsup --config ./tsup.config.json --dts",
+    "build:sdks": "tsup --config ./tsup.config.json",
+    "dev": "tsup --config ./tsup.config.json --watch",
     "lint": "eslint \"**/*.ts\"",
     "test": "vitest"
   },
