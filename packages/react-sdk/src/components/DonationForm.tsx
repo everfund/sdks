@@ -91,8 +91,6 @@ const LoadingSpinner = () => {
   );
 };
 
-const origin = window.location.origin;
-
 const outerDivStyles = {
   height: '100%',
   width: '100%',
@@ -141,7 +139,7 @@ export const DonationForm = ({
         src={`${
           domain || 'https://evr.fund'
         }/${code}/widget${serializeQueryParams({
-          embed_origin: origin,
+          embed_origin: window.location.origin,
         })}`}
         style={iframeStyles}
       />

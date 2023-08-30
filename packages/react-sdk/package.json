@@ -23,7 +23,7 @@
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@everfund/js-sdk": "workspace:*",
+    "@everfund/js-sdk": "3.0.0",
     "goober": "^2.1.13"
   },
   "devDependencies": {
