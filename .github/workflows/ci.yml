@@ -32,10 +32,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run tests
-        run: pnpm test
-
-      - name: Run linter
+      - name: Build SDK's
         run: pnpm build:sdks
 
   build-examples:
@@ -65,7 +62,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run build examples
+      - name: Build examples
         run: 'pnpm build:examples'
 
   test-and-lint:
