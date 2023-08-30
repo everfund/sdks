@@ -33,4 +33,4 @@ jobs:
         run: echo "USE_SOURCE=true" >> $GITHUB_ENV
 
       - name: Run build examples
-        run: pnpm build
+        run: 'pnpm build:sdks'
