@@ -18,7 +18,7 @@
       "outputs": ["dist/**"]
     },
     "build:examples": {
-      "dependsOn": ["^build:sdks"],
+      "dependsOn": ["build:sdks"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "build:docs": {

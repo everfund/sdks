@@ -6,7 +6,35 @@ on:
   pull_request:
 
 jobs:
-  build:
+  build-sdk:
+    name: Build SDK
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Run linter
+        run: pnpm build:sdks
+  test-and-lint:
     name: Test and Lint
     timeout-minutes: 15
     runs-on: ubuntu-latest
@@ -34,3 +62,31 @@ jobs:
 
       - name: Run linter
         run: pnpm lint
+  build-examples:
+    name: Build Examples
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Set USE_SOURCE
+        run: echo "USE_SOURCE=true" >> $GITHUB_ENV
+
+      - name: Run build examples
+        run: 'pnpm build:examples'
