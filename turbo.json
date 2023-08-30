@@ -24,11 +24,14 @@
     "build:docs": {
       "outputs": [".next/**", "!.next/cache/**"]
     },
-    "lint": {},
+    "lint": {
+      "dependsOn": ["^build"]
+    },
     "test": {
       "dependsOn": ["^build:sdks"]
     },
     "dev": {
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
       "cache": false,
       "persistent": true
     }
