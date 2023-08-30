@@ -6,7 +6,7 @@
  * Tags: donation, donations, nonprofit, nonprofits, charity, charities, donation widget, fundraising, payment, payments, crowdfunding, campaign, stripe, campaigns, social causes, causes, credit card, credit cards, bacs, direct-debits
  * Requires at least: 5.3
  * Requires PHP: 7.0
- * Version: 3.0.0
+ * Version: 3.0.1
  * Author: Everfund
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

@@ -5,7 +5,7 @@ Tags:  donation, donations, nonprofit, nonprofits, charity, charities, donation 
 Requires at least: 4.5.0
 Tested up to: 5.9.0
 Requires PHP: 5.3
-Stable tag: 3.0.0
+Stable tag: 3.0.1
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
