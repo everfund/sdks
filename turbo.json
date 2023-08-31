@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build:sdks", "^build:examples", "^build:docs"]
+      "dependsOn": ["build:sdks", "build:examples", "build:docs"]
     },
     "build:sdks": {
       "dependsOn": [
@@ -28,7 +28,7 @@
       "dependsOn": ["^build"]
     },
     "test": {
-      "dependsOn": ["^build:sdks"]
+      "dependsOn": ["build:sdks"]
     },
     "dev": {
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
