@@ -6,7 +6,7 @@
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
-    "build": "wp-scripts build",
+    "build:sdks": "wp-scripts build",
     "format": "wp-scripts format",
     "lint": "eslint \"**/*.js\" --ignore-path .eslintignore",
     "packages-update": "wp-scripts packages-update",

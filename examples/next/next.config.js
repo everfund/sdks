@@ -9,13 +9,11 @@ const nextConfig = {
       process.env.USE_SOURCE === 'true'
         ? {
             ...config.resolve.alias,
-            '@everfund/js-sdk': path.resolve(
-              __dirname,
-              '../../packages/js-sdk/src/index.ts'
-            ),
+            // uses dist instead of TS Files as webpack
+            // has struggles bundling tsx
             '@everfund/react-sdk': path.resolve(
               __dirname,
-              '../../packages/react-sdk/src/index.ts'
+              '../../packages/react-sdk/dist/react-sdk.mjs'
             ),
           }
         : { ...config.resolve.alias };

@@ -2,14 +2,36 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["build:sdks", "build:examples", "build:docs"]
+    },
+    "build:sdks": {
+      "dependsOn": [
+        "@everfund/js-sdk#build:sdks",
+        "@everfund/react-sdk#build:sdks"
+      ]
+    },
+    "@everfund/js-sdk#build:sdks": {
       "outputs": ["dist/**"]
     },
-    "lint": {},
-    "test": {
+    "@everfund/react-sdk#build:sdks": {
+      "dependsOn": ["@everfund/js-sdk#build:sdks"],
+      "outputs": ["dist/**"]
+    },
+    "build:examples": {
+      "dependsOn": ["build:sdks"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "build:docs": {
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
       "dependsOn": ["^build"]
     },
+    "test": {
+      "dependsOn": ["build:sdks"]
+    },
     "dev": {
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
       "cache": false,
       "persistent": true
     }

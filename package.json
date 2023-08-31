@@ -3,6 +3,9 @@
   "packageManager": "pnpm@8.6.10",
   "scripts": {
     "build": "turbo run build",
+    "build:docs": "turbo run build:docs",
+    "build:examples": "turbo run build:examples",
+    "build:sdks": "turbo run build:sdks",
     "dev": "turbo run dev --concurrency=20",
     "format": "prettier --write \"**/*\"",
     "lint": "turbo run lint",
