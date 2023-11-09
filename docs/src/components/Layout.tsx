@@ -21,6 +21,7 @@ const navigation = [
     links: [
       { title: 'About Everfund', href: '/' },
       { title: 'Installation', href: '/installation' },
+      { title: 'Getting Started', href: '/getting-started' },
     ],
   },
   {
