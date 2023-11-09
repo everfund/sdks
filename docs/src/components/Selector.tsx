@@ -7,7 +7,7 @@ type Options = { [key: string]: string }
 
 const SDKs: Options = { react: 'React', js: 'JavaScript' }
 
-export function Selector(type: 'sdk' | 'pm') {
+export function Selector() {
   const router = useRouter()
   const selected = router.query.sdk
 
