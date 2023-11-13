@@ -20,35 +20,34 @@ const navigation = [
     title: 'Introduction',
     links: [
       { title: 'About Everfund', href: '/' },
+      { title: 'Getting Started', href: '/getting-started' },
       { title: 'Installation', href: '/installation' },
     ],
   },
   {
-    title: 'React SDK',
+    title: 'React SDK Examples',
     links: [
-      { title: 'Getting Started', href: '/docs/react-sdk/getting-started' },
       { title: 'React', href: '/docs/react-sdk/react' },
       { title: 'Next', href: '/docs/react-sdk/next' },
       // { title: 'Gatsby', href: '/docs/react-sdk/gatsby' },
     ],
   },
   {
-    title: 'JS SDK',
+    title: 'JS SDK Examples',
     links: [
-      { title: 'Getting Started', href: '/docs/js-sdk/getting-started' },
       { title: 'Vanilla JS', href: '/docs/js-sdk/vanilla-js' },
       { title: 'CDN', href: '/docs/js-sdk/cdn' },
       { title: 'Svelte', href: '/docs/js-sdk/svelte' },
       { title: 'Vue', href: '/docs/js-sdk/vue' },
-      { title: 'WordPress', href: '/docs/js-sdk/wordpress' },
     ],
   },
   {
+    title: 'Plugins',
+    links: [{ title: 'Wordpress', href: '/docs/js-sdk/wordpress' }],
+  },
+  {
     title: 'Nocode',
-    links: [
-      { title: 'Getting Started', href: '/docs/no-code/getting-started' },
-      { title: 'Query Strings', href: '/docs/no-code/query-strings' },
-    ],
+    links: [{ title: 'Query Strings', href: '/docs/no-code/query-strings' }],
   },
 ]
 

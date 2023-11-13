@@ -24,9 +24,16 @@ function getNodeText(node: any) {
 }
 
 function collectHeadings(nodes: any, slugify = slugifyWithCounter()): any {
+  const router = useRouter()
   const sections = []
-
   for (const node of nodes) {
+    // If the SDK is not the current SDK, skip this section
+    if (node.name === 'If' && node.attributes?.sdk) {
+      if (node.attributes.sdk !== (router.query.sdk ?? 'react')) {
+        continue
+      }
+    }
+
     if (node.name === 'Heading' || node.name === 'h3') {
       const title = getNodeText(node)
       if (title) {
@@ -35,7 +42,7 @@ function collectHeadings(nodes: any, slugify = slugifyWithCounter()): any {
         if (node.attributes.level === 3) {
           if (!sections[sections.length - 1]) {
             throw new Error(
-              'Cannot add `h3` to table of contents without a preceding `h2`',
+              'Cannot add `h3` to table of contents without a preceding `h2`'
             )
           }
           sections[sections.length - 1].children.push({
@@ -102,7 +109,7 @@ const MyApp: AppType = ({
   const tableOfContents = pageProps.markdoc?.content
     ? collectHeadings(pageProps.markdoc.content)
     : []
-
+    
   return (
     <>
       <Head>
