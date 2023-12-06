@@ -15,7 +15,7 @@
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
     "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.4.9"
+    "vite": "^4.4.12"
   },
   "browserslist": [
     ">0.2%",
