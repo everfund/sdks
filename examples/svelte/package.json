@@ -10,7 +10,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "@everfund/js-sdk": "3.0.1"
+    "@everfund/js-sdk": "3.0.2"
   },
   "devDependencies": {
     "@rollup/plugin-replace": "^5.0.2",
