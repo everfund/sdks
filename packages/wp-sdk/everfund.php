@@ -72,7 +72,6 @@ function everfund_add_allowed_origins($origins)
     $origins[] = 'https://nhs.charity';
     $origins[] = 'https://shelter.charity';
     $origins[] = 'https://urgent.charity';
-    $origins[] = 'https://everfund.com';
     $origins[] = 'https://api.everfund.com';
     $origins[] = 'https://everfund.com';
 
