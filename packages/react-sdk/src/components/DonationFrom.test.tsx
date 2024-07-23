@@ -47,6 +47,7 @@ describe('DonationForm', () => {
             <div />
           </div>
           <iframe
+            allow="payment"
             id="ef-donationForm"
             src="https://evr.fund/${code}/widget?embed_origin=http://localhost:3000"
             style="margin: 0px; width: 100%; height: 100%;"
