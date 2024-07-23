@@ -9,7 +9,7 @@
     "start": "vite"
   },
   "dependencies": {
-    "@everfund/js-sdk": "3.0.2",
+    "@everfund/js-sdk": "3.0.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
