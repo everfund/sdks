@@ -141,6 +141,7 @@ export const DonationForm = ({
         }/${code}/widget${serializeQueryParams({
           embed_origin: window.location.origin,
         })}`}
+        allow="payment"
         style={iframeStyles}
       />
     </div>

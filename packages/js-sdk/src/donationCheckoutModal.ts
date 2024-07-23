@@ -59,6 +59,7 @@ class DonationCheckoutModal {
         embeded: true,
         close_on_success: closeOnSuccess,
       })}`;
+      modalFrame.allow = 'payment';
 
       // deperciated
       // https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowPaymentRequest

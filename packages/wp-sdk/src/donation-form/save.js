@@ -21,6 +21,7 @@ export default function save({ attributes }) {
             domain || 'https://evr.fund'
           }/${code}/widget?embed_origin=${origin}`}
           className="iframeStyles"
+          allow="payment"
         />
       </div>
     </div>

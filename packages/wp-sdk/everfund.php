@@ -10,7 +10,7 @@
  * Author: Everfund
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       everfund.io
+ * Text Domain:       everfund.com
  *
  * @package           create-block
  */
@@ -41,9 +41,9 @@ function everfund_plugin_settings_page()
     <div class="everfund-modal">
       <h2 class="everfund-title"><?php _e('Everfund is Installed.', 'everfund'); ?></h2>
       <p class="everfund-subtitle"><?php _e('You can now use Everfund on your website.', 'everfund'); ?></p>
-      <a class="everfund-button everfund-neutral" href="https://dashboard.everfund.io/donations/"><?php _e('Go to my Widgets', 'everfund'); ?></a>
-      <a class="everfund-button everfund" href="https://dashboard.everfund.io/donations/links/"><?php _e('Go to my Donations', 'everfund'); ?></a>
-	  <p class="everfund-stuck"><?php _e('Stuck? Talk to ', 'everfund'); ?> <a href="https://help.everfund.co.uk/en/"> Support </a> <?php _e(' or check out the ', 'everfund'); ?><a href="https://developer.everfund.co.uk/integrations/wordpress">developer documentation </a></p>
+      <a class="everfund-button everfund-neutral" href="https://dashboard.everfund.com/donations/"><?php _e('Go to my Widgets', 'everfund'); ?></a>
+      <a class="everfund-button everfund" href="https://dashboard.everfund.com/donations/links/"><?php _e('Go to my Donations', 'everfund'); ?></a>
+	  <p class="everfund-stuck"><?php _e('Stuck? Talk to ', 'everfund'); ?> <a href="https://help.everfund.com/en/"> Support </a> <?php _e(' or check out the ', 'everfund'); ?><a href="https://developer.everfund.com/integrations/wordpress">developer documentation </a></p>
     </div>
   </div>
 
@@ -72,10 +72,8 @@ function everfund_add_allowed_origins($origins)
     $origins[] = 'https://nhs.charity';
     $origins[] = 'https://shelter.charity';
     $origins[] = 'https://urgent.charity';
-    $origins[] = 'https://everfund.co.uk';
-    $origins[] = 'https://api.everfund.co.uk';
-    $origins[] = 'https://everfund.io';
-    $origins[] = 'https://api.everfund.io';
+    $origins[] = 'https://api.everfund.com';
+    $origins[] = 'https://everfund.com';
 
     return $origins;
 }
