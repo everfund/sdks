@@ -169,7 +169,7 @@ importers:
     dependencies:
       '@everfund/react-sdk':
         specifier: 3.0.1
-        version: link:../../packages/react-sdk
+        version: 3.0.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
       next:
         specifier: 13.4.12
         version: 13.4.12(react-dom@18.2.0)(react@18.2.0)
@@ -203,7 +203,7 @@ importers:
     dependencies:
       '@everfund/react-sdk':
         specifier: 3.0.1
-        version: link:../../packages/react-sdk
+        version: 3.0.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
       '@types/react-dom':
         specifier: ^18.2.7
         version: 18.2.7
@@ -228,7 +228,7 @@ importers:
     dependencies:
       '@everfund/js-sdk':
         specifier: 3.0.1
-        version: link:../../packages/js-sdk
+        version: 3.0.1(csstype@3.1.2)
     devDependencies:
       '@rollup/plugin-replace':
         specifier: ^5.0.2
@@ -247,7 +247,7 @@ importers:
     dependencies:
       '@everfund/js-sdk':
         specifier: 3.0.1
-        version: link:../../packages/js-sdk
+        version: 3.0.1(csstype@3.1.2)
     devDependencies:
       '@rollup/plugin-replace':
         specifier: ^5.0.2
@@ -260,7 +260,7 @@ importers:
     dependencies:
       '@everfund/js-sdk':
         specifier: 3.0.1
-        version: link:../../packages/js-sdk
+        version: 3.0.1(csstype@3.1.2)
       vue:
         specifier: ^3.3.4
         version: 3.3.4
@@ -312,7 +312,7 @@ importers:
   packages/react-sdk:
     dependencies:
       '@everfund/js-sdk':
-        specifier: 3.0.1
+        specifier: ^3.0.2
         version: link:../js-sdk
       goober:
         specifier: ^2.1.13
@@ -2028,6 +2028,31 @@ packages:
   /@eslint/js@8.47.0:
     resolution: {integrity: sha512-P6omY1zv5MItm93kLM8s2vr1HICJH8v0dvddDhysbIuZ+vcjOHg5Zbkf1mTkcmi2JA9oBG2anOkRnW8WJTS8Og==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
+  /@everfund/js-sdk@3.0.1(csstype@3.1.2):
+    resolution: {integrity: sha512-875Mk0miy9Ikr2U/BQADCn0t/R6ibdaOECnv2elFUijIR6JAH3Mev/IgtHpcf0ECkBESDm9u4US833OXKWPH8g==}
+    engines: {node: '>=12'}
+    dependencies:
+      body-scroll-lock: 4.0.0-beta.0
+      goober: 2.1.13(csstype@3.1.2)
+    transitivePeerDependencies:
+      - csstype
+    dev: false
+
+  /@everfund/react-sdk@3.0.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-3N5pJzfWNedOpsRECwBdLpX3g1MUDn/8TThZ0m1A6b7MKqKRFLE4PcoVPnDsv2nAiWxbqE3z5DrjvWHXQtkIJw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@everfund/js-sdk': 3.0.1(csstype@3.1.2)
+      goober: 2.1.13(csstype@3.1.2)
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - csstype
+    dev: false
 
   /@feedback-fish/react@1.2.2(react@18.2.0):
     resolution: {integrity: sha512-T6VxMM8nNsD3b5ulVsrcvcrNDAc4d73RLYK8Iw+6PFPIdMU2I/mOiuAHvfGauBVIWYHflja4VOdjm3z4CtlvYQ==}
