@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "everfund/donate-checkout-button",
+	"version": "1.0.0",
+	"title": "Everfund Donate button",
+	"category": "design",
+	"description": "A donation button when clicked will open the Everfund donation modal.",
+	"supports": {
+		"align": true,
+		"ariaLabel": true,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"textAlign": false
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"html": true
+	},
+	"textdomain": "donate-checkout-button",
+	"attributes": {
+		"textAlign": {
+			"type": "string"
+		},
+		"width": {
+			"type": "number"
+		},
+		"buttonText": {
+			"type": "string",
+			"attribute": "buttonText",
+			"default": "Donate Now"
+		},
+		"code": {
+			"type": "string",
+			"attribute": "code"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

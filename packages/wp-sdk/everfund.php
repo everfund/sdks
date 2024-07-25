@@ -37,16 +37,43 @@ function everfund_admin_styles()
 function everfund_plugin_settings_page()
 {
     ?>
-  <div class="wrap everfund-wrap">
+<div class="wrap everfund-wrap">
     <div class="everfund-modal">
-      <h2 class="everfund-title"><?php _e('Everfund is Installed.', 'everfund'); ?></h2>
-      <p class="everfund-subtitle"><?php _e('You can now use Everfund on your website.', 'everfund'); ?></p>
-      <a class="everfund-button everfund-neutral" href="https://dashboard.everfund.com/donations/"><?php _e('Go to my Widgets', 'everfund'); ?></a>
-      <a class="everfund-button everfund" href="https://dashboard.everfund.com/donations/links/"><?php _e('Go to my Donations', 'everfund'); ?></a>
-	  <p class="everfund-stuck"><?php _e('Stuck? Talk to ', 'everfund'); ?> <a href="https://help.everfund.com/en/"> Support </a> <?php _e(' or check out the ', 'everfund'); ?><a href="https://developer.everfund.com/integrations/wordpress">developer documentation </a></p>
-    </div>
-  </div>
+        <h2 class="everfund-title"><?php _e('Everfund is Successfully Installed!', 'everfund'); ?></h2>
+        <p class="everfund-subtitle"><?php _e('Your WordPress site is now powered by Everfund\'s donation platform.', 'everfund'); ?></p>
+        
+        <div class="everfund-columns">
+            <div class="everfund-column">
+                <h3 class="everfund-heading"><?php _e('Manage Your Campaigns', 'everfund'); ?></h3>
+                <p><?php _e('Set up and manage your fundraising campaigns through the Everfund dashboard.', 'everfund'); ?></p>
+                <a class="everfund-button everfund-neutral" href="https://dashboard.everfund.com/fundraising/campaigns" target="_blank"><?php _e('Manage Campaigns', 'everfund'); ?></a>
+            </div>
+            <div class="everfund-column">
+                <h3 class="everfund-heading"><?php _e('View Your Donations', 'everfund'); ?></h3>
+                <p><?php _e('Track and analyze your donations in real-time through the Everfund dashboard.', 'everfund'); ?></p>
+                <a class="everfund-button everfund" href="https://dashboard.everfund.com/donations" target="_blank"><?php _e('View Donations', 'everfund'); ?></a>
+            </div>
+        </div>
 
+        <div class="everfund-info-box">
+            <h4 class="everfund-info-title"><?php _e('Important Note:', 'everfund'); ?></h4>
+            <p><?php _e('All campaign management, donation processing, and analytics are handled through the Everfund dashboard. The only action required in WordPress is adding donation buttons to your pages using the block editor.', 'everfund'); ?></p>
+        </div>
+
+        <h3 class="everfund-heading"><?php _e('Adding Donation Buttons:', 'everfund'); ?></h3>
+        <ol class="everfund-list">
+            <li><?php _e('Edit the page where you want to add a donation button.', 'everfund'); ?></li>
+            <li><?php _e('Add a new block and search for "Everfund Donation Button".', 'everfund'); ?></li>
+            <li><?php _e('Configure the button settings in the block options.', 'everfund'); ?></li>
+        </ol>
+
+        <p class="everfund-support"><?php _e('Need help? ', 'everfund'); ?> 
+            <a href="https://help.everfund.com/en/" target="_blank"><?php _e('Contact Support', 'everfund'); ?></a> 
+            <?php _e(' or check out our ', 'everfund'); ?>
+            <a href="https://docs.everfund.com/docs/js-sdk/wordpress" target="_blank"><?php _e('WordPress Integration Guide', 'everfund'); ?></a>
+        </p>
+    </div>
+</div>
   <?php
 }
 
@@ -57,8 +84,8 @@ function everfund_sdk_script()
 
 function create_block_init() {
 	register_block_type(__DIR__ . '/build');
-	register_block_type(__DIR__ . '/build/donation-checkout-modal');
 	register_block_type(__DIR__ . '/build/donation-form');
+    register_block_type(__DIR__ . '/build/donate-button');
 }
 
 function everfund_add_allowed_origins($origins)

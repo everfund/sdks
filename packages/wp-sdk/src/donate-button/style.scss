@@ -1,0 +1,22 @@
+.wp-block-button.aligncenter {
+    text-align: center;
+}
+
+.wp-block-button__width {
+    &-100 .wp-element-button{
+        width: 100%;
+    }
+
+    &-75 .wp-element-button{
+        width: 75%;
+    }
+
+    &-50 .wp-element-button{
+        width: 50%;
+    }
+
+    &-25 .wp-element-button{
+        width: 25%;
+    }
+
+}
