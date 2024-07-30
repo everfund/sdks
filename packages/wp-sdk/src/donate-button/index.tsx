@@ -2,15 +2,14 @@
  * External dependencies
  */
 import { registerBlockType } from '@wordpress/blocks';
-import * as React from 'react';
 
 /**
  * Internal dependencies
  */
-import Edit from './edit';
-import Save from './save';
+import { EverfundIcon } from '../everfund-icon';
+import { Edit } from './edit';
+import { Save } from './save';
 import metadata from './block.json';
-import EverfundIcon from '../components/logo';
 
 /**
  * Every block starts by registering a new block type definition.

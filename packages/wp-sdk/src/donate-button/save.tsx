@@ -2,13 +2,13 @@
  * External dependencies
  */
 import clsx from 'clsx';
-import * as React from 'react';
+import { BlockSaveProps } from '@wordpress/blocks';
 
 /**
  * Internal dependencies
  */
-import Block from './block';
-import { BlockAttributes } from './types';
+import { DonateButtonBlock } from './block';
+import { DonateButtonAttributes } from './types';
 import { useStyleProps } from '../hooks/use-style-props';
 import './style.scss';
 
@@ -18,7 +18,9 @@ import './style.scss';
  * @param {BlockAttributes} props - The block props
  * @returns {JSX.Element} - The block save component
  */
-const Save = ({ attributes }: { attributes: BlockAttributes }): JSX.Element => {
+export const Save = ({
+	attributes,
+}: BlockSaveProps<DonateButtonAttributes>): JSX.Element => {
 	const styleProps = useStyleProps(attributes);
 	return (
 		<div
@@ -28,16 +30,14 @@ const Save = ({ attributes }: { attributes: BlockAttributes }): JSX.Element => {
 					attributes.width,
 			})}
 		>
-			<Block
+			<DonateButtonBlock
 				buttonText={attributes.buttonText}
 				code={attributes.code}
 				className={clsx(styleProps.className, attributes.className)}
 				style={styleProps.style}
 			>
 				{attributes.buttonText}
-			</Block>
+			</DonateButtonBlock>
 		</div>
 	);
 };
-
-export default Save;

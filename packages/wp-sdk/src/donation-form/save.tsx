@@ -1,20 +1,23 @@
 /**
  * External dependencies
  */
-import * as React from 'react';
+import type { BlockSaveProps } from '@wordpress/blocks';
 
 /**
  * Internal dependencies
  */
 import './styles.scss';
+import { DonationFormAttributes } from './types';
 
 /**
  * This is the save component for the donation form block, which renders the donation form
  * on the frontend.
- * @param {BlockAttributes} props - The block props
+ * @param {BlockSaveProps<DonationFormAttributes>} props - The block props
  * @returns {JSX.Element} - The block save component
  */
-export default function Save({ attributes }) {
+export function Save({
+	attributes,
+}: BlockSaveProps<DonationFormAttributes>): JSX.Element {
 	const { code, domain, height, width } = attributes;
 
 	// eslint-disable-next-line no-undef

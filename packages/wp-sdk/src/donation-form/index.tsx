@@ -7,9 +7,9 @@ import * as React from 'react';
 /**
  * Internal dependencies
  */
-import EverfundIcon from '../components/logo';
-import Edit from './edit';
-import Save from './save';
+import { EverfundIcon } from '../everfund-icon';
+import { Edit } from './edit';
+import { Save } from './save';
 import metadata from './block.json';
 
 /**
@@ -30,7 +30,6 @@ registerBlockType(metadata.name, {
 	icon: {
 		src: <EverfundIcon />,
 	},
-
 	edit: Edit,
 	save: Save,
 });

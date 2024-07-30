@@ -3,9 +3,8 @@
 		"allowJs": true,
 		"checkJs": true,
 		"allowSyntheticDefaultImports": true,
-		"jsx": "preserve",
-		"target": "es6",
-		"module": "commonjs",
+		"target": "es2019",
+		"module": "esnext",
 		"declaration": true,
 		"declarationMap": true,
 		"emitDeclarationOnly": false,
@@ -14,6 +13,7 @@
 		/* Strict Type-Checking Options */
 		"strict": true,
 		"jsx": "react-jsx",
+		"typeRoots": [],
 		/* Additional Checks */
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
@@ -24,14 +24,8 @@
 		"moduleResolution": "node",
 
 		/* This needs to be false so our types are possible to consume without setting this */
-		"esModuleInterop": false,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
 		"resolveJsonModule": true
-	},
-
-	/* 
-		We set files: [] here so that running tsc against this config does not pick up anything, 
-		but only delegates the tsc command execution to the projects specified in references[]
-		More at: https://www.typescriptlang.org/docs/handbook/project-references.html
-	*/
-	"files": []
+	}
 }
