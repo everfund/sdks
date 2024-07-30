@@ -8,6 +8,12 @@ import * as React from 'react';
  */
 import './styles.scss';
 
+/**
+ * This is the save component for the donation form block, which renders the donation form
+ * on the frontend.
+ * @param {BlockAttributes} props - The block props
+ * @returns {JSX.Element} - The block save component
+ */
 export default function Save({ attributes }) {
 	const { code, domain, height, width } = attributes;
 

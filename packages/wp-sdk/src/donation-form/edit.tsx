@@ -11,7 +11,13 @@ import {
 import { InspectorControls, useBlockProps } from '@wordpress/block-editor';
 import * as React from 'react';
 
-const EverFundFormControls = ({ attributes, setAttributes }) => {
+/**
+ * This is the editor component for the donation form block, allowing users to set the props
+ * inside the wordpress sidebar interface
+ * @param {BlockEditProps<BlockAttributes>} props - The block props
+ * @returns {JSX.Element} - The block edit component
+ */
+const EditorFormControls = ({ attributes, setAttributes }) => {
   const [showSizeControls, setSizeControls] = React.useState(false);
   const [showCustomDomain, setCustomDomainControls] = React.useState(false);
   return (
@@ -62,11 +68,17 @@ const EverFundFormControls = ({ attributes, setAttributes }) => {
   );
 };
 
+/**
+ * This is the donation form iframe block, which is rendered in the editor,
+ * save.tsx is what is displayed on the frontend
+ * @param {BlockEditProps<BlockAttributes>} props - The block props
+ * @returns {JSX.Element} - The block edit component
+ */
 export default function Edit({ attributes, setAttributes }) {
   const blockProps = useBlockProps();
   return (
     <>
-      <EverFundFormControls
+      <EditorFormControls
         attributes={attributes}
         setAttributes={setAttributes}
       />

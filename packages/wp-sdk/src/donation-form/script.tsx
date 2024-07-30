@@ -1,4 +1,9 @@
-// eslint-disable-next-line no-undef
+/**
+ * This is the script that runs on the frontend when the donation form block is rendered.
+ * It listens for messages from the iframe and removes the loading spinner when the iframe is ready.
+ * @param {MessageEvent} event - The message event
+ * @returns {void}
+ */
 window.addEventListener(
 	'message',
 	({ data }) => {
@@ -10,7 +15,6 @@ window.addEventListener(
 
 		switch (message) {
 			case 'everfund:ready': {
-				// eslint-disable-next-line no-undef
 				const loadingSpinner = document.querySelector(
 					'.everfund-loading-rings'
 				);

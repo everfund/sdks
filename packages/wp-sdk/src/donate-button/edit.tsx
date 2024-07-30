@@ -26,7 +26,13 @@ import { BlockAttributes } from './types';
 import { useStyleProps } from '../hooks/use-style-props';
 import './style.scss';
 
-function WidthPanel({
+/**
+ * This is the editor component for the donation button block, allowing users to set the props
+ * inside the wordpress sidebar interface
+ * @param {BlockEditProps<BlockAttributes>} props - The block props
+ * @returns {JSX.Element} - The block edit component
+ */
+function EditorFormControls({
   selectedWidth,
   setAttributes,
 }: {
@@ -56,6 +62,12 @@ function WidthPanel({
   );
 }
 
+/**
+ * This is the donate-button block, which is rendered in the editor,
+ * save.tsx is what is displayed on the frontend
+ * @param {BlockEditProps<BlockAttributes>} props - The block props
+ * @returns {JSX.Element} - The block edit component
+ */
 const Edit = ({
   attributes,
   setAttributes,
@@ -69,7 +81,15 @@ const Edit = ({
     'is-selected',
     'wp-elements-0',
   ];
-  // function to remove class names given in an array from string
+
+  /**
+   * Removes the classnames from the blockProps.className that are in the rCN array
+   * this is so we can show exactly what the user would see on the front end 
+   * while remaing able to edit the block in the editor
+   * @param {string} str - The string to remove the classnames from
+   * @param {string[]} classNames - The classnames to remove from the string
+   * @returns {string} - The string with the classnames removed
+   */
   const removeClassNamesFromString = (str: string, classNames: string[]) => {
     return classNames.reduce((acc, className) => {
       return acc.replace(className, '');
@@ -79,7 +99,7 @@ const Edit = ({
   return (
     <>
       <InspectorControls>
-        <WidthPanel
+        <EditorFormControls
           selectedWidth={attributes.width}
           setAttributes={setAttributes}
         />

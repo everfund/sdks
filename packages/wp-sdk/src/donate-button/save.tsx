@@ -3,6 +3,7 @@
  */
 import clsx from 'clsx';
 import * as React from 'react';
+
 /**
  * Internal dependencies
  */
@@ -11,6 +12,12 @@ import { BlockAttributes } from './types';
 import { useStyleProps } from '../hooks/use-style-props';
 import './style.scss';
 
+/**
+ * This is the save component for the donate button block, which renders the donate button
+ * on the frontend.
+ * @param {BlockAttributes} props - The block props
+ * @returns {JSX.Element} - The block save component
+ */
 const Save = ({ attributes }: { attributes: BlockAttributes }): JSX.Element => {
 	const styleProps = useStyleProps(attributes);
 	return (
