@@ -1,6 +1,6 @@
 {
   "name": "@everfund/react-sdk",
-  "version": "3.0.3",
+  "version": "3.0.2",
   "author": "Christopher Burns",
   "license": "MIT",
   "engines": {
@@ -24,7 +24,7 @@
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@everfund/js-sdk": "^3.0.3",
+    "@everfund/js-sdk": "^3.0.2",
     "goober": "^2.1.13"
   },
   "devDependencies": {
