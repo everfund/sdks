@@ -9,7 +9,7 @@
     "build:sdks": "wp-scripts build && pnpm copy-js-sdk",
     "copy-js-sdk": "cp ../js-sdk/dist/js-sdk.global.js ./js/ && cp ../js-sdk/dist/js-sdk.global.js.map ./js/",
     "format": "wp-scripts format",
-    "lint": "eslint \"**/*.js\" --ignore-path .eslintignore",
+    "lint": "eslint \"**/*.{ts,tsx,js}\" --ignore-path .eslintignore",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start"
