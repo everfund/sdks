@@ -5,7 +5,7 @@ Tags: donation, fundraising, nonprofit, charity, multichannel, payment, campaign
 Requires at least: 4.5.0
 Tested up to: 6.6.0
 Requires PHP: 5.3
-Stable tag: 3.1.0
+Stable tag: 3.0.2
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -59,20 +59,22 @@ Everfund is the modern donation platform that helps unify your donation processe
 
 1. Upload the plugin files to the `/wp-content/plugins/everfund-sdk` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
-3. Use the Settings->Everfund screen to configure the plugin.
-4. Add the Everfund code to a button or add HTML code where you want the donation portal to appear.
+3. Add the Everfund code to a button or add HTML code where you want the donation portal to appear.
 
 For detailed setup instructions, visit our [developer documentation](https://docs.everfund.com/getting-started).
 
 == Frequently Asked Questions ==
 
+= Do I need an everfund account? =
+
+Yes, to use the donation portal, you will need an Everfund account, as that is where you set up the campaigns
 = Is Everfund secure? =
 
 Yes, Everfund keeps everything secure and updated without you having to worry about plugin updates, allowing you to focus on your fundraising.
 
 = Can I customize the donation portal? =
 
-Absolutely! Everfund offers a customizable donation system to match your brand and fundraising needs.
+Absolutely! Everfund offers a customizable donation system to match your brand and fundraising needs, this is done outside of the wordpress system in the everfund dashboard meaning you can easily update how the donation system needs to look without having to touch any code.
 
 == Screenshots ==
 
@@ -81,8 +83,11 @@ Absolutely! Everfund offers a customizable donation system to match your brand a
 == Changelog ==
 
 = 3.1.0 =
-* Added support for multichannel campaigns
-* Improved dashboard analytics
+* Rebuilt Donation button to be more flexible with customisation and no longer break with WordPress's new Gutenberg editor.
+* Rebuilt Donation form, to move settings to wordpress sideback for a more consistent interface
+* Refactored codebase from javascript to typescript. 
+* Updated Assets
+* Updated Admin view with correct information
 
 = 3.0.1 =
 * Bug fixes and performance improvements
@@ -92,11 +97,6 @@ Absolutely! Everfund offers a customizable donation system to match your brand a
 
 = 1.1.0 =
 * Initial Release
-
-== Upgrade Notice ==
-
-= 3.1.0 =
-This version adds support for multichannel campaigns and improves dashboard analytics. Upgrade to enhance your fundraising capabilities.
 
 == Disclosure ==
 
