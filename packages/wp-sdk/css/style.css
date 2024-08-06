@@ -10,10 +10,11 @@
 .everfund-modal {
   background-color: #fff;
   border: 1px solid #e8e8e8;
-  width: 66.13%;
-  max-width: 540px;
+  width: 90%;
+  max-width: 800px;
   margin: 45px auto 2rem;
   padding: 2rem 2rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .everfund-modal .everfund-button {
@@ -25,9 +26,7 @@
   cursor: pointer;
   width: 200px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 12px;
+  margin: 20px auto;
 }
 
 .everfund-modal .everfund-button.everfund {
@@ -44,25 +43,72 @@
 
 .everfund-title {
   color: #555459;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 .everfund-subtitle {
   color: #555459;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  margin: 12px 0 26px;
+  margin: 0 0 30px;
 }
 
-.everfund-stuck {
+.everfund-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.everfund-column {
+  width: 48%;
+}
+
+.everfund-heading {
+  color: #0e5344;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+
+.everfund-info-box {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.everfund-info-title {
+  color: #0e5344;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.everfund-list {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.everfund-list li {
+  margin-bottom: 10px;
+}
+
+.everfund-support {
   color: #555459;
   font-size: 16px;
   font-weight: 400;
-  margin: 12px 0 0;
+  margin: 30px 0 0;
 }
 
-.everfund-stuck a {
-  text-decoration: none !important;
+.everfund-support a {
+  color: #0e5344;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.everfund-support a:hover {
+  text-decoration: underline;
 }
