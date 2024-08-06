@@ -12,6 +12,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "@everfund/eslint-config-everfund": "workspace:*",
     "@everfund/prettier": "workspace:*",
     "eslint": "^8.47.0",

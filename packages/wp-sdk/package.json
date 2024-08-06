@@ -1,19 +1,36 @@
 {
   "name": "@everfund/wp-sdk",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Plug and Play Donation System",
   "author": "Christopher Burns <christopher@everfund.co.uk>",
   "license": "MIT",
   "main": "build/index.js",
   "scripts": {
-    "build:sdks": "wp-scripts build",
+    "build:sdks": "wp-scripts build && pnpm copy-js-sdk",
+    "copy-js-sdk": "cp ../js-sdk/dist/js-sdk.global.js ./js/ && cp ../js-sdk/dist/js-sdk.global.js.map ./js/",
     "format": "wp-scripts format",
-    "lint": "eslint \"**/*.js\" --ignore-path .eslintignore",
+    "lint": "eslint \"**/*.{ts,tsx,js}\" --ignore-path .eslintignore",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start"
   },
+  "peerDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "@wordpress/components": "^28.4.0",
+    "@wordpress/i18n": "^5.4.0",
+    "@wordpress/icons": "^10.4.0",
+    "@wordpress/style-engine": "^2.4.0",
+    "change-case": "^5.4.4",
+    "clsx": "^2.1.1"
+  },
   "devDependencies": {
-    "@wordpress/scripts": "^26.10.0"
+    "@types/wordpress__block-editor": "^11.5.15",
+    "@types/wordpress__blocks": "^12.5.14",
+    "@wordpress/scripts": "^28.4.0"
   }
 }
