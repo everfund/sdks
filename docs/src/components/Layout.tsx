@@ -47,7 +47,13 @@ const navigation = [
   },
   {
     title: 'Nocode',
-    links: [{ title: 'Query Strings', href: '/docs/no-code/query-strings' }],
+    links: [
+      { title: 'Query Strings', href: '/docs/no-code/query-strings' },
+      {
+        title: 'Browser Payments',
+        href: '/docs/no-code/browser-payments',
+      },
+    ],
   },
 ]
 
@@ -95,7 +101,7 @@ function Header({ navigation }: { navigation: NavigationProps }): JSX.Element {
         'sticky top-0 z-50 mx-auto border-b-2 border-b-slate-900/5 px-4 py-5 transition duration-500  [@supports(backdrop-filter:blur(0))]:bg-white/90',
         isScrolled
           ? 'backdrop-blur dark:bg-slate-900/95  dark:[@supports(backdrop-filter:blur(0))]:bg-slate-900/75'
-          : 'dark:bg-transparent',
+          : 'dark:bg-transparent'
       )}
     >
       <div className="mx-auto flex  flex-wrap items-center justify-between sm:px-6 lg:px-8">
@@ -188,7 +194,7 @@ export function Layout({
   const previousPage = allLinks[linkIndex - 1]
   const nextPage = allLinks[linkIndex + 1]
   const section = navigation.find((section) =>
-    section.links.find((link) => link.href === router.pathname),
+    section.links.find((link) => link.href === router.pathname)
   )
   const currentSection = useTableOfContents(tableOfContents)
 
@@ -307,7 +313,7 @@ export function Layout({
                               className={clsx(
                                 isActive(section)
                                   ? 'text-ever-500'
-                                  : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300',
+                                  : 'font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
                               )}
                             >
                               {section.title}
@@ -338,12 +344,12 @@ export function Layout({
                                     </a>
                                   </Link>
                                 </li>
-                              ),
+                              )
                             )}
                           </ol>
                         )}
                       </li>
-                    ),
+                    )
                   )}
                 </ol>
               </>
@@ -352,7 +358,7 @@ export function Layout({
           <div
             className={clsx(
               'rounded-full bg-slate-100 text-center transition hover:bg-ever-500 hover:text-white',
-              tableOfContents.length > 0 && 'mt-8',
+              tableOfContents.length > 0 && 'mt-8'
             )}
           >
             <FeedbackFish projectId="3a707b6d109cfe">
